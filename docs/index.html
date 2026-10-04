@@ -33,7 +33,8 @@
     <link rel="stylesheet" href="assets/css/remixicon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/kredi-hesaplama.css?v=2">
+    <link rel="stylesheet" href="assets/css/kredi-hesaplama.css?v=3">
+    <script src="assets/js/kredi-oranlari.js?v=1"></script>
 
     <title>KredimGeldi</title>
 
@@ -610,6 +611,7 @@
                         <div class="col-lg-6 col-md-7" data-cues="slideInRight" data-duration="400">
                             <div class="section-heading mb-0">
                                 <h2 class="mb-0">Güncel Faiz Oranları</h2>
+                                <p class="mt-2 mb-0">Kredilerde bankaların en düşük aylık faizi, mevduatta en yüksek yıllık faiz. Son güncelleme: <span data-rate-updated></span></p>
                             </div>
                         </div>
 
@@ -621,11 +623,10 @@
                             <div class="title position-relative">
                                 <i class="flaticon-income partnership"></i>
                                 <h3>
-                                    <a href="#">İhtiyac Kredisi</a>
+                                    <a href="products.html?type=ihtiyac">İhtiyaç Kredisi</a>
 
                                     <div class="percentage-area" style="margin-top: 15px;">
-                                        <span class="percentage">2,99</span>
-                                        <span>%</span>
+                                        <span>%</span><span class="percentage" data-rate="ihtiyac">2,99</span>
                                         <!-- info icon -->
                                     </div>
                                 </h3>
@@ -638,11 +639,10 @@
                             <div class="title position-relative">
                                 <i class="flaticon-income partnership"></i>
                                 <h3>
-                                    <a href="#">Konut Kredisi</a>
+                                    <a href="products.html?type=konut">Konut Kredisi</a>
 
                                     <div class="percentage-area" style="margin-top: 15px;">
-                                        <span class="percentage">2,75</span>
-                                        <span>%</span>
+                                        <span>%</span><span class="percentage" data-rate="konut">2,75</span>
                                         <!-- info icon -->
                                     </div>
                                 </h3>
@@ -656,10 +656,9 @@
                             <div class="title position-relative">
                                 <i class="flaticon-analytic partnership"></i>
                                 <h3>
-                                    <a href="#">Taşıt Kredisi</a>
+                                    <a href="products.html?type=tasit">Taşıt Kredisi</a>
                                     <div class="percentage-area" style="margin-top: 15px;">
-                                        <span class="percentage">2,94</span>
-                                        <span>%</span>
+                                        <span>%</span><span class="percentage" data-rate="tasit">2,94</span>
                                         <!-- info icon -->
                                     </div>
                                 </h3>
@@ -672,10 +671,9 @@
                             <div class="title position-relative">
                                 <i class="flaticon-agreement partnership"></i>
                                 <h3>
-                                    <a href="#">Mevduat</a>
+                                    <a href="service-details.html?type=mevduat">Mevduat</a>
                                     <div class="percentage-area" style="margin-top: 15px;">
-                                        <span class="percentage">53</span>
-                                        <span>%</span>
+                                        <span>%</span><span class="percentage" data-rate="mevduat">53</span>
                                         <!-- info icon -->
                                     </div>
                                 </h3>
@@ -1022,27 +1020,9 @@
 
     </style>
     <script>
-        // Constants
-        const DEFAULT_VALUES = {
-            ihtiyac: { tutar: 10000, vade: 12 },
-            konut: { tutar: 100000, vade: 12 },
-            tasit: { tutar: 50000, vade: 12 }
-        };
-
-        const LOAN_LIMITS = {
-            ihtiyac: [
-                { min: 10000, max: 125000, minTerm: 6, maxTerm: 36 },
-                { min: 125001, max: 250000, minTerm: 6, maxTerm: 24 },
-                { min: 250001, max: 1000000, minTerm: 6, maxTerm: 12 }
-            ],
-            konut: [
-                { min: 100000, max: 5000000, minTerm: 12, maxTerm: 120 }
-            ],
-            tasit: [
-                { min: 50000, max: 1750000, minTerm: 12, maxTerm: 48 },
-                { min: 1750001, max: 2500000, minTerm: 12, maxTerm: 36 }
-            ]
-        };
+        // Oranlar ve sınırlar: assets/js/kredi-oranlari.js
+        const DEFAULT_VALUES = KG_RATES.defaults;
+        const LOAN_LIMITS = KG_RATES.limits;
 
         // Utility Functions
         function isNumber(event) {

@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="assets/css/remixicon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/kredi-hesaplama.css?v=2">
+    <link rel="stylesheet" href="assets/css/kredi-hesaplama.css?v=3">
     <link rel="stylesheet" href="assets/css/basvuru.css?v=3">
 
     <title>KredimGeldi</title>
@@ -173,8 +173,8 @@
     <div id="details-modal-placeholder"></div>
 
 
-    <div id="loan-container"
-        style="display: flex; flex-direction: column;gap: 25px; justify-content: top; align-items: center; min-height: 1000px; ;padding: 65px; padding-top: 0px; ">
+    <div class="container">
+        <div id="loan-container" class="kg-offers"></div>
     </div>
 
 
@@ -200,6 +200,7 @@
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js?v=2"></script>
     <script src="assets/js/basvuru.js?v=3"></script>
+    <script src="assets/js/kredi-oranlari.js?v=1"></script>
     <script>
         fetch('components/mobile_navbar.html?v=2')
             .then(response => response.text())
@@ -220,88 +221,9 @@
 
     </script>
     <script>
-        // Constants
-        const DEFAULT_VALUES = {
-            ihtiyac: { tutar: 10000, vade: 12 },
-            konut: { tutar: 100000, vade: 12 },
-            tasit: { tutar: 50000, vade: 12 }
-        };
-
-        const INSURANCE_RATES = {
-            ihtiyac: 0.015,  // 1.5% yillik
-            konut: 0.02,     // 2% yillik
-            tasit: 0.055     // 5.5% yillik
-        };
-
-        const LOAN_LIMITS = {
-            ihtiyac: [
-                { min: 10000, max: 125000, minTerm: 6, maxTerm: 36 },
-                { min: 125001, max: 250000, minTerm: 6, maxTerm: 24 },
-                { min: 250001, max: 1000000, minTerm: 6, maxTerm: 12 }
-            ],
-            konut: [
-                { min: 100000, max: 5000000, minTerm: 12, maxTerm: 120 }
-            ],
-            tasit: [
-                { min: 50000, max: 1750000, minTerm: 12, maxTerm: 48 },
-                { min: 1750001, max: 2500000, minTerm: 12, maxTerm: 36 }
-            ]
-        };
-
-        const KREDI_ORANLARI = {
-            garanti: {
-                ihtiyac: { oran: 2.99 },
-                konut: { oran: 2.99 },
-                tasit: { oran: 2.99 },
-                mevduat: { oran: 53.5 }
-            },
-            akbank: {
-                ihtiyac: { oran: 2.59 },
-                konut: { oran: 2.49 },
-                tasit: { oran: 2.29 },
-                mevduat: { oran: 53.4 }
-            },
-            ziraat: {
-                ihtiyac: { oran: 2.69 },
-                konut: { oran: 2.95 },
-                tasit: { oran: 2.39 },
-                mevduat: { oran: 53.45 }
-            },
-            qnb: {
-                ihtiyac: { oran: 2.59 },
-                konut: { oran: 2.49 },
-                tasit: { oran: 2.29 },
-                mevduat: { oran: 53.35 }
-            },
-            isbankasi: {
-                ihtiyac: { oran: 2.69 },
-                konut: { oran: 2.49 },
-                tasit: { oran: 2.39 },
-                mevduat: { oran: 53.4 }
-            }
-        };
-
-        const BANK_NAMES = {
-            akbank: "Akbank",
-            garanti: "Garanti BBVA",
-            isbankasi: "İş Bankası",
-            qnb: "QNB",
-            ziraat: "Ziraat Bankası"
-        };
-
-        const LOAN_TYPE_NAMES = {
-            ihtiyac: "İhtiyaç Kredisi",
-            konut: "Konut Kredisi",
-            tasit: "Taşıt Kredisi"
-        };
-
-        const BANK_LOGOS = {
-            akbank: { file: "akbank_logo.png", scale: 1 },
-            garanti: { file: "garanti_logo.png", scale: 1 },
-            isbankasi: { file: "isbankası.svg", scale: 5 },
-            qnb: { file: "QNBFinansbank.svg", scale: 1.5 },
-            ziraat: { file: "ziraatlogo.svg", scale: 7 }
-        };
+        // Oranlar, sınırlar ve hesaplama: assets/js/kredi-oranlari.js
+        const DEFAULT_VALUES = KG_RATES.defaults;
+        const LOAN_LIMITS = KG_RATES.limits;
 
         // Utility Functions
         function getQueryParam(name, defaultValue = '') {
@@ -392,35 +314,6 @@
             input.reportValidity();
         }
 
-        // Loan Calculation Functions
-        function calculateLoan(principal, term, annualRate, loanType) {
-            const P = parseFloat(principal);
-            const r = (annualRate / 100);
-            const n = parseInt(term);
-            let monthlyPayment = P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-
-            const insuranceRate = INSURANCE_RATES[loanType] || 0;
-            const totalInsuranceFee = (P * insuranceRate) * (Math.ceil(n / 12));
-            let monthlyInsuranceFee = totalInsuranceFee / n;
-            monthlyPayment += monthlyInsuranceFee;
-
-            const fileRate = 0.005;
-            const fileFee = P * fileRate;
-
-            const totalInstallment = monthlyPayment * n;
-            const totalPayment = totalInstallment + fileFee;
-
-            return {
-                principal: P,
-                term: n,
-                annualRate: annualRate,
-                monthlyPayment: monthlyPayment,
-                totalInstallment: totalInstallment,
-                fileFee: fileFee,
-                totalPayment: totalPayment
-            };
-        }
-
         // UI Update Functions
         function updateLoanCalculations() {
             const tutar = document.getElementById('tutar').value.replace(/\./g, '');
@@ -430,75 +323,64 @@
 
             if (!container) return;
 
-            container.innerHTML = '';
+            const offers = Object.entries(KG_RATES.banks)
+                .filter(([, bank]) => typeof bank[loanType] === 'number')
+                .map(([key, bank]) => ({ key, bank, calc: KGLoan.calculate(tutar, vade, bank[loanType], loanType) }))
+                .sort((a, b) => a.calc.monthlyPayment - b.calc.monthlyPayment);
 
-            Object.entries(KREDI_ORANLARI).forEach(([bank, rates]) => {
-                if (rates[loanType]) {
-                    const calculation = calculateLoan(tutar, vade, rates[loanType].oran, loanType);
-                    const card = createLoanCard(bank, loanType, calculation);
-                    container.appendChild(card);
-                }
-            });
+            container.innerHTML = '';
+            const head = document.createElement('div');
+            head.className = 'kg-offers-head';
+            head.innerHTML = '<h2>' + offers.length + ' bankadan ' + (KG_RATES.typeNames[loanType] || 'kredi') + ' teklifi</h2>'
+                + '<p>En düşük aylık taksitten başlayarak sıralandı. Oranlar ' + KG_RATES.updated + ' tarihinde güncellendi.</p>';
+            container.appendChild(head);
+            offers.forEach((o, i) => container.appendChild(createLoanCard(o.key, o.bank, loanType, o.calc, i === 0)));
+            const note = document.createElement('p');
+            note.className = 'kg-offers-note';
+            note.textContent = 'Taksitler KKDF ve BSMV dahil hesaplanır (konut kredisi bu vergilerden muaftır). Dosya masrafı kredi tutarının binde 5\'idir. '
+                + 'Kesin oran ve taksit, bankanın değerlendirmesinden sonra belirlenir; sigorta gibi isteğe bağlı ürünler dahil değildir.';
+            container.appendChild(note);
         }
 
-        function createLoanCard(bank, loanType, calculation) {
+        function createLoanCard(key, bank, loanType, calc, best) {
             const card = document.createElement("div");
-            card.className = "teklif-card bg-color-fffaeb";
-            card.style.cssText = "display: flex; align-items: center; gap: 25px; width: 100%; min-height: 150px; min-width: 350px; padding: 20px; border-radius: 30px; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);";
-
+            card.className = "kg-offer-card" + (best ? " is-best" : "");
+            const rate = KGLoan.formatRate(calc.rate);
             card.innerHTML = `
-                <div class="teklif-image-container" style="width: 300px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center">
-                    <img class="app-image-3" data-bank-logo alt="${BANK_NAMES[bank] || bank}" style="height: 30px;">
+                ${best ? '<span class="kg-offer-badge"><i class="ri-medal-line"></i> En Uygun Teklif</span>' : ''}
+                <div class="kg-offer-bank">
+                    <img data-bank-logo alt="${bank.name}">
                 </div>
-                <div style="display: flex;padding-right:50px; padding-left:50px; justify-content: center; width: 100%; gap:10%; flex-wrap: wrap">
-                    <div style="display: flex; flex-direction: column; align-items: center;">
-                        <span style="font-size: 14px; color: #777;">Toplam Miktar</span>
-                        <span style="font-size: 16px; font-weight: bold;">${formatCurrency(calculation.principal)}</span>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;">
-                        <span style="font-size: 14px; color: #777;">Aylık Ödeme</span>
-                        <span style="font-size: 16px; font-weight: bold;">${formatCurrency(calculation.monthlyPayment)}</span>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;">
-                        <span style="font-size: 14px; color: #777;">Faiz Oranı</span>
-                        <span style="font-size: 16px; font-weight: bold;">${calculation.annualRate.toFixed(2)} %</span>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;">
-                        <span style="font-size: 14px; color: #777;">Vade</span>
-                        <span style="font-size: 16px; font-weight: bold;">${calculation.term} ay</span>
-                    </div>
-                    <div style="display: flex; flex-direction: column; align-items: center;">
-                        <span style="font-size: 14px; color: #777;">Toplam Geri Ödeme</span>
-                        <span style="font-size: 16px; font-weight: bold;">${formatCurrency(calculation.totalPayment)}</span>
-                    </div>
-                </div>
-                <div class="teklif-button-container" style="display: flex; gap: 10px; justify-content: center; align-items: center; height: 100%;">
-                    <a style="display: flex;align-items: anchor-center; cursor:pointer" class="default-btn text-center" style="height: 30px; font-size: small;" data-bs-toggle="modal" data-bs-target="#identificationModal"><span>Başvur</span></a>
-                    <a style="display: flex;align-items: anchor-center; cursor:pointer" class="default-btn two text-center" style="height: 30px; font-size: small;" data-bs-toggle="modal" data-bs-target="#detailsModal">Detaylar</a>
+                <dl class="kg-offer-figures">
+                    <div><dt>Aylık Taksit</dt><dd class="kg-offer-main">${formatCurrency(calc.monthlyPayment)}</dd></div>
+                    <div><dt>Aylık Faiz</dt><dd>%${rate}</dd></div>
+                    <div><dt>Vade</dt><dd>${calc.term} ay</dd></div>
+                    <div><dt>Toplam Geri Ödeme</dt><dd>${formatCurrency(calc.totalPayment)}</dd></div>
+                    <div><dt>Yıllık Maliyet</dt><dd>%${KGLoan.formatRate(calc.annualCost)}</dd></div>
+                </dl>
+                <div class="kg-offer-actions">
+                    <a role="button" class="default-btn" data-bs-toggle="modal" data-bs-target="#identificationModal">Başvur <i class="ri-arrow-right-up-line"></i></a>
+                    <a role="button" class="default-btn two" data-bs-toggle="modal" data-bs-target="#detailsModal">Detaylar</a>
                 </div>
             `;
 
             // Başvur ve Detaylar pencereleri teklifin özetini bu bilgilerden gösterir.
             const offer = {
-                bank: BANK_NAMES[bank] || bank,
-                bankKey: bank,
-                typeName: LOAN_TYPE_NAMES[loanType] || '',
-                amount: formatCurrency(calculation.principal),
-                term: String(calculation.term),
-                rate: calculation.annualRate.toFixed(2),
-                monthly: formatCurrency(calculation.monthlyPayment),
-                fee: formatCurrency(calculation.fileFee),
-                total: formatCurrency(calculation.totalPayment)
+                bank: bank.name,
+                bankKey: key,
+                typeName: KG_RATES.typeNames[loanType] || '',
+                amount: formatCurrency(calc.principal),
+                term: String(calc.term),
+                rate: calc.rate.toFixed(2),
+                monthly: formatCurrency(calc.monthlyPayment),
+                fee: formatCurrency(calc.fileFee),
+                total: formatCurrency(calc.totalPayment)
             };
             card.querySelectorAll('[data-bs-toggle="modal"]').forEach(btn => Object.assign(btn.dataset, offer));
 
-            const logoElement = card.querySelector("[data-bank-logo]");
-            if (logoElement && BANK_LOGOS[bank]) {
-                logoElement.src = `assets/images/brands/${bank}/${BANK_LOGOS[bank].file}`;
-                if (BANK_LOGOS[bank].scale > 1) {
-                    logoElement.style.transform = `scale(${BANK_LOGOS[bank].scale})`;
-                }
-            }
+            const logo = card.querySelector("[data-bank-logo]");
+            logo.src = `assets/images/brands/${key}/${bank.logo}`;
+            if (bank.scale > 1) logo.style.transform = `scale(${bank.scale})`;
 
             return card;
         }
@@ -642,8 +524,6 @@
                 document.querySelectorAll(".choose-btn .nav-link").forEach(btn => btn.classList.remove("active"));
                 this.classList.add("active");
                 // set to default
-
-                console.log('Clicked on ' + this.getAttribute("data-tab"));
 
                 updateLimitsBasedOnType(this.getAttribute("data-tab"));
             });
