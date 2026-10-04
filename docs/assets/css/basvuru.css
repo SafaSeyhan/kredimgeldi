@@ -1,0 +1,384 @@
+/* Başvur ve Detaylar pencereleri */
+.kg-modal {
+    --kg-green: #9edd05;
+    --kg-dark: #0c3a30;
+    --kg-ink: #082720;
+    --kg-cream: #fffaeb;
+    --kg-line: rgba(12, 58, 48, 0.12);
+}
+
+.kg-modal .modal-dialog {
+    max-width: 560px;
+    padding: 0 8px;
+}
+
+.kg-modal .modal-dialog.modal-lg {
+    max-width: 760px;
+}
+
+.kg-modal .modal-content {
+    border: 0;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 30px 60px -20px rgba(8, 39, 32, 0.5);
+}
+
+.kg-modal-head {
+    position: relative;
+    flex: 0 0 auto;
+    padding: 30px 32px 28px;
+    background: radial-gradient(circle at 100% 0, rgba(158, 221, 5, 0.3), transparent 50%), var(--kg-dark);
+    color: #F9F9F9;
+}
+
+.kg-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #F9F9F9;
+    font-size: 22px;
+    transition: background ease 0.2s, color ease 0.2s;
+}
+
+.kg-modal-close:hover {
+    background: var(--kg-green);
+    color: var(--kg-ink);
+}
+
+.kg-modal-eyebrow {
+    display: block;
+    padding-right: 48px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--kg-green);
+}
+
+.kg-modal-title {
+    margin: 6px 48px 0 0;
+    font-size: 26px;
+    line-height: 1.25;
+    color: #F9F9F9;
+}
+
+.kg-offer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin: 22px 0 0;
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.kg-offer-wide {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.kg-offer > div {
+    padding: 14px 16px;
+    background: rgba(8, 39, 32, 0.55);
+}
+
+.kg-offer dt {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(249, 249, 249, 0.7);
+}
+
+.kg-offer dd {
+    margin: 4px 0 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #F9F9F9;
+    overflow-wrap: anywhere;
+}
+
+.kg-modal-body {
+    padding: 28px 32px 32px;
+    color: var(--kg-ink);
+}
+
+/* Başvuru formu */
+.kg-apply-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: var(--kg-cream);
+    font-size: 15px;
+}
+
+.kg-apply-note i {
+    font-size: 18px;
+    color: var(--kg-dark);
+}
+
+.kg-apply-note a,
+.kg-apply-consent a,
+.kg-details-more a {
+    color: var(--kg-dark);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.kg-apply-message {
+    margin-bottom: 20px;
+    border-radius: 14px;
+    font-size: 15px;
+}
+
+.kg-modal .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--kg-ink);
+}
+
+.kg-modal .form-control {
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid rgba(12, 58, 48, 0.2);
+    background-color: #F9F9F9;
+    color: var(--kg-ink);
+    padding: 12px 15px;
+}
+
+.kg-modal .form-control:focus {
+    border-color: var(--kg-green);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(158, 221, 5, 0.2);
+}
+
+.kg-modal .form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.kg-modal .invalid-feedback {
+    font-size: 13px;
+}
+
+.kg-sync-hint {
+    margin: 0;
+    font-size: 14px;
+    color: #4b5d58;
+}
+
+/* Kayıtlı bilgiler özeti */
+.kg-saved {
+    padding: 18px 20px;
+    border-radius: 18px;
+    border: 1px solid var(--kg-line);
+    background: var(--kg-cream);
+}
+
+.kg-saved-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.kg-saved-head i {
+    color: var(--kg-dark);
+}
+
+.kg-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1px solid rgba(12, 58, 48, 0.25);
+    border-radius: 30px;
+    background: #ffffff;
+    color: var(--kg-dark);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all ease 0.2s;
+}
+
+.kg-link-btn:hover {
+    background: var(--kg-dark);
+    border-color: var(--kg-dark);
+    color: #F9F9F9;
+}
+
+.kg-saved-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 20px;
+    margin: 0;
+}
+
+.kg-saved-list dt {
+    font-size: 13px;
+    font-weight: 400;
+    color: #4b5d58;
+}
+
+.kg-saved-list dd {
+    margin: 2px 0 0;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.kg-saved-hint {
+    margin: 14px 0 0;
+    font-size: 13px;
+    color: #4b5d58;
+}
+
+.kg-apply-consent {
+    display: flex;
+    gap: 12px;
+    padding: 0;
+    margin: 22px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.kg-apply-consent .form-check-input {
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    margin: 1px 0 0;
+    border-color: var(--kg-dark);
+}
+
+.kg-apply-consent .form-check-input:checked {
+    background-color: var(--kg-dark);
+    border-color: var(--kg-dark);
+}
+
+.kg-apply-consent .form-check-input:focus {
+    box-shadow: 0 0 0 4px rgba(158, 221, 5, 0.3);
+}
+
+.kg-apply-consent .form-check-input.is-invalid {
+    border-color: #dc3545;
+}
+
+.kg-apply-consent .invalid-feedback {
+    flex-basis: 100%;
+}
+
+.kg-apply-consent {
+    flex-wrap: wrap;
+}
+
+.kg-apply-consent .form-check-label {
+    flex: 1 1 0;
+}
+
+.kg-apply-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 24px;
+    padding: 16px 28px;
+    font-size: 17px;
+}
+
+.kg-apply-submit:disabled {
+    opacity: 0.7;
+}
+
+/* Başvuru alındı */
+.kg-apply-done {
+    padding: 10px 0 4px;
+    text-align: center;
+}
+
+.kg-done-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: var(--kg-green);
+    color: var(--kg-ink);
+    font-size: 38px;
+}
+
+.kg-apply-done h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.kg-apply-done p {
+    color: #4b5d58;
+    margin-bottom: 24px;
+}
+
+.kg-apply-done .default-btn {
+    padding: 14px 40px;
+}
+
+/* Detaylar */
+.kg-details-body h4 {
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.kg-details-body p {
+    color: #33463f;
+    line-height: 1.7;
+}
+
+.kg-details-more {
+    padding: 14px 18px;
+    margin: 20px 0 0;
+    border-radius: 14px;
+    background: var(--kg-cream);
+}
+
+@media (max-width: 575px) {
+    .kg-modal .modal-dialog {
+        padding: 0;
+    }
+
+    .kg-modal-head {
+        padding: 24px 20px 22px;
+    }
+
+    .kg-modal-title {
+        font-size: 22px;
+    }
+
+    .kg-offer-wide {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .kg-offer > div {
+        padding: 12px 14px;
+    }
+
+    .kg-offer dd {
+        font-size: 15px;
+    }
+
+    .kg-modal-body {
+        padding: 22px 20px 24px;
+    }
+
+    .kg-saved-list {
+        grid-template-columns: 1fr;
+    }
+}

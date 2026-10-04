@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="assets/css/remixicon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/basvuru.css?v=1">
 
     <title>KredimGeldi</title>
     <!-- some good looking meta tags for SEO and preview -->
@@ -227,6 +228,7 @@
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/basvuru.js?v=1"></script>
     <script>
         fetch('components/mobile_navbar.html')
             .then(response => response.text())
@@ -306,6 +308,20 @@
                 tasit: { oran: 2.39 },
                 mevduat: { oran: 53.4 }
             }
+        };
+
+        const BANK_NAMES = {
+            akbank: "Akbank",
+            garanti: "Garanti BBVA",
+            isbankasi: "İş Bankası",
+            qnb: "QNB",
+            ziraat: "Ziraat Bankası"
+        };
+
+        const LOAN_TYPE_NAMES = {
+            ihtiyac: "İhtiyaç Kredisi",
+            konut: "Konut Kredisi",
+            tasit: "Taşıt Kredisi"
         };
 
         const BANK_LOGOS = {
@@ -491,6 +507,19 @@
                 </div>
             `;
 
+            // Başvur ve Detaylar pencereleri teklifin özetini bu bilgilerden gösterir.
+            const offer = {
+                bank: BANK_NAMES[bank] || bank,
+                typeName: LOAN_TYPE_NAMES[loanType] || '',
+                amount: formatCurrency(calculation.principal),
+                term: String(calculation.term),
+                rate: calculation.annualRate.toFixed(2),
+                monthly: formatCurrency(calculation.monthlyPayment),
+                fee: formatCurrency(calculation.fileFee),
+                total: formatCurrency(calculation.totalPayment)
+            };
+            card.querySelectorAll('[data-bs-toggle="modal"]').forEach(btn => Object.assign(btn.dataset, offer));
+
             const logoElement = card.querySelector("#bankLogo");
             if (logoElement && BANK_LOGOS[bank]) {
                 logoElement.src = `assets/images/brands/${bank}/${BANK_LOGOS[bank].file}`;
@@ -669,12 +698,12 @@
                 }
             }
         });
-        fetch('components/identification_modal.html')
+        fetch('components/identification_modal.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('id-modal-placeholder').innerHTML = data;
             })
-        fetch('components/details_modal.html')
+        fetch('components/details_modal.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('details-modal-placeholder').innerHTML = data;

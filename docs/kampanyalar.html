@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="assets/css/remixicon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/basvuru.css?v=1">
 
     <title>KredimGeldi</title>
     <!-- some good looking meta tags for SEO and preview -->
@@ -595,7 +596,7 @@
 
 
 
-        fetch('components/identification_modal.html')
+        fetch('components/identification_modal.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('id-modal-placeholder').innerHTML = data;
@@ -610,6 +611,7 @@
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/basvuru.js?v=1"></script>
 
     <style>
         .pricing-bg .nav-item {
