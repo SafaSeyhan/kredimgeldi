@@ -152,11 +152,11 @@
                         </div>
 
 
-                        <form class="form-sidebar bg-color-edf1ee radius-20">
+                        <form novalidate data-kg-contact class="form-sidebar bg-color-edf1ee radius-20">
                             <h3>Bize Ulaşın</h3>
-                            <input type="text" class="form-control" placeholder="İsim">
-                            <input type="text" class="form-control" placeholder="E-Posta">
-                            <textarea class="form-control textarea" placeholder="Mesajınız..."></textarea>
+                            <input type="text" class="form-control" name="name" autocomplete="name" maxlength="120" placeholder="Ad Soyad">
+                            <input type="email" class="form-control" name="email" autocomplete="email" maxlength="200" placeholder="E-Posta">
+                            <textarea class="form-control textarea" name="message" maxlength="5000" placeholder="Mesajınız..."></textarea>
                             <button type="submit" class="default-btn">Mesaj Gönder <i
                                     class="ri-arrow-right-up-line"></i></button>
                         </form>
@@ -190,7 +190,7 @@
 
 
 
-        fetch('components/footer.html?v=2')
+        fetch('components/footer.html?v=3')
             .then(response => response.text())
             .then(data => {
                 // document.getElementById('footer-area') add as a scildren
@@ -294,6 +294,7 @@
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js?v=2"></script>
+    <script src="assets/js/formlar.js?v=1"></script>
 
     <style>
         .main-navbar {

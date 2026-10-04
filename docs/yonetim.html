@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Yönetim Paneli - KredimGeldi</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/yonetim.css?v=1">
+</head>
+
+<body class="kg-admin-body">
+    <header class="kg-admin-top">
+        <a href="index.html" class="kg-admin-logo"><img src="assets/images/logo.png" alt="KredimGeldi"></a>
+        <span class="kg-admin-badge">Yönetim Paneli</span>
+        <div class="kg-admin-user">
+            <span id="admin-email"></span>
+            <a href="index.html"><i class="ri-home-4-line"></i> Siteye Dön</a>
+            <a href="#" data-kg-signout><i class="ri-logout-box-r-line"></i> Çıkış</a>
+        </div>
+    </header>
+
+    <main class="kg-admin">
+        <div class="kg-admin-state" id="admin-loading">
+            <span class="spinner-border" role="status" aria-hidden="true"></span>
+            <p>Yükleniyor...</p>
+        </div>
+
+        <div class="kg-admin-state d-none" id="admin-denied">
+            <i class="ri-lock-2-line"></i>
+            <h1>Bu sayfaya erişim yetkiniz yok</h1>
+            <p id="admin-denied-text">Yönetim paneline yalnızca yönetici hesapları girebilir.</p>
+            <a href="index.html" class="default-btn">Ana Sayfaya Dön</a>
+        </div>
+
+        <div class="d-none" id="admin-content">
+            <section class="kg-admin-stats">
+                <div><span>Yeni Başvuru</span><strong id="stat-new">0</strong></div>
+                <div><span>İncelemede</span><strong id="stat-review">0</strong></div>
+                <div><span>Onaylanan</span><strong id="stat-approved">0</strong></div>
+                <div><span>Okunmamış Mesaj</span><strong id="stat-unread">0</strong></div>
+            </section>
+
+            <nav class="kg-admin-tabs" role="tablist">
+                <button type="button" class="active" data-tab="apps"><i class="ri-file-list-3-line"></i> Başvurular <em id="count-apps"></em></button>
+                <button type="button" data-tab="messages"><i class="ri-mail-line"></i> Mesajlar <em id="count-messages"></em></button>
+                <button type="button" data-tab="subscribers"><i class="ri-notification-3-line"></i> Bülten <em id="count-subscribers"></em></button>
+            </nav>
+
+            <!-- Başvurular -->
+            <section class="kg-admin-panel" data-panel="apps">
+                <div class="kg-admin-tools">
+                    <div class="kg-admin-filter" id="apps-filter">
+                        <button type="button" class="active" data-filter="all">Tümü</button>
+                        <button type="button" data-filter="alindi">Bekleyen</button>
+                        <button type="button" data-filter="onaylandi">Onaylanan</button>
+                        <button type="button" data-filter="reddedildi">Reddedilen</button>
+                    </div>
+                    <input type="search" class="form-control" id="apps-search" placeholder="Ad, T.C., telefon veya başvuru no ara">
+                    <button type="button" class="kg-admin-btn" data-export="apps"><i class="ri-download-2-line"></i> Excel (CSV)</button>
+                </div>
+                <div class="kg-admin-table-wrap">
+                    <table class="kg-admin-table">
+                        <thead>
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Başvuru No</th>
+                                <th>Müşteri</th>
+                                <th>Telefon</th>
+                                <th>Banka / Ürün</th>
+                                <th>Tutar</th>
+                                <th>Vade</th>
+                                <th>Durum</th>
+                            </tr>
+                        </thead>
+                        <tbody id="apps-body"></tbody>
+                    </table>
+                </div>
+                <p class="kg-admin-empty d-none" id="apps-empty">Bu filtrede başvuru yok.</p>
+            </section>
+
+            <!-- Mesajlar -->
+            <section class="kg-admin-panel d-none" data-panel="messages">
+                <div class="kg-admin-tools">
+                    <div class="kg-admin-filter" id="messages-filter">
+                        <button type="button" class="active" data-filter="all">Tümü</button>
+                        <button type="button" data-filter="unread">Okunmamış</button>
+                    </div>
+                    <button type="button" class="kg-admin-btn" data-export="messages"><i class="ri-download-2-line"></i> Excel (CSV)</button>
+                </div>
+                <div id="messages-list" class="kg-admin-messages"></div>
+                <p class="kg-admin-empty d-none" id="messages-empty">Henüz mesaj yok.</p>
+            </section>
+
+            <!-- Bülten -->
+            <section class="kg-admin-panel d-none" data-panel="subscribers">
+                <div class="kg-admin-tools">
+                    <button type="button" class="kg-admin-btn" id="copy-emails"><i class="ri-file-copy-line"></i> E-postaları Kopyala</button>
+                    <button type="button" class="kg-admin-btn" data-export="subscribers"><i class="ri-download-2-line"></i> Excel (CSV)</button>
+                </div>
+                <div class="kg-admin-table-wrap">
+                    <table class="kg-admin-table">
+                        <thead><tr><th>E-posta</th><th>Abonelik Tarihi</th></tr></thead>
+                        <tbody id="subscribers-body"></tbody>
+                    </table>
+                </div>
+                <p class="kg-admin-empty d-none" id="subscribers-empty">Henüz abone yok.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Başvuru detayı -->
+    <div class="modal fade kg-admin-modal" id="app-modal" tabindex="-1" aria-labelledby="app-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <span class="kg-admin-eyebrow" id="app-modal-ref"></span>
+                        <h3 class="modal-title" id="app-modal-title"></h3>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h4>Müşteri</h4>
+                            <dl class="kg-admin-dl" id="app-modal-person"></dl>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Başvurulan Teklif</h4>
+                            <dl class="kg-admin-dl" id="app-modal-offer"></dl>
+                        </div>
+                    </div>
+
+                    <form class="kg-admin-result" id="result-form" novalidate>
+                        <h4>Banka Sonucu</h4>
+                        <p class="kg-admin-hint">Sonuç kaydedildiğinde müşteri, Hesabım &gt; Başvurularım bölümünde "Başvuru Sonucunu İncele" adımını görür. Üye olmadan yapılan başvurularda müşteriye telefonla dönüş yapın.</p>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label" for="r-status">Durum</label>
+                                <select class="form-select" id="r-status" name="status">
+                                    <option value="alindi">Değerlendiriliyor</option>
+                                    <option value="onaylandi">Onaylandı</option>
+                                    <option value="reddedildi">Reddedildi</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 kg-approve-only">
+                                <label class="form-label" for="r-amount">Onaylanan Tutar (₺)</label>
+                                <input class="form-control" id="r-amount" name="result_amount" inputmode="decimal">
+                            </div>
+                            <div class="col-md-4 kg-approve-only">
+                                <label class="form-label" for="r-rate">Aylık Faiz (%)</label>
+                                <input class="form-control" id="r-rate" name="result_rate" inputmode="decimal">
+                            </div>
+                            <div class="col-md-4 kg-approve-only">
+                                <label class="form-label" for="r-term">Vade (ay)</label>
+                                <input class="form-control" id="r-term" name="result_term" inputmode="numeric">
+                            </div>
+                            <div class="col-md-4 kg-approve-only">
+                                <label class="form-label" for="r-monthly">Aylık Taksit (₺)</label>
+                                <input class="form-control" id="r-monthly" name="result_monthly" inputmode="decimal">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="r-note">Müşteriye Not</label>
+                                <textarea class="form-control" id="r-note" name="result_note" rows="3" maxlength="1000" placeholder="Örn. Banka sizi 2 iş günü içinde arayacak."></textarea>
+                            </div>
+                        </div>
+                        <div class="kg-admin-message d-none" id="result-message" role="status"></div>
+                        <button type="submit" class="default-btn mt-3">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+    <script src="assets/js/auth-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/yonetim.js?v=1"></script>
+</body>
+
+</html>

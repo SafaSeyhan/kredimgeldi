@@ -105,18 +105,18 @@
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6 col-md-12" data-cues="slideInUp" data-duration="800">
-                    <form class="faq-form bg-color-9edd05 radius-30">
+                    <form novalidate data-kg-contact class="faq-form bg-color-9edd05 radius-30">
                         <div class="section-heading">
                             <span class="sub-title">S.S.S.</span>
                             <h2 class="mb-0">Aradığınız Cevabı Bulamadınız mı? Hemen Sorun!</h2>
                         </div>
                         <div class="form-group bg-color-ffffff radius-30">
-                            <input type="text" class="form-control" placeholder="İsim">
-                            <input type="text" class="form-control" placeholder="E-Posta">
+                            <input type="text" class="form-control" name="name" autocomplete="name" maxlength="120" placeholder="Ad Soyad">
+                            <input type="email" class="form-control" name="email" autocomplete="email" maxlength="200" placeholder="E-Posta">
                             <!-- 
                             <input type="text" class="form-control" placeholder="Website">
                             -->
-                            <textarea class="form-control textarea" placeholder="Sorunuz"></textarea>
+                            <textarea class="form-control textarea" name="message" maxlength="5000" placeholder="Sorunuz"></textarea>
                             <button type="submit" class="default-btn two">Mesaj Gönder <i
                                     class="ri-arrow-right-up-line"></i></button>
                         </div>
@@ -379,7 +379,7 @@
 
 
 
-        fetch('components/footer.html?v=2')
+        fetch('components/footer.html?v=3')
             .then(response => response.text())
             .then(data => {
                 // document.getElementById('footer-area') add as a scildren
@@ -397,6 +397,7 @@
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js?v=2"></script>
+    <script src="assets/js/formlar.js?v=1"></script>
     <style>
         .main-navbar {
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);

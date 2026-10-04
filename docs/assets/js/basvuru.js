@@ -266,30 +266,34 @@
             }
         }
 
-        let saved = null;
-        if (user) {
-            setBusy(form, true);
-            saved = await saveApplication(values);
-            setBusy(form, false);
-            if (saved && saved.error) return showMessage(form, 'Başvurunuz gönderilemedi. ' + KGAuth.translateError(saved.error));
+        setBusy(form, true);
+        const saved = user ? await saveApplication(values) : await saveGuestApplication(values);
+        setBusy(form, false);
+        if (!saved || saved.error) {
+            const err = saved && saved.error;
+            if (err && /tc_kimlik_no/.test(err.message || '')) return showMessage(form, 'Geçerli bir T.C. kimlik numarası girin.');
+            if (err && /Çok fazla/.test(err.message || '')) return showMessage(form, 'Çok fazla deneme yapıldı. Lütfen biraz bekleyip tekrar deneyin.');
+            return showMessage(form, 'Başvurunuz şu anda gönderilemedi. Lütfen birkaç dakika sonra tekrar deneyin.');
         }
 
         const modal = form.closest('.modal');
         const where = offer && offer.bank ? offer.bank + ' ' + (offer.typeName || '') : '';
         $('[data-done-text]', modal).textContent = (where ? where.trim() + ' için b' : 'B') + 'aşvurunuz alındı. Teşekkür ederiz.';
-        const tracked = Boolean(saved && saved.data);
-        $('[data-done-track]', modal).classList.toggle('d-none', !tracked);
-        $('[data-done-link]', modal).classList.toggle('d-none', !tracked);
-        if (tracked) $('[data-done-ref]', modal).textContent = saved.data.reference_no;
+        const ref = saved.data && saved.data.reference_no;
+        $('[data-done-track]', modal).classList.toggle('d-none', !ref);
+        $('[data-done-ref]', modal).textContent = ref || '';
+        $('[data-done-hint]', modal).textContent = user
+            ? 'Başvurunuzun durumunu Hesabım > Başvurularım bölümünden adım adım takip edebilirsiniz.'
+            : 'Başvuru numaranızı not edin. Bundan sonraki başvurularınızı adım adım takip etmek için üye olabilirsiniz.';
+        $('[data-done-link]', modal).classList.toggle('d-none', !user);
+        $('[data-done-signup]', modal).classList.toggle('d-none', Boolean(user));
         form.classList.add('d-none');
         $('[data-step="done"]', modal).classList.remove('d-none');
     }
 
-    // Başvuruyu, teklif ve o anki kimlik bilgileriyle birlikte kaydeder.
-    // Tablo henüz kurulmadıysa başvuru akışını bozmamak için sessizce geçer.
-    async function saveApplication(values) {
+    function offerRow() {
         const o = offer || {};
-        const row = Object.assign({
+        return {
             bank_code: o.bankKey || null,
             bank_name: o.bank || null,
             loan_type: o.typeName || null,
@@ -299,13 +303,36 @@
             monthly_payment: parseTl(o.monthly),
             total_payment: parseTl(o.total),
             file_fee: parseTl(o.fee)
-        }, values);
+        };
+    }
+
+    // Üye başvurusu: teklif ve o anki kimlik bilgileriyle kaydedilir, Başvurularım'da görünür.
+    async function saveApplication(values) {
+        const row = Object.assign(offerRow(), values);
         try {
             const { data, error } = await KGAuth.client.from(APPLICATIONS).insert(row).select('id, reference_no').single();
-            if (!error) return { data };
-            console.error('Başvuru kaydedilemedi:', error);
-            const missing = error.code === '42P01' || error.code === 'PGRST205' || /does not exist|schema cache/i.test(error.message || '');
-            return missing ? null : { error };
+            if (error) console.error('Başvuru kaydedilemedi:', error);
+            return error ? { error } : { data };
+        } catch (e) {
+            console.error('Başvuru kaydedilemedi:', e);
+            return { error: e };
+        }
+    }
+
+    // Üye olmadan başvuru: supabase/formlar_ve_yonetim.sql içindeki fonksiyonla kaydedilir.
+    async function saveGuestApplication(values) {
+        if (!window.KGAuth || !KGAuth.client) return { error: { message: 'not configured' } };
+        const r = offerRow();
+        try {
+            const { data, error } = await KGAuth.client.rpc('submit_guest_application', {
+                p_bank_code: r.bank_code, p_bank_name: r.bank_name, p_loan_type: r.loan_type,
+                p_amount: r.amount, p_term_months: r.term_months, p_interest_rate: r.interest_rate,
+                p_monthly_payment: r.monthly_payment, p_total_payment: r.total_payment, p_file_fee: r.file_fee,
+                p_first_name: values.first_name, p_last_name: values.last_name, p_tc_kimlik_no: values.tc_kimlik_no,
+                p_birth_date: values.birth_date || null, p_phone: values.phone
+            });
+            if (error) console.error('Başvuru kaydedilemedi:', error);
+            return error ? { error } : { data: { reference_no: data } };
         } catch (e) {
             console.error('Başvuru kaydedilemedi:', e);
             return { error: e };

@@ -199,7 +199,8 @@
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js?v=2"></script>
-    <script src="assets/js/basvuru.js?v=3"></script>
+    <script src="assets/js/formlar.js?v=1"></script>
+    <script src="assets/js/basvuru.js?v=4"></script>
     <script src="assets/js/kredi-oranlari.js?v=1"></script>
     <script>
         fetch('components/mobile_navbar.html?v=2')
@@ -213,7 +214,7 @@
 
 
 
-        fetch('components/footer.html?v=2')
+        fetch('components/footer.html?v=3')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
@@ -551,7 +552,7 @@
                 }
             }
         });
-        fetch('components/identification_modal.html?v=3')
+        fetch('components/identification_modal.html?v=4')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('id-modal-placeholder').innerHTML = data;
