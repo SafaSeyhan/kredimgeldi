@@ -40,13 +40,35 @@ enabled under **Authentication > Providers**. Each needs an OAuth app created in
 Console / Meta for Developers, with the callback URL Supabase shows on that page.
 Until then the buttons show "Bu giriş yöntemi henüz aktif değil."
 
+## 5. Loan application profile table
+
+The account page (`hesabim.html`) lets signed-in customers save the personal details a loan
+application needs. They are stored in a `loan_profiles` table in the same Supabase project.
+
+1. Open **SQL Editor > New query** in the Supabase dashboard.
+2. Paste the whole of [`supabase/loan_profiles.sql`](supabase/loan_profiles.sql) and click **Run**.
+   It is safe to run more than once.
+3. Check **Table Editor > loan_profiles**: it should show "RLS enabled" and four policies.
+
+Row Level Security means each signed-in user can only read, insert, update and delete their own
+row; visitors who are not signed in cannot touch the table at all. You (the project owner) can see
+every customer's row in the Table Editor. Until the SQL is run, the account page shows a notice and
+the profile forms are disabled.
+
+Saved fields: name, T.C. kimlik no (checksum validated), birth date (18+), gender, marital status,
+education, dependents; mobile phone, city, district, address, postal code, residence status;
+employment status, occupation, employer, job start month, net monthly income, other income,
+monthly debt payments, salary bank; loan type, amount, term; KVKK consent (with timestamp) and
+accuracy declaration.
+
 ## What's included
 
 | Page | What it does |
 | --- | --- |
 | `login.html` | Sign in (with "Beni Hatırla"), sign up (name, email, password, KVKK consent), Google/Facebook buttons |
 | `password.html` | Sends the reset email; the link in the email opens the same page with a "new password" form |
-| `hesabim.html` | Account page (name, email, member since, change password, sign out). Redirects to sign in when logged out |
+| `hesabim.html` | Account page: welcome banner with profile completion, loan application profile in four sections (saved to `loan_profiles`), change password, delete saved details, sign out. Redirects to sign in when logged out |
 | Header & mobile menu | "Giriş Yap / Üye Ol" become "<name> / Çıkış Yap" when signed in |
 
-Code: `docs/assets/js/auth.js` (all auth logic) and `docs/assets/js/auth-config.js` (keys).
+Code: `docs/assets/js/auth.js` (all auth logic), `docs/assets/js/auth-config.js` (keys),
+`docs/assets/js/hesabim.js` + `docs/assets/css/hesabim.css` (account page).
