@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="tr">
 
 <head>
     <!-- Meta Tags -->
@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="assets/css/remixicon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/hesabim.css">
 
     <!-- Title & Favicon -->
     <title>Hesabım - KredimGeldi</title>
@@ -86,7 +87,7 @@
                 </div>
                 <div class="modal-body">
                     <form class="popup-form">
-                        <input type="text" class="form-control" placeholder="Search here">
+                        <input type="text" class="form-control" placeholder="Ara">
                         <button type="submit" class="popup-btn">
                             <i class="ri-search-line"></i>
                         </button>
@@ -99,29 +100,371 @@
 
 
 
-    <div class="my-account-page ptb-120 overflow-hidden">
+    <main class="kg-account">
         <div class="container">
-            <div class="row g-4 d-none" id="account-content">
-                <div class="col-lg-6 col-md-12">
-                    <div class="login-form bg-color-fffaeb radius-30">
-                        <h3>Hesabım</h3>
-                        <p class="mb-2"><strong>İsim:</strong> <span id="account-name"></span></p>
-                        <p class="mb-2"><strong>E-Posta:</strong> <span id="account-email"></span></p>
-                        <p class="mb-4"><strong>Üyelik Tarihi:</strong> <span id="account-created"></span></p>
-                        <button type="button" class="default-btn w-100 text-center" data-kg-signout>Çıkış Yap</button>
+            <div class="kg-loading text-center" id="account-loading">
+                <span class="spinner-border" role="status" aria-hidden="true"></span>
+                <p class="mt-3 mb-0">Hesabınız yükleniyor...</p>
+            </div>
+
+            <div class="d-none" id="account-content">
+                <!-- Karşılama -->
+                <section class="kg-hero">
+                    <div class="kg-hero-user">
+                        <div class="kg-avatar" id="account-initials" aria-hidden="true"></div>
+                        <div>
+                            <span class="kg-hero-eyebrow">Hoş geldiniz</span>
+                            <h1 class="kg-hero-name" id="account-name"></h1>
+                            <p class="kg-hero-meta">
+                                <span><i class="ri-mail-line"></i> <span id="account-email"></span></span>
+                                <span><i class="ri-calendar-line"></i> Üyelik: <span id="account-created"></span></span>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <form class="login-form bg-color-fffaeb radius-30" id="change-password-form" novalidate>
-                        <h3>Şifre Değiştir</h3>
-                        <input type="password" name="password" class="form-control" placeholder="Yeni Şifre (en az 8 karakter)" autocomplete="new-password" minlength="8" required>
-                        <input type="password" name="password2" class="form-control" placeholder="Yeni Şifre Tekrar" autocomplete="new-password" required>
-                        <button type="submit" class="default-btn w-100 text-center">Şifremi Güncelle</button>
-                    </form>
+                    <div class="kg-hero-progress">
+                        <div class="d-flex justify-content-between align-items-end mb-2">
+                            <span>Başvuru profiliniz</span>
+                            <strong id="progress-text">%0</strong>
+                        </div>
+                        <div class="kg-progress" role="progressbar" aria-label="Profil doluluk oranı" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+                            <div class="kg-progress-fill" id="progress-fill"></div>
+                        </div>
+                        <p class="kg-hero-hint" id="progress-hint">Kredi başvurusu için bilgilerinizi tamamlayın.</p>
+                    </div>
+                </section>
+
+                <div class="alert alert-warning d-none" id="profile-unavailable" role="alert"></div>
+
+                <div class="row g-4">
+                    <!-- Menü -->
+                    <aside class="col-lg-3">
+                        <nav class="kg-side nav flex-column" id="account-tabs" role="tablist">
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-ozet" data-tab="ozet" type="button" role="tab">
+                                <i class="ri-dashboard-line"></i> Genel Bakış
+                            </button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-kimlik" data-tab="kimlik" type="button" role="tab">
+                                <i class="ri-profile-line"></i> Kimlik Bilgileri <span class="kg-dot" data-dot="kimlik"></span>
+                            </button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-iletisim" data-tab="iletisim" type="button" role="tab">
+                                <i class="ri-map-pin-line"></i> İletişim ve Adres <span class="kg-dot" data-dot="iletisim"></span>
+                            </button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-gelir" data-tab="gelir" type="button" role="tab">
+                                <i class="ri-briefcase-line"></i> Çalışma ve Gelir <span class="kg-dot" data-dot="gelir"></span>
+                            </button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-tercih" data-tab="tercih" type="button" role="tab">
+                                <i class="ri-hand-coin-line"></i> Kredi Tercihi <span class="kg-dot" data-dot="tercih"></span>
+                            </button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-guvenlik" data-tab="guvenlik" type="button" role="tab">
+                                <i class="ri-shield-keyhole-line"></i> Güvenlik
+                            </button>
+                            <button class="nav-link kg-signout" type="button" data-kg-signout>
+                                <i class="ri-logout-box-r-line"></i> Çıkış Yap
+                            </button>
+                        </nav>
+                    </aside>
+
+                    <div class="col-lg-9">
+                        <div class="tab-content">
+                            <!-- Genel Bakış -->
+                            <div class="tab-pane fade show active" id="tab-ozet" role="tabpanel">
+                                <div class="kg-card">
+                                    <h2 class="kg-card-title">Başvuru Profiliniz</h2>
+                                    <p class="kg-card-sub">Bilgilerinizi bir kez doldurun, kredi başvurularınızda tekrar tekrar yazmanıza gerek kalmasın.</p>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <button type="button" class="kg-step" data-goto="kimlik">
+                                                <span class="kg-step-icon"><i class="ri-profile-line"></i></span>
+                                                <span class="kg-step-body">
+                                                    <strong>Kimlik Bilgileri</strong>
+                                                    <small>Ad, T.C. kimlik no, doğum tarihi</small>
+                                                </span>
+                                                <span class="kg-badge" data-badge="kimlik"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="button" class="kg-step" data-goto="iletisim">
+                                                <span class="kg-step-icon"><i class="ri-map-pin-line"></i></span>
+                                                <span class="kg-step-body">
+                                                    <strong>İletişim ve Adres</strong>
+                                                    <small>Telefon, ikamet adresi</small>
+                                                </span>
+                                                <span class="kg-badge" data-badge="iletisim"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="button" class="kg-step" data-goto="gelir">
+                                                <span class="kg-step-icon"><i class="ri-briefcase-line"></i></span>
+                                                <span class="kg-step-body">
+                                                    <strong>Çalışma ve Gelir</strong>
+                                                    <small>Meslek, işyeri, aylık gelir</small>
+                                                </span>
+                                                <span class="kg-badge" data-badge="gelir"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="button" class="kg-step" data-goto="tercih">
+                                                <span class="kg-step-icon"><i class="ri-hand-coin-line"></i></span>
+                                                <span class="kg-step-body">
+                                                    <strong>Kredi Tercihi</strong>
+                                                    <small>Kredi türü, tutar, vade, onaylar</small>
+                                                </span>
+                                                <span class="kg-badge" data-badge="tercih"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="kg-note">
+                                    <i class="ri-lock-2-line"></i>
+                                    <p class="mb-0">Bilgileriniz şifreli bağlantı üzerinden saklanır ve yalnızca sizin hesabınızla görüntülenebilir.
+                                        Ayrıntılar için <a href="kisisel-verilerin-korunmasi.html">KVKK Aydınlatma Metni</a>'ni inceleyebilirsiniz.</p>
+                                </div>
+                            </div>
+
+                            <!-- Kimlik Bilgileri -->
+                            <div class="tab-pane fade" id="tab-kimlik" role="tabpanel">
+                                <form class="kg-card kg-form" data-section="kimlik" novalidate>
+                                    <h2 class="kg-card-title">Kimlik Bilgileri</h2>
+                                    <p class="kg-card-sub">Nüfus cüzdanınızdaki bilgilerle aynı olmalıdır.</p>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-first_name">Ad</label>
+                                            <input class="form-control" id="f-first_name" name="first_name" autocomplete="given-name" maxlength="60" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-last_name">Soyad</label>
+                                            <input class="form-control" id="f-last_name" name="last_name" autocomplete="family-name" maxlength="60" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-tc_kimlik_no">T.C. Kimlik No</label>
+                                            <input class="form-control" id="f-tc_kimlik_no" name="tc_kimlik_no" inputmode="numeric" maxlength="11" placeholder="11 haneli" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-birth_date">Doğum Tarihi</label>
+                                            <input class="form-control" id="f-birth_date" name="birth_date" type="date" autocomplete="bday" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-gender">Cinsiyet</label>
+                                            <select class="form-select" id="f-gender" name="gender" required>
+                                                <option value="">Seçiniz</option>
+                                                <option>Kadın</option>
+                                                <option>Erkek</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-marital_status">Medeni Durum</label>
+                                            <select class="form-select" id="f-marital_status" name="marital_status" required>
+                                                <option value="">Seçiniz</option>
+                                                <option>Bekar</option>
+                                                <option>Evli</option>
+                                                <option>Boşanmış</option>
+                                                <option>Dul</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-education">Öğrenim Durumu</label>
+                                            <select class="form-select" id="f-education" name="education" required>
+                                                <option value="">Seçiniz</option>
+                                                <option>İlkokul</option>
+                                                <option>Ortaokul</option>
+                                                <option>Lise</option>
+                                                <option>Ön Lisans</option>
+                                                <option>Lisans</option>
+                                                <option>Yüksek Lisans</option>
+                                                <option>Doktora</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-dependents">Bakmakla Yükümlü Olduğunuz Kişi Sayısı</label>
+                                            <input class="form-control" id="f-dependents" name="dependents" type="number" min="0" max="20" step="1" placeholder="0">
+                                        </div>
+                                    </div>
+                                    <div class="kg-form-actions">
+                                        <button type="submit" class="default-btn">Kaydet ve Devam Et <i class="ri-arrow-right-line"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- İletişim ve Adres -->
+                            <div class="tab-pane fade" id="tab-iletisim" role="tabpanel">
+                                <form class="kg-card kg-form" data-section="iletisim" novalidate>
+                                    <h2 class="kg-card-title">İletişim ve Adres</h2>
+                                    <p class="kg-card-sub">Başvurunuzla ilgili sizinle bu bilgiler üzerinden iletişime geçilir.</p>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-phone">Cep Telefonu</label>
+                                            <input class="form-control" id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="05XX XXX XX XX" maxlength="14" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-residence_status">İkamet Durumu</label>
+                                            <select class="form-select" id="f-residence_status" name="residence_status" required>
+                                                <option value="">Seçiniz</option>
+                                                <option>Ev sahibi</option>
+                                                <option>Kiracı</option>
+                                                <option>Aile yanında</option>
+                                                <option>Lojman</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-city">İl</label>
+                                            <select class="form-select" id="f-city" name="city" required>
+                                                <option value="">Seçiniz</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-district">İlçe</label>
+                                            <input class="form-control" id="f-district" name="district" maxlength="60" required>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label class="form-label" for="f-address">Açık Adres</label>
+                                            <textarea class="form-control" id="f-address" name="address" rows="2" maxlength="500" autocomplete="street-address" placeholder="Mahalle, cadde/sokak, bina ve daire no" required></textarea>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label" for="f-postal_code">Posta Kodu</label>
+                                            <input class="form-control" id="f-postal_code" name="postal_code" inputmode="numeric" autocomplete="postal-code" maxlength="5">
+                                        </div>
+                                    </div>
+                                    <div class="kg-form-actions">
+                                        <button type="submit" class="default-btn">Kaydet ve Devam Et <i class="ri-arrow-right-line"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Çalışma ve Gelir -->
+                            <div class="tab-pane fade" id="tab-gelir" role="tabpanel">
+                                <form class="kg-card kg-form" data-section="gelir" novalidate>
+                                    <h2 class="kg-card-title">Çalışma ve Gelir Bilgileri</h2>
+                                    <p class="kg-card-sub">Bankalar kredi limitini gelir ve mevcut borçlarınıza göre belirler.</p>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-employment_status">Çalışma Durumu</label>
+                                            <select class="form-select" id="f-employment_status" name="employment_status" required>
+                                                <option value="">Seçiniz</option>
+                                                <option>Özel sektör çalışanı</option>
+                                                <option>Kamu çalışanı</option>
+                                                <option>Serbest meslek / İşveren</option>
+                                                <option>Emekli</option>
+                                                <option>Öğrenci</option>
+                                                <option>Ev hanımı</option>
+                                                <option>Çalışmıyor</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6" data-working>
+                                            <label class="form-label" for="f-occupation">Meslek</label>
+                                            <input class="form-control" id="f-occupation" name="occupation" maxlength="80" autocomplete="organization-title" required>
+                                        </div>
+                                        <div class="col-md-6" data-working>
+                                            <label class="form-label" for="f-employer_name">İşyeri Adı</label>
+                                            <input class="form-control" id="f-employer_name" name="employer_name" maxlength="120" autocomplete="organization" required>
+                                        </div>
+                                        <div class="col-md-6" data-working>
+                                            <label class="form-label" for="f-job_start_date">Bu İşyerinde Çalışmaya Başlama Tarihi</label>
+                                            <input class="form-control" id="f-job_start_date" name="job_start_date" type="month" placeholder="YYYY-AA" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-monthly_income">Aylık Net Gelir (₺)</label>
+                                            <input class="form-control" id="f-monthly_income" name="monthly_income" type="number" min="0" step="1" inputmode="numeric" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-other_income">Ek Aylık Gelir (₺) <span class="kg-optional">isteğe bağlı</span></label>
+                                            <input class="form-control" id="f-other_income" name="other_income" type="number" min="0" step="1" inputmode="numeric" placeholder="Kira, yan gelir vb.">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-monthly_debt_payments">Mevcut Aylık Kredi ve Kart Ödemeleri (₺)</label>
+                                            <input class="form-control" id="f-monthly_debt_payments" name="monthly_debt_payments" type="number" min="0" step="1" inputmode="numeric" placeholder="Yoksa 0 yazın" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-salary_bank">Maaş / Emekli Maaşı Aldığınız Banka</label>
+                                            <select class="form-select" id="f-salary_bank" name="salary_bank">
+                                                <option value="">Seçiniz</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="kg-form-actions">
+                                        <button type="submit" class="default-btn">Kaydet ve Devam Et <i class="ri-arrow-right-line"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Kredi Tercihi -->
+                            <div class="tab-pane fade" id="tab-tercih" role="tabpanel">
+                                <form class="kg-card kg-form" data-section="tercih" novalidate>
+                                    <h2 class="kg-card-title">Kredi Tercihi</h2>
+                                    <p class="kg-card-sub">İhtiyacınıza uygun teklifleri bulabilmemiz için kullanılır. Daha sonra değiştirebilirsiniz.</p>
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <label class="form-label" for="f-loan_type">Kredi Türü</label>
+                                            <select class="form-select" id="f-loan_type" name="loan_type" required>
+                                                <option value="">Seçiniz</option>
+                                                <option>İhtiyaç Kredisi</option>
+                                                <option>Taşıt Kredisi</option>
+                                                <option>Konut Kredisi</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label" for="f-loan_amount">Kredi Tutarı (₺)</label>
+                                            <input class="form-control" id="f-loan_amount" name="loan_amount" type="number" min="1000" step="1000" inputmode="numeric" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label" for="f-loan_term_months">Vade</label>
+                                            <select class="form-select" id="f-loan_term_months" name="loan_term_months" required>
+                                                <option value="">Seçiniz</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="kg-consents">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="f-consent_kvkk" name="consent_kvkk" required>
+                                            <label class="form-check-label" for="f-consent_kvkk">
+                                                Kişisel verilerimin kredi başvurusu amacıyla işlenmesine ve anlaşmalı bankalarla paylaşılmasına
+                                                <a href="acik-riza-metni.html" target="_blank">Açık Rıza Metni</a> kapsamında onay veriyorum.
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="f-consent_accuracy" name="consent_accuracy" required>
+                                            <label class="form-check-label" for="f-consent_accuracy">
+                                                Verdiğim bilgilerin doğru ve güncel olduğunu beyan ederim.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="kg-form-actions">
+                                        <button type="submit" class="default-btn">Kaydet <i class="ri-check-line"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Güvenlik -->
+                            <div class="tab-pane fade" id="tab-guvenlik" role="tabpanel">
+                                <form class="kg-card" id="change-password-form" novalidate>
+                                    <h2 class="kg-card-title">Şifre Değiştir</h2>
+                                    <p class="kg-card-sub">Güçlü bir şifre en az 8 karakterden oluşur ve harf ile rakam içerir.</p>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-password">Yeni Şifre</label>
+                                            <input type="password" id="f-password" name="password" class="form-control" autocomplete="new-password" minlength="8" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label" for="f-password2">Yeni Şifre Tekrar</label>
+                                            <input type="password" id="f-password2" name="password2" class="form-control" autocomplete="new-password" required>
+                                        </div>
+                                    </div>
+                                    <div class="kg-form-actions">
+                                        <button type="submit" class="default-btn">Şifremi Güncelle</button>
+                                    </div>
+                                </form>
+                                <form class="kg-card kg-danger" id="delete-profile-form" novalidate>
+                                    <h2 class="kg-card-title">Başvuru Bilgilerimi Sil</h2>
+                                    <p class="kg-card-sub">Kaydettiğiniz kimlik, adres, gelir ve kredi tercihi bilgileriniz kalıcı olarak silinir. Üyeliğiniz devam eder.</p>
+                                    <div class="kg-form-actions">
+                                        <button type="submit" class="kg-btn-danger">Bilgilerimi Sil</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <div id="footer-placeholder" class="footer-area bg-color-0c3a30 pt-120">
     </div>
     <div class="go-top">
@@ -145,20 +488,6 @@
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
-    <style>
-        .main-navbar {
-            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            width: 100%;
-        }
-
-        .my-account-page{
-            padding-top:180px;
-        }
-
-
-
-    </style>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
@@ -169,31 +498,7 @@
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js"></script>
-    <script>
-        (async function () {
-            const user = await KGAuth.requireUser();
-            if (!user) return;
-
-            document.getElementById('account-name').textContent = KGAuth.displayName(user);
-            document.getElementById('account-email').textContent = user.email;
-            document.getElementById('account-created').textContent = new Date(user.created_at).toLocaleDateString('tr-TR');
-            document.getElementById('account-content').classList.remove('d-none');
-
-            const form = document.getElementById('change-password-form');
-            form.addEventListener('submit', async function (e) {
-                e.preventDefault();
-                const password = form.password.value;
-                if (password.length < 8) return KGAuth.showMessage(form, 'Şifre en az 8 karakter olmalı.');
-                if (password !== form.password2.value) return KGAuth.showMessage(form, 'Şifreler eşleşmiyor.');
-                KGAuth.setBusy(form, true);
-                const { error } = await KGAuth.updatePassword(password);
-                KGAuth.setBusy(form, false);
-                if (error) return KGAuth.showMessage(form, KGAuth.translateError(error));
-                form.reset();
-                KGAuth.showMessage(form, 'Şifreniz güncellendi.', 'success');
-            });
-        })();
-    </script>
+    <script src="assets/js/hesabim.js"></script>
 </body>
 
 </html>
