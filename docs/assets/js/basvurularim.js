@@ -242,7 +242,7 @@
             items.push(['done', 'Başvurunuz ' + bankName(app) + ' değerlendirmesine iletildi', dateTime(stage.checkAt)]);
             if (stage.step === 2) items.push(['current', 'Banka değerlendirmesi sürüyor', 'Sonuçlandığında bu sayfada görüntülenecek']);
             else items.push([stage.key === 'onaylandi' ? 'done' : 'failed',
-                stage.key === 'onaylandi' ? 'Başvurunuz onaylandı' : 'Başvurunuz olumlu sonuçlanmadı',
+                stage.key === 'onaylandi' ? 'Başvurunuz onaylandı' : 'Başvuru Olumsuz Sonuçlandı',
                 app.result_at ? dateTime(app.result_at) : '']);
         }
         return '<ol class="kg-history">' + items.map(i => '<li class="' + i[0] + '"><strong>' + esc(i[1]) + '</strong>'
