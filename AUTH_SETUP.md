@@ -72,3 +72,15 @@ accuracy declaration.
 
 Code: `docs/assets/js/auth.js` (all auth logic), `docs/assets/js/auth-config.js` (keys),
 `docs/assets/js/hesabim.js` + `docs/assets/css/hesabim.css` (account page).
+
+## Forms, guest applications and the admin panel
+
+Run `supabase/formlar_ve_yonetim.sql` in the SQL Editor (after `loan_applications.sql`). Before running it,
+change the e-mail on the last line to the account that should manage the site.
+
+- Contact forms (İletişim, SSS, Kampanyalar, service pages) save to `contact_messages`.
+- The footer "Abone Ol" field saves to `newsletter_subscribers`.
+- Applications made without signing in are saved to `loan_applications` with an empty `user_id`.
+- `yonetim.html` (e.g. https://kredimgeldi.com/yonetim.html) lists applications, messages and subscribers
+  for accounts in `admin_users`, lets you set an application's result, and exports each list as CSV.
+  To add another manager: `insert into admin_users (user_id) select id from auth.users where email = '...';`
