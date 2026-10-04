@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /hesabim.html
+Disallow: /yonetim.html
+Disallow: /password.html
+
+Sitemap: https://kredimgeldi.com/sitemap.xml

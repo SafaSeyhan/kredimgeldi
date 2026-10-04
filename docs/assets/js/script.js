@@ -30,7 +30,7 @@
     // Header is loaded right away (not after all images) so the menu shows up immediately.
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder && !document.getElementById('navbar')) {
-        fetch('components/header.html?v=2')
+        fetch('components/header.html?v=3')
             .then(response => response.text())
             .then(data => {
                 if (document.getElementById('navbar')) return;
