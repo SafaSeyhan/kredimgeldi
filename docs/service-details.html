@@ -111,51 +111,22 @@
                         <img class="service-image-9 radius-30" src="assets/images/service/service-1.jpg"
                             alt="image">
 
-                        <h2 id="heading-title">Global Payments</h2>
-                        <p id="content-1">Our mission is to bridge the gap between traditional banking and modern
-                            technology offering
-                            innovative and seamless financial services that cater to the evolving needs of individuals
-                            and businesses alike with a robust suite of products ranging.</p>
-                        <p id="content-2">We are redefining the financial services industry with our innovative fintech
-                            solutions. By
-                            integrating advanced with financial expertise we provide a comprehensive suite of services
-                            that cater to both individuals and businesses from digital banking and seamless payment
-                            processing to sophisticated investment tools and personalized financial.</p>
+                        <h2 id="heading-title"></h2>
+                        <p id="content-1"></p>
+                        <p id="content-2"></p>
 
                         <div class="offering-card bg-color-0c3a30 radius-20">
-                            <p id="content-3" class="text-white text-center">“Our mission is to bridge the gap between
-                                traditional
-                                banking and modern technology, offering innovative and seamless financial services that
-                                cater to the evolving needs of individuals and businesses alike with a robust suite of
-                                products ranging from digital banking and payment processing.”</p>
+                            <p id="content-3" class="text-white text-center"></p>
                         </div>
-                        <p id="content-4" class="mb-5">With a robust suite of products ranging from digital banking and
-                            payment
-                            processing to wealth management and blockchain applications, we empower our clients to
-                            navigate the complexities of the financial world with ease and confidence.</p>
+                        <p id="content-4" class="mb-5"></p>
 
-                        <h2 id="bullet-title">Our Online Banking Solution</h2>
+                        <h2 id="bullet-title"></h2>
                         <ul class="check">
-                            <li id="bullet-1">
-                                <i class="ri-check-line"></i>
-                                Registration and Verification
-                            </li>
-                            <li id="bullet-2">
-                                <i class="ri-check-line"></i>
-                                Making Transactions
-                            </li>
-                            <li id="bullet-3">
-                                <i class="ri-check-line"></i>
-                                Monitoring and Managing Accounts
-                            </li>
-                            <li id="bullet-4">
-                                <i class="ri-check-line"></i>
-                                Built for Global payments
-                            </li>
-                            <li id="bullet-5">
-                                <i class="ri-check-line"></i>
-                                Spend without borders
-                            </li>
+                            <li id="bullet-1"></li>
+                            <li id="bullet-2"></li>
+                            <li id="bullet-3"></li>
+                            <li id="bullet-4"></li>
+                            <li id="bullet-5"></li>
                         </ul>
 
                         <div class="row g-4 mb-4" data-cues="slideInUp" data-duration="800">
@@ -166,11 +137,7 @@
                                 <img class="radius-30" src="assets/images/service/service-image-11.jpg" alt="image">
                             </div>
                         </div>
-                        <p id="content-5">With a robust suite of products ranging from digital banking and payment
-                            processing to wealth
-                            management and blockchain applications we empower our clients to navigate the complexities
-                            of the financial world with ease and confidence our commitment to security transparency and
-                            customer centricity ensures that every transaction.</p>
+                        <p id="content-5"></p>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -213,7 +180,7 @@
     <!-- JS Files -->
 
     <script>
-        fetch('components/mobile_navbar.html')
+        fetch('components/mobile_navbar.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbarOffcanvas').innerHTML = data;
@@ -223,7 +190,7 @@
 
 
 
-        fetch('components/footer.html')
+        fetch('components/footer.html?v=2')
             .then(response => response.text())
             .then(data => {
                 // document.getElementById('footer-area') add as a scildren
@@ -277,15 +244,14 @@
         }
 
 
-        // let pagename = get href type, get name of that
-        if (!type) {
-            // go to prices page
-            window.location.href = "kampanyalar.html";
-        };
-        let pagename = serviceDetails[type].title;
+        // Tür yoksa veya tanınmıyorsa hizmetler listesine dön.
+        if (!serviceDetails[type]) {
+            window.location.replace("services.html");
+        }
+        const pagename = serviceDetails[type] ? serviceDetails[type].title : "";
+        if (pagename) document.title = pagename + " - KredimGeldi";
 
-        console.log(pagename);
-        document.addEventListener("DOMContentLoaded", function () {
+        if (pagename) document.addEventListener("DOMContentLoaded", function () {
             fetch("service-details.json")
                 .then(response => response.json())
                 .then(jsonData => {
@@ -327,7 +293,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js?v=2"></script>
 
     <style>
         .main-navbar {

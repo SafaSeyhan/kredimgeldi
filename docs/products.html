@@ -198,10 +198,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js?v=2"></script>
     <script src="assets/js/basvuru.js?v=3"></script>
     <script>
-        fetch('components/mobile_navbar.html')
+        fetch('components/mobile_navbar.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbarOffcanvas').innerHTML = data;
@@ -212,7 +212,7 @@
 
 
 
-        fetch('components/footer.html')
+        fetch('components/footer.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
@@ -448,7 +448,7 @@
 
             card.innerHTML = `
                 <div class="teklif-image-container" style="width: 300px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center">
-                    <img class="app-image-3" id="bankLogo" alt="${bank}" style="height: 30px;">
+                    <img class="app-image-3" data-bank-logo alt="${BANK_NAMES[bank] || bank}" style="height: 30px;">
                 </div>
                 <div style="display: flex;padding-right:50px; padding-left:50px; justify-content: center; width: 100%; gap:10%; flex-wrap: wrap">
                     <div style="display: flex; flex-direction: column; align-items: center;">
@@ -465,7 +465,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: center;">
                         <span style="font-size: 14px; color: #777;">Vade</span>
-                        <span style="font-size: 16px; font-weight: bold;">${calculation.term}</span>
+                        <span style="font-size: 16px; font-weight: bold;">${calculation.term} ay</span>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: center;">
                         <span style="font-size: 14px; color: #777;">Toplam Geri Ödeme</span>
@@ -492,7 +492,7 @@
             };
             card.querySelectorAll('[data-bs-toggle="modal"]').forEach(btn => Object.assign(btn.dataset, offer));
 
-            const logoElement = card.querySelector("#bankLogo");
+            const logoElement = card.querySelector("[data-bank-logo]");
             if (logoElement && BANK_LOGOS[bank]) {
                 logoElement.src = `assets/images/brands/${bank}/${BANK_LOGOS[bank].file}`;
                 if (BANK_LOGOS[bank].scale > 1) {
@@ -593,6 +593,7 @@
             let tutar = getQueryParam("tutar", '').replace(/\./g, '');
             let vade = getQueryParam("vade", '');
             let type = getQueryParam("type", "ihtiyac");
+            if (!DEFAULT_VALUES[type]) type = "ihtiyac";
 
             // Set active tab
             const navItems = document.querySelectorAll('.choose-btn .nav-link');

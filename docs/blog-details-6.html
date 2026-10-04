@@ -124,22 +124,22 @@
                                             style="display: flex; align-items: center; padding-left: 0; list-style: none; margin: 0;">
                                             <li style="margin-right: 10px;"><span>Paylaş: </span></li>
                                             <li style="margin-right: 10px;">
-                                                <a href="https://facebook.com/" target="_blank">
+                                                <a href="#" data-share="facebook" aria-label="Facebook'ta paylaş">
                                                     <i class="ri-facebook-fill"></i>
                                                 </a>
                                             </li>
                                             <li style="margin-right: 10px;">
-                                                <a href="https://twitter.com/" target="_blank">
+                                                <a href="#" data-share="x" aria-label="X'te paylaş">
                                                     <i class="ri-twitter-x-fill"></i>
                                                 </a>
                                             </li>
                                             <li style="margin-right: 10px;">
-                                                <a href="https://instagram.com/" target="_blank">
-                                                    <i class="ri-instagram-line"></i>
+                                                <a href="#" data-share="whatsapp" aria-label="WhatsApp ile paylaş">
+                                                    <i class="ri-whatsapp-line"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://linkedin.com/" target="_blank">
+                                                <a href="#" data-share="linkedin" aria-label="LinkedIn'de paylaş">
                                                     <i class="ri-linkedin-fill"></i>
                                                 </a>
                                             </li>
@@ -157,22 +157,22 @@
                                         <ul>
                                             <li><span>Share: </span></li>
                                             <li>
-                                                <a href="https://facebook.com/" target="_blank">
+                                                <a href="#" data-share="facebook" aria-label="Facebook'ta paylaş">
                                                     <i class="ri-facebook-fill"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://twitter.com/" target="_blank">
+                                                <a href="#" data-share="x" aria-label="X'te paylaş">
                                                     <i class="ri-twitter-x-fill"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://instagram.com/" target="_blank">
-                                                    <i class="ri-instagram-line"></i>
+                                                <a href="#" data-share="whatsapp" aria-label="WhatsApp ile paylaş">
+                                                    <i class="ri-whatsapp-line"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://linkedin.com/" target="_blank">
+                                                <a href="#" data-share="linkedin" aria-label="LinkedIn'de paylaş">
                                                     <i class="ri-linkedin-fill"></i>
                                                 </a>
                                             </li>
@@ -216,7 +216,7 @@
                                     </a>
                                     <span>24 Ocak 2025</span>
                                     <h4>
-                                        <a href="blog-details-4.html">Çevre ve Ekonominin Keşişim Noktası</a>
+                                        <a href="blog-details-4.html">Çevre ve Ekonominin Kesişim Noktası</a>
                                     </h4>
                                 </li>
                                 <li>
@@ -267,7 +267,7 @@
                         -->
 
                         <div class="tags bg-color-edf1ee radius-20 mb-0">
-                            <h3>Tags</h3>
+                            <h3>Etiketler</h3>
                             <ul>
                                 <li>
                                     <a href="blog.html">TürkiyeEkonomisi</a>
@@ -326,7 +326,7 @@
 
 
     <script>
-        fetch('components/mobile_navbar.html')
+        fetch('components/mobile_navbar.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbarOffcanvas').innerHTML = data;
@@ -335,7 +335,7 @@
 
 
 
-        fetch('components/footer.html')
+        fetch('components/footer.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
@@ -351,7 +351,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js?v=2"></script>
+    <script src="assets/js/blog.js?v=1"></script>
 
     <style>
         .post ul li {

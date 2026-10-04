@@ -4,6 +4,8 @@
 <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
+    <!-- 404 sayfası her adreste gösterildiği için dosya yolları site kökünden çözülür. -->
+    <base href="/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,7 +42,8 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!-- Title & Favicon -->
-    <title>KredimGeldi</title>
+    <title>Sayfa Bulunamadı - KredimGeldi</title>
+    <meta name="robots" content="noindex">
     <!-- some good looking meta tags for SEO and preview -->
 
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -73,8 +76,8 @@
     <div class="error-area ptb-150">
         <div class="container">
             <div class="error-content-wrap">
-                <img class="error-image" src="assets/images/error-image.png" alt="image">
-                <p class="text-black">Üzgünüz, böyle bir sayfa bulunmuyor. Anasayfaya dönmek için tıklayın</p>
+                <img class="error-image" src="assets/images/error-image.png" alt="Sayfa bulunamadı">
+                <p class="text-black">Üzgünüz, aradığınız sayfa bulunamadı.</p>
 
                 <a href="index.html" class="default-btn">Anasayfaya Git</a>
             </div>
@@ -91,7 +94,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js?v=2"></script>
 
 </body>
 
