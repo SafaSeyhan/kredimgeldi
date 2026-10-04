@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="assets/css/remixicon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/kredi-hesaplama.css?v=1">
 
     <title>KredimGeldi</title>
 
@@ -265,95 +266,59 @@
                         </div>
 
                         <div class="col-xl-6 col-lg-12 col-md-12">
-                            <div class="pricing-area">
-                                <div class="container" style="padding: 0;">
-                                    <div class="pricing-bg bg-color-edf1ee radius-30"
-                                        style="box-shadow : 0px 4px 4px 0px rgba(8, 39, 32, 0.1); display: flex; flex-direction: column; justify-content: center; align-items: baseline;">
-                                        <div
-                                            style="display: flex; gap: 24px; justify-content: center; align-items: center; width: 100%;">
-                                            <div
-                                                style="display: flex; flex-direction: column; height: 85%; justify-content: space-between;">
-                                                <div class="choose-btn" style="height: 100%;">
-                                                    <ul class="nav nav-tabs" id="myTab" role="tablist"
-                                                        style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                                                        <li class="nav-item" role="presentation">
-                                                            <button class="nav-link active" data-tab="ihtiyac"
-                                                                type="button">
-                                                                <span><i class="ri-check-line"></i> İhtiyaç
-                                                                    Kredisi</span>
-                                                            </button>
-                                                        </li>
-                                                        <li class="nav-item" role="presentation">
-                                                            <button class="nav-link" data-tab="konut" type="button">
-                                                                <span
-                                                                    style="display: inline-block; max-width: 100%; text-align: center; font-size: 14px; line-height: 1.2;">
-                                                                    <i class="ri-check-line"
-                                                                        style="margin-right: 8px;"></i> Konut Kredisi
-                                                                </span>
-                                                            </button>
-                                                        </li>
+                            <div class="kg-calc">
+                                <div class="kg-calc-head">
+                                    <span class="kg-calc-eyebrow"><i class="ri-calculator-line"></i> Kredi Hesapla</span>
+                                    <h2 class="kg-calc-title">Ne kadar krediye ihtiyacın var?</h2>
+                                </div>
 
-                                                        <li class="nav-item" role="presentation">
-                                                            <button class="nav-link" data-tab="tasit" type="button">
-                                                                <span><i class="ri-check-line"></i> Taşıt Kredisi</span>
-                                                            </button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                <div class="choose-btn kg-calc-types" role="tablist" aria-label="Kredi türü">
+                                    <button class="nav-link kg-calc-type active" data-tab="ihtiyac" type="button" role="tab">
+                                        <i class="ri-wallet-3-line"></i><span>İhtiyaç</span>
+                                    </button>
+                                    <button class="nav-link kg-calc-type" data-tab="konut" type="button" role="tab">
+                                        <i class="ri-home-4-line"></i><span>Konut</span>
+                                    </button>
+                                    <button class="nav-link kg-calc-type" data-tab="tasit" type="button" role="tab">
+                                        <i class="ri-car-line"></i><span>Taşıt</span>
+                                    </button>
+                                </div>
 
-                                            <form id="kredi-hesaplama-formu" onsubmit="handleSubmit(event)"
-                                                style="flex:1;">
-                                                <div
-                                                    style="display: flex; flex-direction: column; justify-content: center; align-items: baseline; flex: 1;">
-                                                    <div class="hesaplama-container"
-                                                        style="display:flex; flex-direction: column; width: 100%; height: 100%; justify-content: center; align-items: baseline;">
-                                                        <div
-                                                            style="margin-top: auto;width: 100%; display: flex; flex-direction: column; gap: 20px;">
-                                                            <div class="tutar-hesaplama">
-                                                                <div class="input-container"
-                                                                    style="position: relative; width: 100%;">
-                                                                    <label for="tutar"
-                                                                        class="floating-label resp-text-2"
-                                                                        style="position: absolute; right: 10px; top: 15px; font-size: 14px; color: #888;">
-                                                                        Kredi Tutarı
-                                                                    </label>
-                                                                    <span class="currency-symbol">₺</span>
-                                                                    <input type="text" id="tutar" name="tutar"
-                                                                        placeholder="Tutar" required
-                                                                        oninput="formatNumber(this)"
-                                                                        onkeypress="return isNumber(event)"
-                                                                        maxlength="8" min="10000" style="height: 50px;">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="vade-hesaplama">
-                                                                <div class="input-container"
-                                                                    style="position: relative; width: 100%;">
-                                                                    <label for="vade" class="floating-label resp-text-2"
-                                                                        style="position: absolute; right: 10px; top: 15px; font-size: 14px; color: #888;">
-                                                                        Vade
-                                                                    </label>
-                                                                    <span class="currency-symbol">Ay</span>
-                                                                    <input type="number" id="vade" name="vade" min="1"
-                                                                        max="36" value="12" required
-                                                                        oninput="syncSliderWithInput()"
-                                                                        style="height: 50px; width: 100%;">
-                                                                </div>
-                                                                <input type="range" id="vade-slider" min="1" max="36"
-                                                                    step="1" value="12" oninput="syncInputWithSlider()"
-                                                                    style="width: 100%;">
-                                                            </div>
-                                                        </div>
-
-                                                        <input type="submit" class="default-btn" id="hesapla-btn"
-                                                            style="margin-top: auto;" value="Hesapla">
-                                                    </div>
-                                                </div>
-                                            </form>
+                                <form id="kredi-hesaplama-formu" class="kg-calc-form" onsubmit="handleSubmit(event)">
+                                    <div class="kg-calc-field">
+                                        <div class="kg-calc-label">
+                                            <label for="tutar">Kredi Tutarı</label>
+                                            <small data-calc-range></small>
+                                        </div>
+                                        <div class="kg-calc-amount">
+                                            <input type="text" id="tutar" name="tutar" inputmode="numeric" placeholder="0" required
+                                                oninput="formatNumber(this)" onkeypress="return isNumber(event)" maxlength="9">
+                                            <span>₺</span>
                                         </div>
                                     </div>
-                                </div>
+
+                                    <div class="kg-calc-field">
+                                        <div class="kg-calc-label">
+                                            <label for="vade">Vade</label>
+                                            <div class="kg-calc-term">
+                                                <input type="number" id="vade" name="vade" min="1" max="36" value="12" required
+                                                    oninput="syncSliderWithInput()">
+                                                <span>ay</span>
+                                            </div>
+                                        </div>
+                                        <input type="range" id="vade-slider" class="kg-calc-slider" min="1" max="36" step="1" value="12"
+                                            oninput="syncInputWithSlider()" aria-label="Vade (ay)">
+                                        <div class="kg-calc-scale"><span data-calc-min></span><span data-calc-max></span></div>
+                                    </div>
+
+                                    <button type="submit" class="default-btn kg-calc-submit" id="hesapla-btn">
+                                        Teklifleri Karşılaştır <i class="ri-arrow-right-line"></i>
+                                    </button>
+                                    <ul class="kg-calc-trust">
+                                        <li><i class="ri-bank-line"></i> 5 bankanın teklifi tek ekranda</li>
+                                        <li><i class="ri-time-line"></i> Saniyeler içinde sonuç</li>
+                                    </ul>
+                                </form>
                             </div>
                         </div>
 
@@ -1129,7 +1094,7 @@
         }
 
         function getSelectedLoanType() {
-            const activeTab = document.querySelector('.nav-link.active');
+            const activeTab = document.querySelector('.choose-btn .nav-link.active');
             return activeTab ? activeTab.getAttribute('data-tab') : 'ihtiyac';
         }
 
@@ -1287,9 +1252,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Set up navigation
             let selectedTab = "ihtiyac";
-            document.querySelectorAll(".nav-link").forEach(button => {
+            document.querySelectorAll(".choose-btn .nav-link").forEach(button => {
                 button.addEventListener("click", function () {
-                    document.querySelectorAll(".nav-link").forEach(btn => btn.classList.remove("active"));
+                    document.querySelectorAll(".choose-btn .nav-link").forEach(btn => btn.classList.remove("active"));
                     this.classList.add("active");
                     selectedTab = this.getAttribute("data-tab");
                     setDefaultValues(selectedTab);
@@ -1823,6 +1788,7 @@
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/kredi-hesaplama.js?v=1"></script>
 </body>
 
 </html>

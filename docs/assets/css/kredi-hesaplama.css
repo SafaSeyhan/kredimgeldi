@@ -1,0 +1,327 @@
+/* Kredi hesaplama kartı (ana sayfa ve krediler sayfası) */
+.kg-calc {
+    --kg-green: #9edd05;
+    --kg-dark: #0c3a30;
+    --kg-ink: #082720;
+    --kg-cream: #fffaeb;
+    --kg-line: rgba(12, 58, 48, 0.14);
+    --kg-muted: #5b6d68;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    height: 100%;
+    padding: 34px 36px 30px;
+    border-radius: 30px;
+    background: #ffffff;
+    border: 1px solid var(--kg-line);
+    box-shadow: 0 24px 50px -28px rgba(8, 39, 32, 0.35);
+    color: var(--kg-ink);
+}
+
+.kg-calc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    background: rgba(158, 221, 5, 0.18);
+    color: var(--kg-dark);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.kg-calc-title {
+    margin: 12px 0 0;
+    font-size: 26px;
+    line-height: 1.25;
+    color: var(--kg-ink);
+}
+
+/* Kredi türü seçimi */
+.kg-calc .kg-calc-types {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    padding: 6px;
+    border-radius: 18px;
+    background: #f1f4f2;
+}
+
+.kg-calc .kg-calc-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    height: auto;
+    padding: 12px 6px;
+    border: 0;
+    border-radius: 13px;
+    background: transparent;
+    color: var(--kg-muted);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: background ease 0.2s, color ease 0.2s, box-shadow ease 0.2s;
+}
+
+.kg-calc .kg-calc-type i {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.kg-calc .kg-calc-type:hover {
+    color: var(--kg-dark);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.kg-calc .kg-calc-type.active {
+    background: var(--kg-dark);
+    color: #F9F9F9;
+    box-shadow: 0 8px 18px -10px rgba(8, 39, 32, 0.7);
+}
+
+.kg-calc .kg-calc-type.active i {
+    color: var(--kg-green);
+}
+
+/* Alanlar */
+.kg-calc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    flex: 1;
+}
+
+.kg-calc-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.kg-calc-label label {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--kg-ink);
+}
+
+.kg-calc-label small {
+    font-size: 13px;
+    color: var(--kg-muted);
+    text-align: right;
+}
+
+.kg-calc .kg-calc-amount {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 64px;
+    padding: 0 20px;
+    border: 1.5px solid var(--kg-line);
+    border-radius: 16px;
+    background: #F9F9F9;
+    transition: border-color ease 0.2s, box-shadow ease 0.2s, background ease 0.2s;
+}
+
+.kg-calc .kg-calc-amount:focus-within {
+    border-color: var(--kg-green);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(158, 221, 5, 0.22);
+}
+
+.kg-calc .kg-calc-amount input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--kg-ink);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.kg-calc .kg-calc-amount input:focus {
+    outline: none;
+    background: transparent;
+}
+
+.kg-calc .kg-calc-amount span {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--kg-dark);
+}
+
+.kg-calc .kg-calc-term {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 14px 0 4px;
+    border: 1.5px solid var(--kg-line);
+    border-radius: 12px;
+    background: #F9F9F9;
+    transition: border-color ease 0.2s, box-shadow ease 0.2s;
+}
+
+.kg-calc .kg-calc-term:focus-within {
+    border-color: var(--kg-green);
+    box-shadow: 0 0 0 4px rgba(158, 221, 5, 0.22);
+}
+
+.kg-calc .kg-calc-term input {
+    width: 54px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--kg-ink);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: right;
+    -moz-appearance: textfield;
+}
+
+.kg-calc .kg-calc-term input:focus {
+    outline: none;
+    background: transparent;
+}
+
+.kg-calc .kg-calc-term span {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--kg-muted);
+}
+
+/* Vade kaydırıcısı: dolu kısım --fill değişkeniyle çizilir */
+.kg-calc .kg-calc-slider {
+    --fill: 50%;
+    width: 100%;
+    height: 8px;
+    margin: 8px 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(to right, var(--kg-green) 0, var(--kg-green) var(--fill), #e3e9e6 var(--fill), #e3e9e6 100%);
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.kg-calc .kg-calc-slider:focus {
+    outline: none;
+}
+
+.kg-calc .kg-calc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--kg-dark);
+    border: 5px solid #ffffff;
+    box-shadow: 0 2px 10px rgba(8, 39, 32, 0.35);
+    transition: transform ease 0.15s;
+}
+
+.kg-calc .kg-calc-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--kg-dark);
+    border: 5px solid #ffffff;
+    box-shadow: 0 2px 10px rgba(8, 39, 32, 0.35);
+}
+
+.kg-calc .kg-calc-slider:active::-webkit-slider-thumb,
+.kg-calc .kg-calc-slider:focus-visible::-webkit-slider-thumb {
+    transform: scale(1.12);
+}
+
+.kg-calc .kg-calc-slider:focus-visible {
+    box-shadow: 0 0 0 4px rgba(158, 221, 5, 0.25);
+}
+
+.kg-calc-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--kg-muted);
+}
+
+/* Gönder */
+.kg-calc .kg-calc-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: auto;
+    padding: 18px 24px;
+    border-radius: 14px;
+    font-size: 17px;
+}
+
+.kg-calc .kg-calc-submit i {
+    font-size: 20px;
+    transition: transform ease 0.2s;
+}
+
+.kg-calc .kg-calc-submit:hover i {
+    transform: translateX(4px);
+}
+
+.kg-calc-trust {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 22px;
+    margin: -6px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    color: var(--kg-muted);
+}
+
+.kg-calc-trust i {
+    margin-right: 4px;
+    color: var(--kg-dark);
+}
+
+@media (max-width: 575px) {
+    .kg-calc {
+        gap: 18px;
+        padding: 24px 18px 22px;
+        border-radius: 24px;
+    }
+
+    .kg-calc-title {
+        font-size: 21px;
+    }
+
+    .kg-calc .kg-calc-type {
+        font-size: 14px;
+        padding: 10px 4px;
+    }
+
+    .kg-calc .kg-calc-amount {
+        height: 58px;
+        padding: 0 16px;
+    }
+
+    .kg-calc .kg-calc-amount input {
+        font-size: 22px;
+    }
+
+    .kg-calc-label {
+        flex-wrap: wrap;
+    }
+}
