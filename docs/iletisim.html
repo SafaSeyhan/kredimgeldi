@@ -136,12 +136,13 @@
                     </form>
                 </div>
                 <div class="col-lg-4 col-md-12" data-cues="slideInDown" data-duration="800">
-                    <div class="contact-map">
-                        <iframe style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); border:0;"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.53925916665!2d-80.2994992!3d25.7823907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a58e9569f7%3A0xe71e83763365d4a1!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2str!4v1700000000000!5m2!1sen!2str"
-                            width="100%" height="450" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                    <div class="contact-info-card radius-30">
+                        <i class="ri-customer-service-2-line"></i>
+                        <h3>Size nasıl yardımcı olabiliriz?</h3>
+                        <p>Kredi başvurunuz, teklifler veya üyeliğinizle ilgili sorularınızı formdan iletebilir ya da
+                            bize e-posta ile yazabilirsiniz. Mesajlarınıza en kısa sürede dönüş yapıyoruz.</p>
+                        <a href="mailto:info@kredimgeldi.com" class="contact-info-mail"><i class="ri-mail-line"></i> info@kredimgeldi.com</a>
+                        <a href="faq.html" class="default-btn two">Sıkça Sorulan Sorular <i class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -150,40 +151,6 @@
     <!-- End Contact Form Area -->
 
 
-    <!-- Start Contact Address Area -->
-    <div class="contact-address-area ptb-120 overflow-hidden" style="padding-top: 40px;">
-        <div class="container">
-            <div class="address-container bg-color-0c3a30 radius-20" style="background-color: #fffcec;
-            /* bg shadow */
-            /* black text */
-            color: #000;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-            ">
-                <div class="contact-warp d-flex align-items-center justify-content-between" data-cues="slideInDown"
-                    data-duration="700">
-                    <div class="location position-relative" style="
-                    /* font color white */
-                    color: #000;
-                    ">
-                        <i class="flaticon-phone-call call-icon"></i>
-                        <span style="color: #000;">Telefon</span>
-                        <a style="color: #000;" href="tel:000946862091">+90 534 000 00 00</a>
-                    </div>
-                    <div class="location position-relative">
-                        <i class="flaticon-email-1 call-icon"></i>
-                        <span style="color: #000;">E-Posta</span>
-                        <a style="color: #000;" href="mailto:info@kredimgeldi.com">info@kredimgeldi.com</a>
-                    </div>
-                    <div class="location position-relative">
-                        <i class="flaticon-maps-and-flags call-icon"></i>
-                        <span style="color: #000;">Merkezimiz</span>
-                        <a style="color: #000;" href="https://maps.app.goo.gl/p2Mj3tx74CBgnfjH8">Fire Media Marketing
-                            Miami FL, USA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Start Footer Area -->
     <div id="footer-placeholder" class="footer-area bg-color-0c3a30 pt-120">
     </div>
@@ -221,7 +188,7 @@
 
 
 
-        fetch('components/footer.html?v=3')
+        fetch('components/footer.html?v=4')
             .then(response => response.text())
             .then(data => {
                 // document.getElementById('footer-area') add as a scildren
@@ -230,6 +197,48 @@
     </script>
 
     <style>
+        .contact-info-card {
+            height: 100%;
+            padding: 40px 34px;
+            background: #0c3a30;
+            color: #F9F9F9;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info-card > i {
+            display: inline-grid;
+            place-items: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #9edd05;
+            color: #0c3a30;
+            font-size: 26px;
+        }
+
+        .contact-info-card h3 {
+            margin: 20px 0 12px;
+            color: #ffffff;
+        }
+
+        .contact-info-card p {
+            color: rgba(249, 249, 249, 0.85);
+        }
+
+        .contact-info-mail {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 22px 0 26px;
+            color: #9edd05;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .contact-info-mail:hover {
+            color: #ffffff;
+        }
+
         .main-navbar {
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
             position: absolute;
