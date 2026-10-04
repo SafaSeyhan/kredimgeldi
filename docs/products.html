@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/kredi-hesaplama.css?v=2">
-    <link rel="stylesheet" href="assets/css/basvuru.css?v=2">
+    <link rel="stylesheet" href="assets/css/basvuru.css?v=3">
 
     <title>KredimGeldi</title>
     <!-- some good looking meta tags for SEO and preview -->
@@ -199,7 +199,7 @@
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/basvuru.js?v=1"></script>
+    <script src="assets/js/basvuru.js?v=2"></script>
     <script>
         fetch('components/mobile_navbar.html')
             .then(response => response.text())
@@ -481,6 +481,7 @@
             // Başvur ve Detaylar pencereleri teklifin özetini bu bilgilerden gösterir.
             const offer = {
                 bank: BANK_NAMES[bank] || bank,
+                bankKey: bank,
                 typeName: LOAN_TYPE_NAMES[loanType] || '',
                 amount: formatCurrency(calculation.principal),
                 term: String(calculation.term),
@@ -669,7 +670,7 @@
                 }
             }
         });
-        fetch('components/identification_modal.html?v=2')
+        fetch('components/identification_modal.html?v=3')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('id-modal-placeholder').innerHTML = data;

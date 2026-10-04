@@ -332,6 +332,46 @@
     padding: 14px 40px;
 }
 
+.kg-done-track {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: -8px 0 24px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: var(--kg-cream, #fffaeb);
+    border: 1px dashed rgba(12, 58, 48, 0.25);
+}
+
+.kg-done-track span {
+    font-size: 13px;
+    color: #5c6e69;
+}
+
+.kg-done-track strong {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: var(--kg-ink, #082720);
+}
+
+.kg-done-track small {
+    color: #4b5d58;
+}
+
+.kg-done-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 575px) {
+    .kg-done-actions .default-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* Detaylar */
 .kg-details-body h4 {
     font-size: 20px;
