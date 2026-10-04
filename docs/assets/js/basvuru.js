@@ -2,10 +2,12 @@
 // Pencereler sayfaya fetch ile sonradan eklendiği için olaylar document üzerinden dinlenir.
 // Giriş yapmış kullanıcının kimlik bilgileri Hesabım'daki loan_profiles tablosundan getirilir;
 // başvuru sırasında değiştirilen bilgiler aynı tabloya geri kaydedilir.
+// Giriş yapmış kullanıcının başvurusu loan_applications tablosuna yazılır ve Hesabım > Başvurularım'da listelenir.
 (function () {
     "use strict";
 
     const TABLE = 'loan_profiles';
+    const APPLICATIONS = 'loan_applications';
     const FIELDS = ['first_name', 'last_name', 'tc_kimlik_no', 'birth_date', 'phone'];
 
     let user = null;
@@ -59,6 +61,12 @@
         const d = new Date(year, month - 1, day);
         if (d.getFullYear() !== year || d.getMonth() !== month - 1 || d.getDate() !== day) return v;
         return m[3] + '-' + m[2].padStart(2, '0') + '-' + m[1].padStart(2, '0');
+    }
+
+    // "₺100.000,00" -> 100000
+    function parseTl(v) {
+        const n = Number(String(v || '').replace(/[^0-9,]/g, '').replace(',', '.'));
+        return v && isFinite(n) && /\d/.test(v) ? n : null;
     }
 
     function isoToTrDate(v) { return v ? String(v).slice(0, 10).split('-').reverse().join('.') : ''; }
@@ -256,11 +264,50 @@
             }
         }
 
+        let saved = null;
+        if (user) {
+            setBusy(form, true);
+            saved = await saveApplication(values);
+            setBusy(form, false);
+            if (saved && saved.error) return showMessage(form, 'Başvurunuz gönderilemedi. ' + KGAuth.translateError(saved.error));
+        }
+
         const modal = form.closest('.modal');
         const where = offer && offer.bank ? offer.bank + ' ' + (offer.typeName || '') : '';
-        $('[data-done-text]', modal).textContent = (where ? where.trim() + ' için b' : 'B') + 'aşvuru bilgileriniz alındı. Teşekkür ederiz.';
+        $('[data-done-text]', modal).textContent = (where ? where.trim() + ' için b' : 'B') + 'aşvurunuz alındı. Teşekkür ederiz.';
+        const tracked = Boolean(saved && saved.data);
+        $('[data-done-track]', modal).classList.toggle('d-none', !tracked);
+        $('[data-done-link]', modal).classList.toggle('d-none', !tracked);
+        if (tracked) $('[data-done-ref]', modal).textContent = saved.data.reference_no;
         form.classList.add('d-none');
         $('[data-step="done"]', modal).classList.remove('d-none');
+    }
+
+    // Başvuruyu, teklif ve o anki kimlik bilgileriyle birlikte kaydeder.
+    // Tablo henüz kurulmadıysa başvuru akışını bozmamak için sessizce geçer.
+    async function saveApplication(values) {
+        const o = offer || {};
+        const row = Object.assign({
+            bank_code: o.bankKey || null,
+            bank_name: o.bank || null,
+            loan_type: o.typeName || null,
+            amount: parseTl(o.amount),
+            term_months: o.term ? Number(o.term) || null : null,
+            interest_rate: o.rate ? Number(o.rate) || null : null,
+            monthly_payment: parseTl(o.monthly),
+            total_payment: parseTl(o.total),
+            file_fee: parseTl(o.fee)
+        }, values);
+        try {
+            const { data, error } = await KGAuth.client.from(APPLICATIONS).insert(row).select('id, reference_no').single();
+            if (!error) return { data };
+            console.error('Başvuru kaydedilemedi:', error);
+            const missing = error.code === '42P01' || error.code === 'PGRST205' || /does not exist|schema cache/i.test(error.message || '');
+            return missing ? null : { error };
+        } catch (e) {
+            console.error('Başvuru kaydedilemedi:', e);
+            return { error: e };
+        }
     }
 
     function setBusy(form, busy) {

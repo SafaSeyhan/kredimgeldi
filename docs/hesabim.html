@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="assets/css/remixicon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/hesabim.css?v=2">
+    <link rel="stylesheet" href="assets/css/hesabim.css?v=3">
 
     <!-- Title & Favicon -->
     <title>Hesabım - KredimGeldi</title>
@@ -142,6 +142,9 @@
                             <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-ozet" data-tab="ozet" type="button" role="tab">
                                 <i class="ri-dashboard-line"></i> Genel Bakış
                             </button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-basvurularim" data-tab="basvurularim" type="button" role="tab">
+                                <i class="ri-file-list-3-line"></i> Başvurularım <span class="kg-count d-none" id="apps-count"></span>
+                            </button>
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-kimlik" data-tab="kimlik" type="button" role="tab">
                                 <i class="ri-profile-line"></i> Kimlik Bilgileri <span class="kg-dot" data-dot="kimlik"></span>
                             </button>
@@ -213,10 +216,77 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="kg-card kg-latest d-none" id="apps-latest">
+                                    <div class="kg-latest-head">
+                                        <div>
+                                            <h2 class="kg-card-title">Son Başvurunuz</h2>
+                                            <p class="kg-card-sub mb-0">Başvurunuzun durumunu anlık olarak takip edin.</p>
+                                        </div>
+                                        <button type="button" class="kg-link-more" data-goto="basvurularim">Tüm Başvurularım <i class="ri-arrow-right-line"></i></button>
+                                    </div>
+                                    <div id="apps-latest-body"></div>
+                                </div>
                                 <div class="kg-note">
                                     <i class="ri-lock-2-line"></i>
                                     <p class="mb-0">Bilgileriniz şifreli bağlantı üzerinden saklanır ve yalnızca sizin hesabınızla görüntülenebilir.
                                         Ayrıntılar için <a href="kisisel-verilerin-korunmasi.html">KVKK Aydınlatma Metni</a>'ni inceleyebilirsiniz.</p>
+                                </div>
+                            </div>
+
+                            <!-- Başvurularım -->
+                            <div class="tab-pane fade" id="tab-basvurularim" role="tabpanel">
+                                <div class="kg-card kg-apps">
+                                    <div class="kg-apps-head">
+                                        <div>
+                                            <h2 class="kg-card-title">Başvurularım</h2>
+                                            <p class="kg-card-sub mb-0">Kredi başvurularınızın hangi aşamada olduğunu buradan adım adım takip edebilirsiniz.</p>
+                                        </div>
+                                        <a class="default-btn" href="products.html">Yeni Başvuru <i class="ri-add-line"></i></a>
+                                    </div>
+
+                                    <div class="kg-apps-stats">
+                                        <div class="kg-stat">
+                                            <span class="kg-stat-icon"><i class="ri-file-list-3-line"></i></span>
+                                            <span><strong id="apps-stat-total">0</strong><small>Toplam Başvuru</small></span>
+                                        </div>
+                                        <div class="kg-stat">
+                                            <span class="kg-stat-icon"><i class="ri-time-line"></i></span>
+                                            <span><strong id="apps-stat-active">0</strong><small>Devam Eden</small></span>
+                                        </div>
+                                        <div class="kg-stat">
+                                            <span class="kg-stat-icon"><i class="ri-checkbox-circle-line"></i></span>
+                                            <span><strong id="apps-stat-done">0</strong><small>Sonuçlanan</small></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="kg-filter" role="group" aria-label="Başvuruları filtrele" id="apps-filter">
+                                        <button type="button" class="active" data-filter="all">Tümü</button>
+                                        <button type="button" data-filter="active">Devam Eden</button>
+                                        <button type="button" data-filter="done">Sonuçlanan</button>
+                                    </div>
+
+                                    <div class="kg-apps-loading text-center d-none" id="apps-loading">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        <span class="ms-2">Başvurularınız yükleniyor...</span>
+                                    </div>
+                                    <div id="apps-list"></div>
+
+                                    <div class="kg-empty d-none" id="apps-empty">
+                                        <span class="kg-empty-icon"><i class="ri-file-search-line"></i></span>
+                                        <h3>Henüz bir başvurunuz yok</h3>
+                                        <p>Size uygun kredi tekliflerini karşılaştırın, tek tıkla başvurun ve sürecin her adımını buradan takip edin.</p>
+                                        <a class="default-btn" href="products.html">Kredi Tekliflerini İncele <i class="ri-arrow-right-up-line"></i></a>
+                                    </div>
+                                    <p class="kg-empty-filter d-none" id="apps-empty-filter">Bu filtreye uygun başvurunuz bulunmuyor.</p>
+                                </div>
+
+                                <div class="kg-howto">
+                                    <h3>Başvuru süreci nasıl işler?</h3>
+                                    <ol>
+                                        <li><span><i class="ri-inbox-archive-line"></i></span><div><strong>Başvuru Alındı</strong><small>Başvurunuz ve kimlik bilgileriniz ilk 12 saat içinde kontrol edilir.</small></div></li>
+                                        <li><span><i class="ri-bank-line"></i></span><div><strong>Banka İncelemesinde</strong><small>Bilgileriniz eksiksizse başvurunuz bankaya iletilir ve kredi değerlendirmesi yapılır.</small></div></li>
+                                        <li><span><i class="ri-file-search-line"></i></span><div><strong>Başvuru Sonucu</strong><small>Değerlendirme tamamlandığında sonucu ve kredi koşullarını buradan inceleyebilirsiniz.</small></div></li>
+                                    </ol>
                                 </div>
                             </div>
 
@@ -465,6 +535,21 @@
             </div>
         </div>
     </main>
+    <!-- Başvuru detayları -->
+    <div class="modal fade kg-app-modal" id="app-modal" tabindex="-1" aria-labelledby="app-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="kg-app-modal-head">
+                    <button type="button" class="kg-app-modal-close" data-bs-dismiss="modal" aria-label="Kapat"><i class="ri-close-line"></i></button>
+                    <span class="kg-app-modal-eyebrow" id="app-modal-ref"></span>
+                    <h3 class="kg-app-modal-title" id="app-modal-title"></h3>
+                    <span id="app-modal-status"></span>
+                </div>
+                <div class="modal-body" id="app-modal-body"></div>
+            </div>
+        </div>
+    </div>
+
     <div id="footer-placeholder" class="footer-area bg-color-0c3a30 pt-120">
     </div>
     <div class="go-top">
@@ -498,7 +583,8 @@
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/hesabim.js?v=2"></script>
+    <script src="assets/js/hesabim.js?v=3"></script>
+    <script src="assets/js/basvurularim.js?v=1"></script>
 </body>
 
 </html>
