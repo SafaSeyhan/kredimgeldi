@@ -125,14 +125,13 @@
         else steps.push(['', 'ri-bank-line', 'Banka İncelemesinde', stage.key === 'missing' ? '' : 'Sıradaki adım']);
 
         // 3. Başvuru Sonucunu İncele
-        if (stage.step === 3) steps.push(['done result', 'ri-file-search-line', 'Başvuru Sonucunu İncele', '']);
+        if (stage.key === 'onaylandi') steps.push(['done', 'ri-check-line', 'Başvuru Onaylandı', app.result_at ? dateTime(app.result_at) : '']);
+        else if (stage.key === 'reddedildi') steps.push(['failed', 'ri-close-line', 'Başvuru Olumsuz Sonuçlandı', app.result_at ? dateTime(app.result_at) : '']);
         else steps.push(['', 'ri-lock-line', 'Başvuru Sonucunu İncele', stage.key === 'missing' ? '' : 'Banka değerlendirmesinin ardından']);
 
         const fill = stage.step === 3 ? 1 : stage.step === 2 ? 0.5 : 0;
         return '<ol class="kg-stepper" style="--fill:' + fill + '">' + steps.map((s, i) => {
-            const label = s[0].includes('result')
-                ? '<button type="button" class="kg-step-link" data-app-open="' + esc(app.id) + '" data-app-result>' + s[2] + ' <i class="ri-arrow-right-line"></i></button>'
-                : '<strong>' + s[2] + '</strong>';
+            const label = '<strong>' + s[2] + '</strong>';
             return '<li class="' + s[0] + '"><span class="kg-step-dot"><i class="' + s[1] + '"></i></span>'
                 + '<span class="kg-step-text"><small class="kg-step-no">' + (i + 1) + '. Aşama</small>' + label
                 + (s[3] ? '<small>' + esc(s[3]) + '</small>' : '') + '</span></li>';
