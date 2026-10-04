@@ -80,6 +80,32 @@
         return parts.filter(Boolean).join(' ');
     }
 
+    // "14.05.1990" -> "1990-05-14". Geçersiz bir tarih girildiyse metni olduğu gibi döndürür ki doğrulama yakalasın.
+    function trDateToIso(v) {
+        const m = /^(\d{1,2})\.(\d{1,2})\.(\d{4})$/.exec(v);
+        if (!m) return v;
+        const [day, month, year] = [Number(m[1]), Number(m[2]), Number(m[3])];
+        const d = new Date(year, month - 1, day);
+        if (d.getFullYear() !== year || d.getMonth() !== month - 1 || d.getDate() !== day) return v;
+        return m[3] + '-' + m[2].padStart(2, '0') + '-' + m[1].padStart(2, '0');
+    }
+
+    // "04.2021" -> "2021-04-01"
+    function trMonthToIso(v) {
+        const m = /^(\d{1,2})\.(\d{4})$/.exec(v);
+        if (!m || Number(m[1]) < 1 || Number(m[1]) > 12) return v;
+        return m[2] + '-' + m[1].padStart(2, '0') + '-01';
+    }
+
+    // Yazarken noktaları otomatik ekler: 14051990 -> 14.05.1990
+    function maskDate(v, parts) {
+        const d = digits(v).slice(0, parts.reduce((a, b) => a + b, 0));
+        const out = [];
+        let i = 0;
+        parts.forEach(n => { if (i < d.length) out.push(d.slice(i, i + n)); i += n; });
+        return out.join('.');
+    }
+
     function isWorking(status) { return status && !NOT_WORKING.includes(status); }
 
     // Bir alan bu profil için zorunlu mu? (Çalışmayanlar için işyeri alanları sorulmaz.)
@@ -96,6 +122,7 @@
         switch (name) {
             case 'tc_kimlik_no': return isValidTckn(value) ? '' : 'Geçerli bir T.C. kimlik numarası girin.';
             case 'birth_date': {
+                if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return 'Tarihi GG.AA.YYYY biçiminde girin (ör. 14.05.1990).';
                 const age = ageOn(value);
                 if (isNaN(age) || age > 100) return 'Geçerli bir doğum tarihi girin.';
                 return age < 18 ? 'Kredi başvurusu için 18 yaşından büyük olmalısınız.' : '';
@@ -103,7 +130,7 @@
             case 'phone': return /^5[0-9]{9}$/.test(value) ? '' : '05XX XXX XX XX biçiminde geçerli bir cep telefonu girin.';
             case 'postal_code': return /^[0-9]{5}$/.test(value) ? '' : 'Posta kodu 5 haneli olmalıdır.';
             case 'job_start_date': {
-                if (!/^\d{4}-\d{2}-01$/.test(value)) return 'Tarihi YYYY-AA biçiminde girin (ör. 2021-04).';
+                if (!/^\d{4}-\d{2}-01$/.test(value)) return 'Tarihi AA.YYYY biçiminde girin (ör. 04.2021).';
                 return new Date(value) > new Date() ? 'Başlama tarihi gelecekte olamaz.' : '';
             }
             case 'dependents': return value >= 0 && value <= 20 && Number.isInteger(value) ? '' : '0 ile 20 arasında bir sayı girin.';
@@ -124,7 +151,8 @@
         let v = el.value.trim();
         if (name === 'phone') return v ? normalizePhone(v) : null;
         if (name === 'tc_kimlik_no' || name === 'postal_code') return v ? digits(v) : null;
-        if (name === 'job_start_date') return v ? (/^\d{4}-\d{2}$/.test(v) ? v + '-01' : v) : null;
+        if (name === 'birth_date') return v ? trDateToIso(v) : null;
+        if (name === 'job_start_date') return v ? trMonthToIso(v) : null;
         if (NUMBER_FIELDS.includes(name)) return v === '' ? null : Number(v);
         return v === '' ? null : v;
     }
@@ -135,7 +163,8 @@
         if (BOOL_FIELDS.includes(name)) { el.checked = Boolean(value); return; }
         if (value === null || value === undefined) { el.value = ''; return; }
         if (name === 'phone') el.value = formatPhone(value);
-        else if (name === 'job_start_date') el.value = String(value).slice(0, 7);
+        else if (name === 'birth_date') el.value = String(value).slice(0, 10).split('-').reverse().join('.');
+        else if (name === 'job_start_date') el.value = String(value).slice(0, 7).split('-').reverse().join('.');
         else if (NUMBER_FIELDS.includes(name)) el.value = String(Number(value));
         else el.value = value;
     }
@@ -323,6 +352,8 @@
 
     function bindInputs() {
         $('#f-tc_kimlik_no').addEventListener('input', e => { e.target.value = digits(e.target.value).slice(0, 11); });
+        $('#f-birth_date').addEventListener('input', e => { e.target.value = maskDate(e.target.value, [2, 2, 4]); });
+        $('#f-job_start_date').addEventListener('input', e => { e.target.value = maskDate(e.target.value, [2, 4]); });
         $('#f-postal_code').addEventListener('input', e => { e.target.value = digits(e.target.value).slice(0, 5); });
         $('#f-phone').addEventListener('input', e => {
             const atEnd = e.target.selectionStart === e.target.value.length;
@@ -400,7 +431,6 @@
 
         fillOptions($('#f-city'), CITIES);
         fillOptions($('#f-salary_bank'), BANKS);
-        $('#f-birth_date').max = new Date().toISOString().slice(0, 10);
 
         bindInputs();
         await loadProfile();
