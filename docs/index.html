@@ -173,7 +173,7 @@
                             </div>
 
                             <div class="banner-card-body" style="border-radius: 30px; overflow: hidden;">
-                                <img src="assets/images/service/creditcard-image-1.png" alt="image"
+                                <img src="assets/images/service/creditcard-image-1.png?v=2" alt="image"
                                     style="border-radius: 30px;">
                             </div>
                         </div>
@@ -1672,7 +1672,7 @@
                     abrMaxWithRealBitrate: true
                 });
 
-                hls.loadSource('assets/videos/master.m3u8');
+                hls.loadSource('assets/videos/master.m3u8?v=2');
                 hls.attachMedia(video);
 
                 hls.on(Hls.Events.MANIFEST_PARSED, function () {
@@ -1707,7 +1707,7 @@
 
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 loadingIndicator.style.display = 'none';
-                video.src = 'assets/videos/master.m3u8';
+                video.src = 'assets/videos/master.m3u8?v=2';
                 video.addEventListener('loadedmetadata', function () {
                     video.play().catch(error => {
                         console.log("Autoplay blocked:", error);
