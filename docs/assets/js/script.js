@@ -27,20 +27,18 @@
         });
     }
 
-    // Wait for everything to load including external resources
-    window.addEventListener('load', function () {
-        // Load header first
-        fetch('components/header.html')
+    // Header is loaded right away (not after all images) so the menu shows up immediately.
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    if (headerPlaceholder && !document.getElementById('navbar')) {
+        fetch('components/header.html?v=2')
             .then(response => response.text())
             .then(data => {
-                const placeholder = document.getElementById('header-placeholder');
-                if (placeholder) {
-                    placeholder.insertAdjacentHTML('afterend', data);
-                    initAllFeatures(); // Initialize everything AFTER header loads
-                }
+                if (document.getElementById('navbar')) return;
+                headerPlaceholder.insertAdjacentHTML('afterend', data);
+                initAllFeatures(); // Initialize everything AFTER header loads
             })
             .catch(error => console.error('Error loading header:', error));
-    });
+    }
 
     function initAllFeatures() {
         // 1. Initialize sticky header

@@ -71,49 +71,10 @@
 
     <div id="videoContainer">
         <video id="videoPlayer" autoplay muted playsinline></video>
-        <div id="loadingIndicator" class="loading">Loading video...</div>
+        <div id="loadingIndicator" class="loading" aria-hidden="true"></div>
     </div>
 
 
-    <div class="identification-modal modal fade" id="identificationModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <!-- <div class="modal-header position-relative">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
-                </div> -->
-                <div class="modal-body"
-                    style="background-color: #fdfbe9; padding: 20px; border-radius: 30px; text-align: center;">
-                    <!-- Logo -->
-                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                        <a class="navbar-brand logo-brand p-0 text-center" href="index.html">
-                            <img src="assets/images/logo.png" alt="Kredim Geldi"
-                                style="width: 200px; pointer-events: none;">
-                        </a>
-                    </div>
-
-                    <!-- Title -->
-                    <h4 style="margin-top: 15px; font-weight: bold;">Kimlik Bilgilerin İle Hemen Başvur</h4>
-
-                    <!-- Form -->
-                    <form class="popup-form"
-                        style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 15px;">
-                        <div style="display: flex; gap: 10px;">
-                            <input type="text" class="form-control" placeholder="İsim" style="flex: 1;">
-                            <input type="text" class="form-control" placeholder="Soyisim" style="flex: 1;">
-                        </div>
-                        <div style="display: flex; gap: 10px;">
-                            <input type="text" class="form-control" placeholder="T.C. No." style="flex: 1;">
-                            <input type="text" class="form-control" placeholder="Doğum Tarihi" style="flex: 1;">
-                        </div>
-
-                        <button type="submit" class="default-btn">Başvur <i class="ri-arrow-right-up-line"></i></button>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <div class="main-banner-area overflow-hidden position-relative"
         style="background-image: url(assets/images/hero/hero-image-1.svg)">
@@ -573,13 +534,13 @@
                             <div class="single-services-card bg-color-fffaeb radius-30"
                                 style="box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);">
                                 <h3>
-                                    <a href="service-details.html">Kredi Karnesi</a>
+                                    <a href="service-details.html?type=kredi-karnesi">Kredi Karnesi</a>
                                 </h3>
                                 <p>Finansal geçmişinizi değerlendirerek kredi başvurularınızda avantaj elde etmenizi
                                     sağlayan kişisel finansal durum analizi sunar.</p>
                                 <div class="flex-warp d-flex align-items-center justify-content-between">
                                     <i class="flaticon-mission mission"></i>
-                                    <a href="service-details.html" class="arrow-btn"><i
+                                    <a href="service-details.html?type=kredi-karnesi" class="arrow-btn"><i
                                             class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
@@ -588,14 +549,14 @@
                             <div class="single-services-card bg-color-fffaeb radius-30"
                                 style="box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);">
                                 <h3>
-                                    <a href="service-details.html">Kredi Kartı</a>
+                                    <a href="service-details.html?type=kredi-karti">Kredi Kartı</a>
                                 </h3>
                                 <p>Esnek ödeme seçenekleri, avantajlı kampanyalar ve ödül programlarıyla günlük
                                     alışverişlerinizi kolaylaştırır.
                                 </p>
                                 <div class="flex-warp d-flex align-items-center justify-content-between">
                                     <i class="flaticon-online-meeting mission"></i>
-                                    <a href="service-details.html" class="arrow-btn"><i
+                                    <a href="service-details.html?type=kredi-karti" class="arrow-btn"><i
                                             class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
@@ -604,13 +565,13 @@
                             <div class="single-services-card bg-color-fffaeb radius-30"
                                 style="box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);">
                                 <h3>
-                                    <a href="service-details.html">Sigorta</a>
+                                    <a href="service-details.html?type=sigorta">Sigorta</a>
                                 </h3>
                                 <p>Yaşamın belirsizliklerine karşı kapsamlı risk yönetimi ve özel poliçe seçenekleri
                                     sunarak sizi güvence altına alır.</p>
                                 <div class="flex-warp d-flex align-items-center justify-content-between">
                                     <i class="flaticon-corporation mission"></i>
-                                    <a href="service-details.html" class="arrow-btn"><i
+                                    <a href="service-details.html?type=sigorta" class="arrow-btn"><i
                                             class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
@@ -619,14 +580,14 @@
                             <div class="single-services-card bg-color-fffaeb radius-30"
                                 style="box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);">
                                 <h3>
-                                    <a href="service-details.html">Mevduat</a>
+                                    <a href="service-details.html?type=mevduat">Mevduat</a>
                                 </h3>
                                 <p>Paranızı korurken kazancınızı artırmanıza yardımcı olan rekabetçi faiz oranları
                                     ve
                                     güvenilir yatırım fırsatları sunar.</p>
                                 <div class="flex-warp d-flex align-items-center justify-content-between">
                                     <i class="flaticon-investor mission"></i>
-                                    <a href="service-details.html" class="arrow-btn"><i
+                                    <a href="service-details.html?type=mevduat" class="arrow-btn"><i
                                             class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
@@ -1279,19 +1240,13 @@
             document.getElementById('hesapla-btn').addEventListener('click', handleSubmit);
 
             // Load components
-            fetch('components/mobile_navbar.html')
+            fetch('components/mobile_navbar.html?v=2')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbarOffcanvas').innerHTML = data;
                 });
 
-            fetch('components/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-placeholder').insertAdjacentHTML('afterend', data);
-                });
-
-            fetch('components/footer.html')
+            fetch('components/footer.html?v=2')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer-placeholder').innerHTML = data;
@@ -1657,7 +1612,7 @@
             const loadingIndicator = document.getElementById('loadingIndicator');
             const videoContainer = document.getElementById('videoContainer');
 
-            if (Hls.isSupported()) {
+            if (typeof Hls !== 'undefined' && Hls.isSupported()) {
                 const hls = new Hls({
                     maxBufferLength: 30,
                     maxMaxBufferLength: 600,
@@ -1714,7 +1669,7 @@
                     });
                 });
             } else {
-                loadingIndicator.textContent = 'Your browser does not support this video format.';
+                videoContainer.style.display = 'none';
                 console.error("HLS not supported in this browser");
             }
 
@@ -1783,7 +1738,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
     <script src="assets/js/auth-config.js"></script>
     <script src="assets/js/auth.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js?v=2"></script>
     <script src="assets/js/kredi-hesaplama.js?v=1"></script>
 </body>
 
