@@ -8,9 +8,10 @@ and nothing else on the site changes.
 ## 1. Create the project
 
 1. Sign up at https://supabase.com and create a new project (pick the Frankfurt / eu-central region).
-2. Open **Project Settings > API** and copy the **Project URL** and the **anon public** key.
-3. Paste them into `docs/assets/js/auth-config.js`.
-   The anon key is meant to be public. Never put the `service_role` key in the site.
+2. Open **Project Settings > API Keys** and copy the **Project URL** and the **publishable** key
+   (called "anon public" in older projects).
+3. Paste them into `docs/assets/js/auth-config.js` (already done for project `olqucdyyuhgwgsyswwlj`).
+   The publishable key is meant to be public. Never put the `secret` / `service_role` key in the site.
 
 ## 2. URL settings
 

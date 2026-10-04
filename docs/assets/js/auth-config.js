@@ -1,8 +1,8 @@
 // KredimGeldi üyelik sistemi ayarları.
-// Supabase projesi oluşturduktan sonra (Project Settings > API) bu iki değeri doldurun.
-// "anon public" anahtarı tarayıcıda kullanılmak için tasarlanmıştır, burada durması güvenlidir.
-// "service_role" anahtarını ASLA buraya yazmayın.
+// Değerler Supabase panelindeki Project Settings > API Keys sayfasından alınır.
+// "publishable" (eski adıyla "anon public") anahtar tarayıcıda kullanılmak için tasarlanmıştır, burada durması güvenlidir.
+// "secret" / "service_role" anahtarını ASLA buraya yazmayın.
 window.KG_AUTH_CONFIG = {
-    supabaseUrl: '',      // örn. 'https://abcdefgh.supabase.co'
-    supabaseAnonKey: ''   // örn. 'eyJhbGciOi...'
+    supabaseUrl: 'https://olqucdyyuhgwgsyswwlj.supabase.co',
+    supabaseAnonKey: 'sb_publishable_mO19zDMtqicO1tB1qqSYqw_DN7HEAWF'
 };
