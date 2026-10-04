@@ -75,9 +75,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1px;
     margin: 22px 0 0;
+    border: 1px solid rgba(158, 221, 5, 0.6);
     border-radius: 18px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.14);
 }
 
 .kg-offer-wide {
@@ -86,7 +87,7 @@
 
 .kg-offer > div {
     padding: 14px 16px;
-    background: rgba(8, 39, 32, 0.55);
+    background: rgba(8, 39, 32, 0.5);
 }
 
 .kg-offer dt {
