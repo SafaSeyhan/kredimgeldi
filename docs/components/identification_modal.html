@@ -1,39 +1,86 @@
-<div class="identification-modal modal fade" id="identificationModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog modal-dialog-centered">
+<div class="kg-modal modal fade" id="identificationModal" tabindex="-1" aria-labelledby="kg-apply-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-            <!-- <div class="modal-header position-relative">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
-            </div> -->
-            <div class="modal-body"
-                style="background-color: #fdfbe9; padding: 20px; border-radius: 30px; text-align: center;">
-                <!-- Logo -->
-                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                    <a class="navbar-brand logo-brand p-0 text-center" href="index.html">
-                        <img src="assets/images/logo.png" alt="Kredim Geldi"
-                            style="width: 200px; pointer-events: none;">
-                    </a>
-                </div>
-
-                <!-- Title -->
-                <h4 style="margin-top: 15px; font-weight: bold;">Kimlik Bilgilerin İle Hemen Başvur</h4>
-
-                <!-- Form -->
-                <form class="popup-form"
-                    style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 15px;">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" class="form-control" placeholder="İsim" style="flex: 1;">
-                        <input type="text" class="form-control" placeholder="Soyisim" style="flex: 1;">
-                    </div>
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" class="form-control" placeholder="T.C. No." style="flex: 1;">
-                        <input type="text" class="form-control" placeholder="Doğum Tarihi" style="flex: 1;">
-                    </div>
-
-                    <button type="submit" class="default-btn">Başvur <i class="ri-arrow-right-up-line"></i></button>
-                </form>
+            <div class="kg-modal-head">
+                <button type="button" class="kg-modal-close" data-bs-dismiss="modal" aria-label="Kapat"><i class="ri-close-line"></i></button>
+                <span class="kg-modal-eyebrow" data-offer-label>Hemen Başvur</span>
+                <h3 class="kg-modal-title" id="kg-apply-title">Kimlik bilgilerinle hemen başvur</h3>
+                <dl class="kg-offer d-none" data-offer>
+                    <div><dt>Kredi Tutarı</dt><dd data-offer-amount></dd></div>
+                    <div><dt>Vade</dt><dd data-offer-term></dd></div>
+                    <div><dt>Aylık Taksit</dt><dd data-offer-monthly></dd></div>
+                    <div><dt>Toplam Geri Ödeme</dt><dd data-offer-total></dd></div>
+                </dl>
             </div>
 
+            <div class="modal-body kg-modal-body">
+                <form class="kg-apply-form" data-step="form" novalidate>
+                    <div class="kg-apply-note d-none" data-guest>
+                        <i class="ri-user-line"></i>
+                        <span>Hesabınız var mı? <a href="login.html" data-login-link>Giriş yapın</a>, bilgileriniz otomatik dolsun.</span>
+                    </div>
+
+                    <div class="kg-apply-message alert d-none" role="alert"></div>
+
+                    <div class="kg-saved d-none" data-saved>
+                        <div class="kg-saved-head">
+                            <span><i class="ri-shield-check-line"></i> Hesabınızdaki bilgiler</span>
+                            <button type="button" class="kg-link-btn" data-edit><i class="ri-edit-line"></i> Düzenle</button>
+                        </div>
+                        <dl class="kg-saved-list">
+                            <div><dt>Ad Soyad</dt><dd data-saved-name></dd></div>
+                            <div><dt>T.C. Kimlik No</dt><dd data-saved-tc></dd></div>
+                            <div><dt>Doğum Tarihi</dt><dd data-saved-birth></dd></div>
+                            <div><dt>Cep Telefonu</dt><dd data-saved-phone></dd></div>
+                        </dl>
+                        <p class="kg-saved-hint">Bilgileriniz yanlışsa "Düzenle" ile düzeltebilirsiniz.</p>
+                    </div>
+
+                    <div class="row g-3" data-fields>
+                        <div class="col-sm-6">
+                            <label class="form-label" for="kg-apply-first_name">Ad</label>
+                            <input class="form-control" id="kg-apply-first_name" name="first_name" autocomplete="given-name" maxlength="60">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label" for="kg-apply-last_name">Soyad</label>
+                            <input class="form-control" id="kg-apply-last_name" name="last_name" autocomplete="family-name" maxlength="60">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label" for="kg-apply-tc_kimlik_no">T.C. Kimlik No</label>
+                            <input class="form-control" id="kg-apply-tc_kimlik_no" name="tc_kimlik_no" inputmode="numeric" maxlength="11" placeholder="11 haneli">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label" for="kg-apply-birth_date">Doğum Tarihi</label>
+                            <input class="form-control" id="kg-apply-birth_date" name="birth_date" inputmode="numeric" maxlength="10" placeholder="GG.AA.YYYY" autocomplete="bday">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="kg-apply-phone">Cep Telefonu</label>
+                            <input class="form-control" id="kg-apply-phone" name="phone" type="tel" inputmode="numeric" maxlength="14" placeholder="05XX XXX XX XX" autocomplete="tel-national">
+                        </div>
+                        <p class="kg-sync-hint d-none" data-sync-hint><i class="ri-information-line"></i> Değişiklikleriniz Hesabım sayfanızdaki bilgilere de kaydedilir.</p>
+                    </div>
+
+                    <div class="kg-apply-consent form-check">
+                        <input class="form-check-input" type="checkbox" id="kg-apply-consent" name="consent">
+                        <label class="form-check-label" for="kg-apply-consent">
+                            <a href="kisisel-verilerin-korunmasi.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni okudum,
+                            <a href="acik-riza-metni.html" target="_blank" rel="noopener">Açık Rıza Metni</a> kapsamında bilgilerimin işlenmesini onaylıyorum.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="default-btn kg-apply-submit">
+                        <span class="spinner-border spinner-border-sm d-none" aria-hidden="true"></span>
+                        Başvur <i class="ri-arrow-right-up-line"></i>
+                    </button>
+                </form>
+
+                <div class="kg-apply-done d-none" data-step="done">
+                    <span class="kg-done-icon"><i class="ri-check-line"></i></span>
+                    <h4>Başvurunuz alındı</h4>
+                    <p data-done-text>Başvurunuz için teşekkür ederiz.</p>
+                    <button type="button" class="default-btn two" data-bs-dismiss="modal">Tamam</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

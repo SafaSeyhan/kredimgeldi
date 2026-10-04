@@ -1,76 +1,45 @@
-<div class="details-modal modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog modal-dialog-centered">
+<div class="kg-modal modal fade" id="detailsModal" tabindex="-1" aria-labelledby="kg-details-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
-            <div class="modal-body"
-                style="background-color: #fdfbe9; padding: 20px; border-radius: 30px; text-align: center;">
+            <div class="kg-modal-head">
+                <button type="button" class="kg-modal-close" data-bs-dismiss="modal" aria-label="Kapat"><i class="ri-close-line"></i></button>
+                <span class="kg-modal-eyebrow" data-offer-label>Kredi Detayları</span>
+                <h3 class="kg-modal-title" id="kg-details-title">Kredi başvurusu detayları</h3>
+                <dl class="kg-offer kg-offer-wide d-none" data-offer>
+                    <div><dt>Kredi Tutarı</dt><dd data-offer-amount></dd></div>
+                    <div><dt>Vade</dt><dd data-offer-term></dd></div>
+                    <div><dt>Faiz Oranı</dt><dd data-offer-rate></dd></div>
+                    <div><dt>Aylık Taksit</dt><dd data-offer-monthly></dd></div>
+                    <div><dt>Dosya Masrafı</dt><dd data-offer-fee></dd></div>
+                    <div><dt>Toplam Geri Ödeme</dt><dd data-offer-total></dd></div>
+                </dl>
+            </div>
 
-                <!-- Bank Logo -->
-                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                    <a class="navbar-brand logo-brand p-0 text-center" href="index.html">
-                        <img src="assets/images/logo.png" alt="Bank Logo" style="width: 200px; pointer-events: none;">
-                    </a>
-                </div>
-
-                <!-- Bank Info -->
-                <h4 style="margin-top: 20px; font-weight: bold;">Kredi Başvurusu Detayları</h4>
-                <p style="font-size: 16px; color: #333; margin-top: 10px;">
-                </p>
-
-                <!-- Sections -->
-                <div style="text-align: left; margin-top: 20px;">
-                    <div style="text-align: justify;">Kredi başvurusu yapmadan önce dikkat edilmesi gereken bazı önemli
-                        detaylar bulunmaktadır.
-                        Öncelikle, kredi almadan önce finansal durumunuzu değerlendirmeniz önemlidir. Gelir-gider
-                        dengenizi göz önünde bulundurarak, aylık taksitleri rahatça ödeyip ödeyemeyeceğinizi
-                        hesaplamalısınız. Ayrıca kredi notunuzu kontrol etmek, başvurunuzun onaylanma ihtimalini
-                        artırmak açısından faydalı olacaktır. Bankalar, kredi notu düşük olan müşterilere ya kredi
-                        vermez ya da daha yüksek faiz oranları uygular.
-
-                        Kredi faizleri, bankaların sunduğu faiz oranına ve kredinin vadesine göre değişiklik gösterir.
-                        Faiz oranı, yıllık veya aylık olarak belirlenir ve kullanılan krediye ek olarak ödenecek toplam
-                        maliyeti etkiler. Bankalar genellikle sabit faizli ve değişken faizli kredi seçenekleri sunar.
-                        Sabit faizli kredilerde, faiz oranı kredi süresi boyunca değişmezken, değişken faizli krediler
-                        piyasa koşullarına bağlı olarak artabilir veya azalabilir. Ayrıca, kredinin toplam maliyetini
-                        hesaplarken yalnızca faiz oranına değil, dosya masrafı, sigorta ücreti ve diğer ek maliyetlere
-                        de dikkat edilmelidir.
-
-                        Kredi başvurusunda bulunurken, bankanın talep ettiği belgeleri eksiksiz sunmak süreci
-                        hızlandıracaktır. Genellikle kimlik belgesi, gelir belgesi ve bazı durumlarda ek teminatlar
-                        talep edilebilir. Gelir belgesi, maaş bordrosu veya serbest çalışanlar için vergi levhası gibi
-                        belgeler olabilir. Kredi türüne bağlı olarak, ipotek veya kefil gibi ek güvenceler istenebilir.
-
-                        Son olarak, kredi sözleşmesini dikkatlice okumak ve tüm maddeleri anladığınızdan emin olmak
-                        büyük önem taşır. Özellikle faiz oranları, erken ödeme cezaları, gecikme faizleri ve ek ücretler
-                        gibi detaylar incelenmelidir. Kredi çekerken sadece aylık taksitlere odaklanmak yerine, toplam
-                        geri ödeme miktarını ve bütçenize uzun vadede etkisini değerlendirmek sağlıklı bir finansal
-                        karar vermenize yardımcı olacaktır.</div>
-                    </ul>
-                </div>
-
-                <!-- Link to Website -->
-                <div style="margin-top: 10px;">
-                    <p>Daha Fazla Bilgi İçin <a href="https://kredimgeldi.com/faq.html" target="_blank"
-                            style="color: #007bff;">Buraya Tıklayın</a>.</p>
-                </div>
-
-                <h5 style="margin-top: 30px; font-weight: bold;">Kimlik Bilgilerin İle Hemen Başvur</h5>
-                <p style="font-size: 16px; color: #333; margin-top: 10px;">
-                </p>
-
-                <!-- Form (Optional, if still needed) -->
-                <form class="popup-form"
-                    style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 15px;">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" class="form-control" placeholder="İsim" style="flex: 1;">
-                        <input type="text" class="form-control" placeholder="Soyisim" style="flex: 1;">
-                    </div>
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" class="form-control" placeholder="T.C. No." style="flex: 1;">
-                        <input type="text" class="form-control" placeholder="Doğum Tarihi" style="flex: 1;">
-                    </div>
-
-                    <button type="submit" class="default-btn">Başvur <i class="ri-arrow-right-up-line"></i></button>
-                </form>
+            <div class="modal-body kg-modal-body kg-details-body">
+                <h4>Başvurmadan önce bilmeniz gerekenler</h4>
+                <p>Kredi başvurusu yapmadan önce dikkat edilmesi gereken bazı önemli detaylar bulunmaktadır.
+                    Öncelikle, kredi almadan önce finansal durumunuzu değerlendirmeniz önemlidir. Gelir-gider
+                    dengenizi göz önünde bulundurarak, aylık taksitleri rahatça ödeyip ödeyemeyeceğinizi
+                    hesaplamalısınız. Ayrıca kredi notunuzu kontrol etmek, başvurunuzun onaylanma ihtimalini
+                    artırmak açısından faydalı olacaktır. Bankalar, kredi notu düşük olan müşterilere ya kredi
+                    vermez ya da daha yüksek faiz oranları uygular.</p>
+                <p>Kredi faizleri, bankaların sunduğu faiz oranına ve kredinin vadesine göre değişiklik gösterir.
+                    Faiz oranı, yıllık veya aylık olarak belirlenir ve kullanılan krediye ek olarak ödenecek toplam
+                    maliyeti etkiler. Bankalar genellikle sabit faizli ve değişken faizli kredi seçenekleri sunar.
+                    Sabit faizli kredilerde, faiz oranı kredi süresi boyunca değişmezken, değişken faizli krediler
+                    piyasa koşullarına bağlı olarak artabilir veya azalabilir. Ayrıca, kredinin toplam maliyetini
+                    hesaplarken yalnızca faiz oranına değil, dosya masrafı, sigorta ücreti ve diğer ek maliyetlere
+                    de dikkat edilmelidir.</p>
+                <p>Kredi başvurusunda bulunurken, bankanın talep ettiği belgeleri eksiksiz sunmak süreci
+                    hızlandıracaktır. Genellikle kimlik belgesi, gelir belgesi ve bazı durumlarda ek teminatlar
+                    talep edilebilir. Gelir belgesi, maaş bordrosu veya serbest çalışanlar için vergi levhası gibi
+                    belgeler olabilir. Kredi türüne bağlı olarak, ipotek veya kefil gibi ek güvenceler istenebilir.</p>
+                <p>Son olarak, kredi sözleşmesini dikkatlice okumak ve tüm maddeleri anladığınızdan emin olmak
+                    büyük önem taşır. Özellikle faiz oranları, erken ödeme cezaları, gecikme faizleri ve ek ücretler
+                    gibi detaylar incelenmelidir. Kredi çekerken sadece aylık taksitlere odaklanmak yerine, toplam
+                    geri ödeme miktarını ve bütçenize uzun vadede etkisini değerlendirmek sağlıklı bir finansal
+                    karar vermenize yardımcı olacaktır.</p>
+                <p class="kg-details-more">Daha fazla bilgi için <a href="faq.html">Sıkça Sorulan Sorular</a> sayfamıza göz atabilirsiniz.</p>
             </div>
         </div>
     </div>
