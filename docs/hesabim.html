@@ -13,7 +13,7 @@
     <meta name="keywords"
         content="kredi başvurusu, kredi karşılaştırma, en uygun kredi, hızlı kredi, banka kredileri, kredi hesaplama">
     <meta name="author" content="KredimGeldi">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="revisit-after" content="7 days">
 
     <!-- Open Graph Meta Tags (Facebook & LinkedIn) -->
@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!-- Title & Favicon -->
-    <title>KredimGeldi</title>
+    <title>Hesabım - KredimGeldi</title>
     <!-- some good looking meta tags for SEO and preview -->
 
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -97,109 +97,36 @@
     </div>
     <!-- End Search Modal -->
 
-    <!-- Start Page Banner Area -->
-    <div class="page-banner-area position-relative overflow-hidden"
-        style="background-image: url(assets/images/hero/hero-image-2.svg)">
-        <div class="container">
-            <div class="page-banner-content">
-                <h1>KredimGeldi Bilgi Güvenliği</h1>
-                <ul>
-                    <li><a>Politikalar</a></li>
-                    <li>Bilgi Güvenliği</li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="shape-image">
-            <img class="page-banner-shape-1 moveHorizontal_reverse" src="assets/images/shape/page-banner-shape-1.png"
-                alt="shape">
-            <img class="page-banner-shape-2 moveVertical" src="assets/images/shape/page-banner-shape-2.png" alt="shape">
-        </div>
-    </div>
-    <!-- End Page Banner Area -->
 
-    <!-- Start Privacy Policy Area -->
-    <div class="privacy-policy-area ptb-120">
+    <div class="my-account-page ptb-120 overflow-hidden">
         <div class="container">
-            <div class="privacy-policy-content" data-cues="slideInUp" data-duration="700">
-                <div class="information-collection">
-                    <h4>Bilgi Güvenliği Politikamız</h4>
-                    <p>
-                        Fire Media Marketing olarak, kuruluşumuz yasal
-                        şartlara uyum sağlamak ve faaliyetlerimiz kapsamında gizlilik, bütünlük ile tüm fiziksel ve
-                        elektronik
-                        bilgi varlıklarını korumak amacıyla taahhütte bulunmaktadır.
-                    </p>
-                    <p>
-                        Bilgi Güvenliği Yönetim Sistemi (BGYS) gereksinimleri, BGYS hedefleri ile uyumlu şekilde
-                        yürütülmektedir.
-                        ISO 27001:2019 BGYS Kapsamına Göre Politikamız şunları içermektedir:
-                    </p>
-                    <ul>
-                        <li>Bilgi güvenliği yönetim sistemimizin ISO 27001:2019 standardı gerekliliklerine uygun şekilde
-                            dokümante edilmesi, belgelendirilmesi ve sürekli iyileştirilmesini sağlamak,</li>
-                        <li>Personelimizin BGYS farkındalığını sürekli artırmak,</li>
-                        <li>Stratejik iş planları ve BGYS hedefleri doğrultusunda risk ve fırsat yönetimi kapsamında
-                            ilgili riskleri tanımlamak, belirlemek, değerlendirmek ve kontrol etmek,</li>
-                        <li>BGYS ile ilgili tüm yasal mevzuat ve sözleşmelere tam uyum sağlamak,</li>
-                        <li>BGYS varlıklarına yönelik risklerin izlenmesini ve etkin şekilde yönetilmesini sağlamak,
-                        </li>
-                        <li>BGYS kapsamında paydaşlarımızın bilgi varlıklarının gizliliğini korumak,</li>
-                    </ul>
-                    <p>
-                        7 Nisan 2016 tarihli ve 29677 sayılı Resmi Gazete’de yayımlanan, 24 Mart 2016 tarihli ve 6698
-                        sayılı
-                        Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında özel önem verilen kişisel veriler; ırk,
-                        etnik köken,
-                        din veya diğer inançlar, kılık ve kıyafet, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili
-                        verilerdir.
-                    </p>
-                    <p>
-                        Kuruluşumuz, KVKK ile “özel nitelikli” olarak belirlenen kişisel verilerin hukuka uygun olarak
-                        işlenmesi
-                        ve korunmasında yüksek hassasiyet göstermektedir. Bu kapsamda, alınan teknik ve idari tedbirler
-                        özel
-                        nitelikli kişisel veriler açısından özenle uygulanmakta ve düzenli denetimler
-                        gerçekleştirilmektedir.
-                    </p>
-                    <p>
-                        Sektörümüzde bilgi güvenliği alanında örnek bir kuruluş olmak hedefiyle, BGYS hedeflerimiz
-                        doğrultusunda
-                        sistemimizi sürekli geliştirmeyi ve sürdürülebilir bilgi güvenliği şartlarını sağlamayı taahhüt
-                        ederiz.
-                    </p>
+            <div class="row g-4 d-none" id="account-content">
+                <div class="col-lg-6 col-md-12">
+                    <div class="login-form bg-color-fffaeb radius-30">
+                        <h3>Hesabım</h3>
+                        <p class="mb-2"><strong>İsim:</strong> <span id="account-name"></span></p>
+                        <p class="mb-2"><strong>E-Posta:</strong> <span id="account-email"></span></p>
+                        <p class="mb-4"><strong>Üyelik Tarihi:</strong> <span id="account-created"></span></p>
+                        <button type="button" class="default-btn w-100 text-center" data-kg-signout>Çıkış Yap</button>
+                    </div>
                 </div>
-
+                <div class="col-lg-6 col-md-12">
+                    <form class="login-form bg-color-fffaeb radius-30" id="change-password-form" novalidate>
+                        <h3>Şifre Değiştir</h3>
+                        <input type="password" name="password" class="form-control" placeholder="Yeni Şifre (en az 8 karakter)" autocomplete="new-password" minlength="8" required>
+                        <input type="password" name="password2" class="form-control" placeholder="Yeni Şifre Tekrar" autocomplete="new-password" required>
+                        <button type="submit" class="default-btn w-100 text-center">Şifremi Güncelle</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    <!-- End Privacy Policy Area -->
-
-    <!-- Start Footer Area -->
     <div id="footer-placeholder" class="footer-area bg-color-0c3a30 pt-120">
     </div>
-    <!-- End Footer Area -->
-
-    <!-- Start Copyright Area -->
-
-    <!-- End Copyright Area -->
-
-    <!-- Go top Btn -->
     <div class="go-top">
         <i class="ri-arrow-up-fill"></i>
     </div>
-    <!-- Go top Btn End -->
-
-    <!-- JS Files -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/fslightbox.min.js"></script>
-    <script src="assets/js/smooth-scroll.js"></script>
-    <script src="assets/js/scrollCue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
-    <script src="assets/js/auth-config.js"></script>
-    <script src="assets/js/auth.js"></script>
-    <script src="assets/js/script.js"></script>
     <script>
         fetch('components/mobile_navbar.html')
             .then(response => response.text())
@@ -217,6 +144,55 @@
                 // document.getElementById('footer-area') add as a scildren
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
+    </script>
+    <style>
+        .main-navbar {
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            width: 100%;
+        }
+
+        .my-account-page{
+            padding-top:180px;
+        }
+
+
+
+    </style>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fslightbox.min.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+    <script src="assets/js/auth-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        (async function () {
+            const user = await KGAuth.requireUser();
+            if (!user) return;
+
+            document.getElementById('account-name').textContent = KGAuth.displayName(user);
+            document.getElementById('account-email').textContent = user.email;
+            document.getElementById('account-created').textContent = new Date(user.created_at).toLocaleDateString('tr-TR');
+            document.getElementById('account-content').classList.remove('d-none');
+
+            const form = document.getElementById('change-password-form');
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const password = form.password.value;
+                if (password.length < 8) return KGAuth.showMessage(form, 'Şifre en az 8 karakter olmalı.');
+                if (password !== form.password2.value) return KGAuth.showMessage(form, 'Şifreler eşleşmiyor.');
+                KGAuth.setBusy(form, true);
+                const { error } = await KGAuth.updatePassword(password);
+                KGAuth.setBusy(form, false);
+                if (error) return KGAuth.showMessage(form, KGAuth.translateError(error));
+                form.reset();
+                KGAuth.showMessage(form, 'Şifreniz güncellendi.', 'success');
+            });
+        })();
     </script>
 </body>
 

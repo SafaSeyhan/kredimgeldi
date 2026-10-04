@@ -103,16 +103,15 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-6 col-md-12" data-cues="slideInRight" data-duration="200">
-                    <form class="login-form bg-color-fffaeb radius-30">
+                    <form class="login-form bg-color-fffaeb radius-30" id="signin-form" novalidate>
                         <h3>Giriş Yap</h3>
-                        <input type="text" class="form-control" placeholder="E-Posta">
-                        <input type="text" class="form-control" placeholder="Şifre">
+                        <input type="email" name="email" class="form-control" placeholder="E-Posta" autocomplete="email" required>
+                        <input type="password" name="password" class="form-control" placeholder="Şifre" autocomplete="current-password" required>
 
                         <div class="d-flex login-warp gap-4 align-items-center justify-content-between">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
+                                <input class="form-check-input" type="checkbox" name="remember" id="rememberMe" checked>
+                                <label class="form-check-label" for="rememberMe">
                                     Beni Hatırla
                                 </label>
                             </div>
@@ -125,24 +124,31 @@
 
                         <div class="underline position-relative"><span>VEYA</span></div>
 
-                        <a href="https://www.facebook.com/" target="_blank"
-                            class="default-btn facebook w-100 text-center mb-4">Facebook ile Giriş Yap</a>
-                        <a href="https://www.google.com/" target="_blank"
-                            class="default-btn facebook google w-100 text-center mb-4">Google ile Giriş Yap</a>
+                        <button type="button" data-provider="facebook"
+                            class="default-btn facebook w-100 text-center mb-4">Facebook ile Giriş Yap</button>
+                        <button type="button" data-provider="google"
+                            class="default-btn facebook google w-100 text-center mb-4">Google ile Giriş Yap</button>
 
-                        <p>Hesabın mı yok? <a href="login.html">Kayıt Ol</a></p>
+                        <p>Hesabın mı yok? <a href="#signup-form">Kayıt Ol</a></p>
 
                     </form>
                 </div>
                 <div class="col-lg-6 col-md-12" data-cues="slideInLeft" data-duration="200">
-                    <form class="login-form bg-color-fffaeb radius-30">
+                    <form class="login-form bg-color-fffaeb radius-30" id="signup-form" novalidate>
                         <h3>Hesap Oluştur</h3>
-                        <input type="text" class="form-control" placeholder="İsim">
-                        <input type="text" class="form-control" placeholder="E-Posta">
-                        <input type="text" class="form-control" placeholder="Şifre">
-                        <input type="text" class="form-control" placeholder="Şifre Tekrar">
+                        <input type="text" name="name" class="form-control" placeholder="İsim Soyisim" autocomplete="name" required>
+                        <input type="email" name="email" class="form-control" placeholder="E-Posta" autocomplete="email" required>
+                        <input type="password" name="password" class="form-control" placeholder="Şifre (en az 8 karakter)" autocomplete="new-password" minlength="8" required>
+                        <input type="password" name="password2" class="form-control" placeholder="Şifre Tekrar" autocomplete="new-password" required>
+                        <div class="form-check mb-4 text-start">
+                            <input class="form-check-input" type="checkbox" name="consent" id="signupConsent" required>
+                            <label class="form-check-label" for="signupConsent">
+                                <a href="kullanim-kosullari.html" target="_blank">Kullanım Koşulları</a>'nı ve
+                                <a href="kisisel-verilerin-korunmasi.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum, kabul ediyorum.
+                            </label>
+                        </div>
                         <button type="submit" class="default-btn w-100 text-center mb-4">Kayıt Ol</button>
-                        <p>Zaten hesabın var mı <a href="login.html">Giriş Yap</a></p>
+                        <p>Zaten hesabın var mı? <a href="#signin-form">Giriş Yap</a></p>
                     </form>
                 </div>
             </div>
@@ -191,7 +197,79 @@
     <script src="assets/js/fslightbox.min.js"></script>
     <script src="assets/js/smooth-scroll.js"></script>
     <script src="assets/js/scrollCue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+    <script src="assets/js/auth-config.js"></script>
+    <script src="assets/js/auth.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        (function () {
+            const signinForm = document.getElementById('signin-form');
+            const signupForm = document.getElementById('signup-form');
+            const params = new URLSearchParams(window.location.search);
+            // Sadece site içi sayfalara yönlendir (açık yönlendirme olmasın).
+            const next = /^[\w-]+\.html$/.test(params.get('next') || '') ? params.get('next') : 'hesabim.html';
+
+            KGAuth.getUser().then(user => { if (user) window.location.replace(next); });
+
+            if (!KGAuth.configured) {
+                KGAuth.showMessage(signinForm, 'Üyelik sistemi henüz yapılandırılmadı. Lütfen daha sonra tekrar deneyin.', 'warning');
+            }
+
+            signinForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const email = signinForm.email.value.trim();
+                const password = signinForm.password.value;
+                if (!email || !password) {
+                    return KGAuth.showMessage(signinForm, 'E-posta ve şifrenizi girin.');
+                }
+                KGAuth.setBusy(signinForm, true);
+                const { error } = await KGAuth.signIn(email, password, signinForm.remember.checked);
+                KGAuth.setBusy(signinForm, false);
+                if (error) return KGAuth.showMessage(signinForm, KGAuth.translateError(error));
+                window.location.replace(next);
+            });
+
+            signinForm.querySelectorAll('[data-provider]').forEach(btn => {
+                btn.addEventListener('click', async function () {
+                    const { error } = await KGAuth.signInWithProvider(btn.dataset.provider);
+                    if (error) KGAuth.showMessage(signinForm, KGAuth.translateError(error));
+                });
+            });
+
+            signupForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const name = signupForm.name.value.trim();
+                const email = signupForm.email.value.trim();
+                const password = signupForm.password.value;
+                if (!name || !email || !password) {
+                    return KGAuth.showMessage(signupForm, 'Lütfen tüm alanları doldurun.');
+                }
+                if (password.length < 8) {
+                    return KGAuth.showMessage(signupForm, 'Şifre en az 8 karakter olmalı.');
+                }
+                if (password !== signupForm.password2.value) {
+                    return KGAuth.showMessage(signupForm, 'Şifreler eşleşmiyor.');
+                }
+                if (!signupForm.consent.checked) {
+                    return KGAuth.showMessage(signupForm, 'Devam etmek için Kullanım Koşulları ve KVKK metnini kabul etmelisiniz.');
+                }
+                KGAuth.setBusy(signupForm, true);
+                const { data, error } = await KGAuth.signUp(name, email, password);
+                KGAuth.setBusy(signupForm, false);
+                if (error) return KGAuth.showMessage(signupForm, KGAuth.translateError(error));
+                if (data.user && data.user.identities && data.user.identities.length === 0) {
+                    // E-posta doğrulaması açıkken Supabase kayıtlı e-postalar için hata yerine boş kimlik döner.
+                    return KGAuth.showMessage(signupForm, KGAuth.translateError({ message: 'User already registered' }));
+                }
+                if (data.session) {
+                    window.location.replace(next);
+                } else {
+                    signupForm.reset();
+                    KGAuth.showMessage(signupForm, 'Hesabınız oluşturuldu! ' + email + ' adresine bir doğrulama bağlantısı gönderdik. Bağlantıya tıkladıktan sonra giriş yapabilirsiniz.', 'success');
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>
