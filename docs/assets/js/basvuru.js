@@ -48,6 +48,8 @@
     }
 
     function formatPhone(d) {
+        // Yazarken ilk girilen "0" kaybolmasın; tek başına "0" olduğu gibi kalır.
+        if (digits(d) === '0') return '0';
         d = normalizePhone(d).slice(0, 10);
         if (!d) return '';
         return ['0' + d.slice(0, 3), d.slice(3, 6), d.slice(6, 8), d.slice(8, 10)].filter(Boolean).join(' ');
