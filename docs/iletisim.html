@@ -113,7 +113,18 @@
                         <h3>Size nasıl yardımcı olabiliriz?</h3>
                         <p>Kredi başvurunuz, teklifler veya üyeliğinizle ilgili sorularınızı formdan iletebilir ya da
                             bize e-posta ile yazabilirsiniz. Mesajlarınıza en kısa sürede dönüş yapıyoruz.</p>
-                        <a href="mailto:info@kredimgeldi.com" class="contact-info-mail"><i class="ri-mail-line"></i> info@kredimgeldi.com</a>
+                        <ul class="contact-info-list">
+                            <li><i class="ri-phone-line"></i> <a href="tel:+908500000000">0850 000 00 00</a></li>
+                            <li><i class="ri-mail-line"></i> <a href="mailto:info@kredimgeldi.com">info@kredimgeldi.com</a></li>
+                            <li><i class="ri-map-pin-line"></i> <span>İstanbul, Türkiye</span></li>
+                            <li><i class="ri-time-line"></i> <span>Hafta içi 09:00 - 18:00</span></li>
+                        </ul>
+                        <ul class="contact-info-social">
+                            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></li>
+                            <li><a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><i class="ri-twitter-x-line"></i></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ri-instagram-line"></i></a></li>
+                            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a></li>
+                        </ul>
                         <a href="faq.html" class="default-btn two">Sıkça Sorulan Sorular <i class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
@@ -160,7 +171,7 @@
 
 
 
-        fetch('components/footer.html?v=5')
+        fetch('components/footer.html?v=6')
             .then(response => response.text())
             .then(data => {
                 // document.getElementById('footer-area') add as a scildren
@@ -197,18 +208,59 @@
             color: rgba(249, 249, 249, 0.85);
         }
 
-        .contact-info-mail {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin: 22px 0 26px;
-            color: #9edd05;
-            font-size: 18px;
-            font-weight: 600;
+        .contact-info-list {
+            list-style: none;
+            padding: 0;
+            margin: 22px 0 22px;
         }
 
-        .contact-info-mail:hover {
-            color: #ffffff;
+        .contact-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            color: #F9F9F9;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .contact-info-list i {
+            color: #9edd05;
+            font-size: 20px;
+        }
+
+        .contact-info-list a {
+            color: #F9F9F9;
+        }
+
+        .contact-info-list a:hover {
+            color: #9edd05;
+        }
+
+        .contact-info-social {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 26px;
+        }
+
+        .contact-info-social a {
+            display: inline-grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(249, 249, 249, 0.3);
+            color: #F9F9F9;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .contact-info-social a:hover {
+            background: #9edd05;
+            border-color: #9edd05;
+            color: #0c3a30;
         }
 
         .main-navbar {
