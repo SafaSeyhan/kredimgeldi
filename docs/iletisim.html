@@ -108,30 +108,47 @@
                     </form>
                 </div>
                 <div class="col-lg-4 col-md-12" data-cues="slideInDown" data-duration="800">
-                    <div class="contact-info-card radius-30">
-                        <i class="ri-customer-service-2-line"></i>
-                        <h3>Size nasıl yardımcı olabiliriz?</h3>
-                        <p>Kredi başvurunuz, teklifler veya üyeliğinizle ilgili sorularınızı formdan iletebilir ya da
-                            bize e-posta ile yazabilirsiniz. Mesajlarınıza en kısa sürede dönüş yapıyoruz.</p>
-                        <ul class="contact-info-list">
-                            <li><i class="ri-phone-line"></i> <a href="tel:+908500000000">0850 000 00 00</a></li>
-                            <li><i class="ri-mail-line"></i> <a href="mailto:info@kredimgeldi.com">info@kredimgeldi.com</a></li>
-                            <li><i class="ri-map-pin-line"></i> <span>İstanbul, Türkiye</span></li>
-                            <li><i class="ri-time-line"></i> <span>Hafta içi 09:00 - 18:00</span></li>
-                        </ul>
-                        <ul class="contact-info-social">
-                            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></li>
-                            <li><a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><i class="ri-twitter-x-line"></i></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ri-instagram-line"></i></a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a></li>
-                        </ul>
-                        <a href="faq.html" class="default-btn two">Sıkça Sorulan Sorular <i class="ri-arrow-right-up-line"></i></a>
+                    <div class="contact-map">
+                        <iframe title="KredimGeldi konum" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); border:0;"
+                            src="https://www.google.com/maps?q=%C4%B0stanbul%2C%20T%C3%BCrkiye&amp;z=11&amp;output=embed"
+                            width="100%" height="450" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Contact Form Area -->
+
+
+    <!-- Start Contact Address Area -->
+    <div class="contact-address-area ptb-120 overflow-hidden" style="padding-top: 40px;">
+        <div class="container">
+            <div class="address-container radius-20" style="background-color: #fffcec; color: #000;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);">
+                <div class="contact-warp d-flex align-items-center justify-content-between" data-cues="slideInDown"
+                    data-duration="700">
+                    <div class="location position-relative">
+                        <i class="flaticon-phone-call call-icon"></i>
+                        <span style="color: #000;">Telefon</span>
+                        <a style="color: #000;" href="tel:+908500000000">0850 000 00 00</a>
+                    </div>
+                    <div class="location position-relative">
+                        <i class="flaticon-email-1 call-icon"></i>
+                        <span style="color: #000;">E-Posta</span>
+                        <a style="color: #000;" href="mailto:info@kredimgeldi.com">info@kredimgeldi.com</a>
+                    </div>
+                    <div class="location position-relative">
+                        <i class="flaticon-maps-and-flags call-icon"></i>
+                        <span style="color: #000;">Merkezimiz</span>
+                        <a style="color: #000;" href="https://www.google.com/maps/search/?api=1&amp;query=Istanbul" target="_blank" rel="noopener">İstanbul, Türkiye</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Address Area -->
 
 
     <!-- Start Footer Area -->
@@ -180,89 +197,6 @@
     </script>
 
     <style>
-        .contact-info-card {
-            height: 100%;
-            padding: 40px 34px;
-            background: #0c3a30;
-            color: #F9F9F9;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-info-card > i {
-            display: inline-grid;
-            place-items: center;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: #9edd05;
-            color: #0c3a30;
-            font-size: 26px;
-        }
-
-        .contact-info-card h3 {
-            margin: 20px 0 12px;
-            color: #ffffff;
-        }
-
-        .contact-info-card p {
-            color: rgba(249, 249, 249, 0.85);
-        }
-
-        .contact-info-list {
-            list-style: none;
-            padding: 0;
-            margin: 22px 0 22px;
-        }
-
-        .contact-info-list li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
-            color: #F9F9F9;
-            font-size: 17px;
-            font-weight: 500;
-        }
-
-        .contact-info-list i {
-            color: #9edd05;
-            font-size: 20px;
-        }
-
-        .contact-info-list a {
-            color: #F9F9F9;
-        }
-
-        .contact-info-list a:hover {
-            color: #9edd05;
-        }
-
-        .contact-info-social {
-            display: flex;
-            gap: 10px;
-            list-style: none;
-            padding: 0;
-            margin: 0 0 26px;
-        }
-
-        .contact-info-social a {
-            display: inline-grid;
-            place-items: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid rgba(249, 249, 249, 0.3);
-            color: #F9F9F9;
-            font-size: 18px;
-            transition: all 0.3s;
-        }
-
-        .contact-info-social a:hover {
-            background: #9edd05;
-            border-color: #9edd05;
-            color: #0c3a30;
-        }
-
         .main-navbar {
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
             position: absolute;
