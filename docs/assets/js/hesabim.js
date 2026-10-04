@@ -28,14 +28,14 @@
     const WORK_FIELDS = ['occupation', 'employer_name', 'job_start_date'];
 
     const SECTIONS = {
-        kimlik: ['first_name', 'last_name', 'tc_kimlik_no', 'birth_date', 'gender', 'marital_status', 'education', 'dependents'],
-        iletisim: ['phone', 'residence_status', 'city', 'district', 'address', 'postal_code'],
+        kimlik: ['first_name', 'last_name', 'tc_kimlik_no', 'birth_date', 'phone', 'gender', 'marital_status', 'education'],
+        iletisim: ['residence_status', 'city', 'district', 'address', 'postal_code'],
         gelir: ['employment_status', 'occupation', 'employer_name', 'job_start_date', 'monthly_income', 'other_income',
-            'monthly_debt_payments', 'salary_bank'],
+            'dependents', 'salary_bank'],
         tercih: ['loan_type', 'loan_amount', 'loan_term_months', 'consent_kvkk', 'consent_accuracy']
     };
     const SECTION_ORDER = ['kimlik', 'iletisim', 'gelir', 'tercih'];
-    const NUMBER_FIELDS = ['dependents', 'monthly_income', 'other_income', 'monthly_debt_payments', 'loan_amount', 'loan_term_months'];
+    const NUMBER_FIELDS = ['dependents', 'monthly_income', 'other_income', 'loan_amount', 'loan_term_months'];
     const BOOL_FIELDS = ['consent_kvkk', 'consent_accuracy'];
 
     let user = null;
@@ -138,8 +138,7 @@
             case 'dependents': return value >= 0 && value <= 20 && Number.isInteger(value) ? '' : '0 ile 20 arasında bir sayı girin.';
             case 'loan_amount': return value >= 1000 ? '' : 'Kredi tutarı en az 1.000 ₺ olmalıdır.';
             case 'monthly_income':
-            case 'other_income':
-            case 'monthly_debt_payments': return value >= 0 ? '' : 'Geçerli bir tutar girin.';
+            case 'other_income': return value >= 0 ? '' : 'Geçerli bir tutar girin.';
             default: return '';
         }
     }
