@@ -1,9 +1,0 @@
-{
-    "scripts": {
-        "sass": "sass --watch ./assets/scss/style.scss ./assets/css/style.css",
-        "sass2": "sass --watch ./assets/scss/responsive.scss ./assets/css/responsive.css"
-    },
-    "dependencies": {
-        "bootstrap": "^5.3.3"
-    }
-}
