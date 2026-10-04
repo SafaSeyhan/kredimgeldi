@@ -279,22 +279,6 @@
     transform: translateX(4px);
 }
 
-.kg-calc-trust {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px 22px;
-    margin: -6px 0 0;
-    padding: 0;
-    list-style: none;
-    font-size: 13px;
-    color: var(--kg-muted);
-}
-
-.kg-calc-trust i {
-    margin-right: 4px;
-    color: var(--kg-dark);
-}
 
 @media (max-width: 575px) {
     .kg-calc {
