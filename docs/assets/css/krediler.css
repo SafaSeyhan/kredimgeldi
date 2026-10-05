@@ -1,0 +1,282 @@
+/* Krediler sayfası (products.html): kredi türü tanıtımı ve hesaplama kartı */
+.kg-loan-hero {
+    --kg-green: #9edd05;
+    --kg-dark: #0c3a30;
+    --kg-ink: #082720;
+    --kg-muted: #5b6d68;
+    padding: 128px 0 30px;
+}
+
+.kg-loan-crumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: var(--kg-muted);
+}
+
+.kg-loan-crumb a {
+    color: var(--kg-muted);
+}
+
+.kg-loan-crumb a:hover {
+    color: var(--kg-dark);
+}
+
+.kg-loan-crumb span {
+    font-weight: 600;
+    color: var(--kg-dark);
+}
+
+.kg-loan-panel {
+    position: relative;
+    overflow: hidden;
+    padding: 56px;
+    border-radius: 30px;
+    background: var(--kg-dark);
+    box-shadow: 0 30px 60px -36px rgba(8, 39, 32, 0.6);
+}
+
+.kg-loan-panel::before {
+    content: "";
+    position: absolute;
+    top: -180px;
+    left: -140px;
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(158, 221, 5, 0.16), rgba(158, 221, 5, 0) 70%);
+    pointer-events: none;
+}
+
+.kg-loan-panel .row {
+    position: relative;
+}
+
+.kg-loan-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: rgba(158, 221, 5, 0.16);
+    color: var(--kg-green);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.kg-loan-text h1 {
+    margin: 0 0 20px;
+    font-size: 50px;
+    line-height: 1.14;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+}
+
+.kg-loan-mark {
+    display: inline-block;
+    padding: 0 14px 4px;
+    border-radius: 14px;
+    background: var(--kg-green);
+    color: var(--kg-ink);
+    transform: rotate(-2deg);
+}
+
+.kg-loan-text > p {
+    margin: 0 0 26px;
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+/* Güncel oran, tutar ve vade bilgileri (kredi-oranlari.js'den) */
+.kg-loan-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0 0 26px;
+    padding: 0;
+    list-style: none;
+}
+
+.kg-loan-facts li {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.kg-loan-facts span {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.kg-loan-facts strong {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.kg-loan-facts li:first-child strong {
+    font-size: 24px;
+    color: var(--kg-green);
+}
+
+.kg-loan-facts strong b {
+    font-weight: inherit;
+}
+
+.kg-loan-points {
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+}
+
+.kg-loan-points li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.kg-loan-points i {
+    display: inline-flex;
+    flex: 0 0 26px;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--kg-green);
+    color: var(--kg-dark);
+}
+
+.kg-loan-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 15px 24px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-weight: 600;
+    color: #ffffff;
+    line-height: normal;
+    transition: all 0.2s ease;
+}
+
+.kg-loan-ghost:hover {
+    border-color: var(--kg-green);
+    color: var(--kg-green);
+}
+
+.kg-loan-hero .kg-calc {
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.5);
+}
+
+#loan-container {
+    scroll-margin-top: 30px;
+}
+
+@media (max-width: 1199.98px) {
+    .kg-loan-text h1 {
+        font-size: 42px;
+    }
+
+    .kg-loan-facts strong {
+        font-size: 15px;
+    }
+
+    .kg-loan-facts li:first-child strong {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .kg-loan-panel {
+        padding: 36px 28px;
+    }
+
+    .kg-loan-ghost {
+        display: none;
+    }
+
+    .kg-loan-points {
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .kg-loan-hero {
+        padding: 104px 0 10px;
+    }
+
+    .kg-loan-hero .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .kg-loan-crumb {
+        padding: 0 4px;
+    }
+
+    .kg-loan-panel {
+        padding: 28px 16px 16px;
+        border-radius: 24px;
+    }
+
+    .kg-loan-text {
+        padding: 0 4px;
+    }
+
+    .kg-loan-text h1 {
+        font-size: 32px;
+    }
+
+    .kg-loan-mark {
+        padding: 0 10px 3px;
+        border-radius: 10px;
+    }
+
+    .kg-loan-text > p {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .kg-loan-facts {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .kg-loan-facts li {
+        padding: 12px 10px;
+        border-radius: 14px;
+    }
+
+    .kg-loan-facts span {
+        font-size: 12px;
+    }
+
+    .kg-loan-facts strong {
+        font-size: 13px;
+    }
+
+    .kg-loan-facts li:first-child strong {
+        font-size: 18px;
+    }
+
+    .kg-loan-points li {
+        font-size: 15px;
+    }
+}
