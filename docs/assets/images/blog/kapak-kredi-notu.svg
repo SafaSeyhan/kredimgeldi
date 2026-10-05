@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c3a30"/><stop offset="1" stop-color="#14513f"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#1b6a52" stop-opacity="0.9"/><stop offset="1" stop-color="#1b6a52" stop-opacity="0"/></radialGradient>
+<pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#ffffff" fill-opacity="0.07"/></pattern>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.28"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<rect width="1200" height="675" fill="url(#dots)"/>
+<circle cx="600" cy="350" r="420" fill="url(#glow)"/>
+<circle cx="1090" cy="80" r="150" fill="#9edd05" fill-opacity="0.10"/>
+<circle cx="110" cy="610" r="120" fill="#9edd05" fill-opacity="0.08"/>
+
+<g filter="url(#sh)"><rect x="300" y="120" width="600" height="440" rx="40" fill="#ffffff"/></g>
+<path d="M370.1 423.1 A230 230 0 0 1 410.0 300.5" stroke="#e5484d" stroke-width="46" fill="none" stroke-linecap="round"/><path d="M418.1 289.3 A230 230 0 0 1 522.4 213.5" stroke="#f5a524" stroke-width="46" fill="none" stroke-linecap="round"/><path d="M535.5 209.2 A230 230 0 0 1 664.5 209.2" stroke="#f0d000" stroke-width="46" fill="none" stroke-linecap="round"/><path d="M677.6 213.5 A230 230 0 0 1 781.9 289.3" stroke="#b7e33a" stroke-width="46" fill="none" stroke-linecap="round"/><path d="M790.0 300.5 A230 230 0 0 1 829.9 423.1" stroke="#9edd05" stroke-width="46" fill="none" stroke-linecap="round"/>
+<line x1="600" y1="430" x2="758.3" y2="355.5" stroke="#0c3a30" stroke-width="14" stroke-linecap="round"/>
+<circle cx="600" cy="430" r="26" fill="#0c3a30"/><circle cx="600" cy="430" r="9" fill="#9edd05"/>
+<rect x="510" y="478" width="180" height="50" rx="25" fill="#edf1ee"/>
+<text x="600" y="513" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="30" font-weight="700" fill="#0c3a30">1.720</text>
+<text x="352" y="470" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="20" fill="#7a8c86">1</text>
+<text x="848" y="470" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="20" fill="#7a8c86">1900</text>
+
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c3a30"/><stop offset="1" stop-color="#14513f"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#1b6a52" stop-opacity="0.9"/><stop offset="1" stop-color="#1b6a52" stop-opacity="0"/></radialGradient>
+<pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#ffffff" fill-opacity="0.07"/></pattern>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.28"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<rect width="1200" height="675" fill="url(#dots)"/>
+<circle cx="600" cy="350" r="420" fill="url(#glow)"/>
+<circle cx="1090" cy="80" r="150" fill="#9edd05" fill-opacity="0.10"/>
+<circle cx="110" cy="610" r="120" fill="#9edd05" fill-opacity="0.08"/>
+<g transform="rotate(-14 400 245)" filter="url(#sh)"><rect x="250" y="150" width="300" height="190" rx="22" fill="#2f7a63"/><rect x="250" y="190" width="300" height="34" fill="#1f5a48"/><rect x="274" y="270" width="120" height="12" rx="6" fill="#ffffff" fill-opacity="0.6"/><rect x="274" y="294" width="70" height="10" rx="5" fill="#ffffff" fill-opacity="0.4"/></g><g transform="rotate(8 420 395)" filter="url(#sh)"><rect x="270" y="300" width="300" height="190" rx="22" fill="#3f8f76"/><rect x="270" y="340" width="300" height="34" fill="#2b6e5a"/><rect x="294" y="420" width="120" height="12" rx="6" fill="#ffffff" fill-opacity="0.6"/><rect x="294" y="444" width="70" height="10" rx="5" fill="#ffffff" fill-opacity="0.4"/></g>
+<path d="M610 330 L700 330" stroke="#9edd05" stroke-width="14" stroke-linecap="round"/>
+<path d="M680 300 L715 330 L680 360" stroke="#9edd05" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<g filter="url(#sh)"><rect x="760" y="215" width="330" height="210" rx="24" fill="#ffffff"/></g>
+<rect x="790" y="245" width="58" height="44" rx="10" fill="#9edd05"/>
+<rect x="790" y="320" width="200" height="14" rx="7" fill="#0c3a30" fill-opacity="0.85"/>
+<rect x="790" y="350" width="130" height="10" rx="5" fill="#c9d3cf"/>
+<text x="1060" y="400" text-anchor="end" font-family="Outfit, Arial, sans-serif" font-size="34" font-weight="700" fill="#0c3a30">1 taksit</text>
+
+</svg>
