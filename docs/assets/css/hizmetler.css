@@ -366,60 +366,6 @@
     color: #ffffff;
 }
 
-/* Kredi kartı görseli */
-.kg-cc {
-    position: relative;
-    max-width: 340px;
-    aspect-ratio: 1.586;
-    margin: 0 auto 22px;
-    padding: 22px;
-    border-radius: 18px;
-    overflow: hidden;
-    background: linear-gradient(135deg, #0c3a30 0%, #1f6b55 60%, #9edd05 140%);
-    color: #ffffff;
-    box-shadow: 0 20px 40px -20px rgba(8, 39, 32, 0.6);
-}
-
-.kg-cc::after {
-    content: "";
-    position: absolute;
-    right: -40px;
-    bottom: -60px;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.kg-cc-chip {
-    width: 40px;
-    height: 30px;
-    border-radius: 6px;
-    background: linear-gradient(135deg, #f3d77b, #c9a43c);
-}
-
-.kg-cc-no {
-    margin-top: 26px;
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-
-.kg-cc-foot {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 14px;
-    font-size: 12px;
-    opacity: 0.85;
-}
-
-.kg-cc-brand {
-    position: absolute;
-    top: 20px;
-    right: 22px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-}
-
 /* Bölümler */
 .kg-svc-section {
     padding: 90px 0;
@@ -1323,7 +1269,6 @@
         text-align: center;
     }
 
-    .kg-cc,
     .kg-hide-sm {
         display: none;
     }
