@@ -1,0 +1,380 @@
+/* Biz Kimiz sayfası (hizmetler.css üzerine) */
+
+/* Üst bölüm görseli */
+.kg-about-visual {
+    position: relative;
+}
+
+.kg-about-visual > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: 26px;
+}
+
+.kg-about-badge {
+    position: absolute;
+    left: -18px;
+    bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.55);
+}
+
+.kg-about-badge > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: var(--kg-green);
+    color: var(--kg-dark);
+    font-size: 22px;
+}
+
+.kg-about-badge-label {
+    display: block;
+    font-size: 13px;
+    color: var(--kg-muted);
+}
+
+.kg-about-badge strong {
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--kg-ink);
+}
+
+.kg-about-badge small {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--kg-muted);
+}
+
+/* Rakamlar */
+.kg-about-facts {
+    padding: 30px 0 10px;
+}
+
+.kg-about-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border: 1px solid var(--kg-line);
+    border-radius: 26px;
+    background: #ffffff;
+}
+
+.kg-about-fact {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 26px 28px;
+}
+
+.kg-about-fact + .kg-about-fact {
+    border-left: 1px solid var(--kg-line);
+}
+
+.kg-about-fact strong {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--kg-dark);
+}
+
+.kg-about-fact span {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--kg-muted);
+}
+
+/* Misyon / vizyon */
+.kg-about-mv {
+    display: grid;
+    gap: 18px;
+}
+
+.kg-about-mv-card {
+    padding: 32px;
+    border-radius: 26px;
+    background: var(--kg-cream);
+}
+
+.kg-about-mv-card.is-dark {
+    background: var(--kg-dark);
+}
+
+.kg-about-mv-card > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    background: var(--kg-green);
+    color: var(--kg-dark);
+    font-size: 24px;
+}
+
+.kg-about-mv-card h3 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    color: var(--kg-ink);
+}
+
+.kg-about-mv-card p {
+    margin: 0;
+    color: var(--kg-muted);
+}
+
+.kg-about-mv-card.is-dark h3 {
+    color: #ffffff;
+}
+
+.kg-about-mv-card.is-dark p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* Neden KredimGeldi */
+.kg-about-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.kg-about-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 26px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kg-about-list li {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid var(--kg-line);
+}
+
+.kg-about-list li > i {
+    display: inline-flex;
+    flex: 0 0 26px;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--kg-green);
+    color: var(--kg-dark);
+}
+
+.kg-about-list strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--kg-ink);
+}
+
+.kg-about-list span {
+    display: block;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--kg-muted);
+}
+
+.kg-about-list a {
+    font-weight: 600;
+    color: var(--kg-dark);
+    text-decoration: underline;
+}
+
+/* Hizmetler */
+.kg-about-services {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Güvenlik metinleri */
+.kg-about-docs {
+    display: grid;
+    gap: 12px;
+}
+
+.kg-about-docs a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    border: 1px solid var(--kg-line);
+    background: #ffffff;
+    font-weight: 600;
+    color: var(--kg-ink);
+    transition: all 0.2s ease;
+}
+
+.kg-about-docs a:hover {
+    border-color: var(--kg-dark);
+    color: var(--kg-ink);
+}
+
+.kg-about-docs a > i:first-child {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--kg-cream);
+    color: var(--kg-dark);
+    font-size: 20px;
+}
+
+.kg-about-docs a > span {
+    flex: 1;
+}
+
+.kg-about-docs a > i:last-child {
+    color: var(--kg-muted);
+}
+
+/* Çağrı bandı */
+.kg-about-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.kg-about-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    color: var(--kg-ink);
+}
+
+.kg-about-cta-link:hover {
+    color: var(--kg-ink);
+    text-decoration: underline;
+}
+
+@media (max-width: 1199.98px) {
+    .kg-about-fact {
+        padding: 22px 20px;
+    }
+
+    .kg-about-fact strong {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .kg-about-badge {
+        left: 16px;
+        bottom: 16px;
+    }
+
+    .kg-about-facts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .kg-about-fact:nth-child(3) {
+        border-left: 0;
+    }
+
+    .kg-about-fact:nth-child(n + 3) {
+        border-top: 1px solid var(--kg-line);
+    }
+
+    .kg-about-services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .kg-about-photo {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .kg-about-visual > img {
+        max-height: 300px;
+        border-radius: 18px;
+    }
+
+    .kg-about-badge {
+        position: static;
+        margin-top: 12px;
+        padding: 14px 16px;
+        box-shadow: none;
+    }
+
+    .kg-about-badge strong {
+        font-size: 21px;
+    }
+
+    .kg-about-facts {
+        padding: 24px 0 0;
+    }
+
+    .kg-about-fact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 18px 16px;
+    }
+
+    .kg-about-fact strong {
+        font-size: 30px;
+    }
+
+    .kg-about-fact span {
+        font-size: 14px;
+    }
+
+    .kg-about-mv-card {
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+
+    .kg-about-list {
+        grid-template-columns: 1fr;
+    }
+
+    .kg-about-services {
+        gap: 10px;
+    }
+
+    .kg-about-services .kg-other span {
+        display: none;
+    }
+
+    .kg-about-cta-actions {
+        width: 100%;
+    }
+
+    .kg-about-cta-actions .default-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .kg-about-cta-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
