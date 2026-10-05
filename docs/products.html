@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/kredi-hesaplama.css?v=3">
     <link rel="stylesheet" href="assets/css/basvuru.css?v=3">
+    <link rel="stylesheet" href="assets/css/krediler.css?v=1">
 
     <title>Kredi Teklifleri ve Kredi Hesaplama - KredimGeldi</title>
 
@@ -69,100 +70,84 @@
     </div>
 
 
-    <!-- Start Banner Area -->
-    <div class="hero-area position-relative overflow-hidden">
-        <div class="container-fluid eighteen-padding radius-30 position-relative"
-            style=" margin-top: 50px; padding-bottom: 1rem; background-color: #0d3a30;">
-            <div class="hero-content">
-                <div class="hero-revenue">
-                    <div class="row g-4" data-cues="slideInUp" data-duration="400" style="margin-top: 100px;">
-                        <div class="col-xl-6 col-lg-12 col-md-12">
-                            <div class="swiper-container" style="height: 100%; border-radius: 30px;">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="assets/images/hero/slider-1.webp" alt="Image 1"
-                                            style="width: 100%; height: 100%; object-fit: cover;" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="assets/images/hero/slider-2.webp" alt="Image 2"
-                                            style="width: 100%; height: 100%; object-fit: cover;" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="assets/images/hero/slider-3.webp" alt="Image 3"
-                                            style="width: 100%; height: 100%; object-fit: cover;" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="assets/images/hero/slider-4.webp" alt="Image 4"
-                                            style="width: 100%; height: 100%; object-fit: cover;" />
-                                    </div>
-
-                                </div>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-
+    <!-- Kredi türü tanıtımı + Kredi Hesaplama -->
+    <section class="kg-loan-hero">
+        <div class="container">
+            <nav class="kg-loan-crumb" aria-label="Sayfa yolu">
+                <a href="index.html">Ana Sayfa</a><i class="ri-arrow-right-s-line" aria-hidden="true"></i>Krediler<i class="ri-arrow-right-s-line" aria-hidden="true"></i><span data-loan-name>İhtiyaç Kredisi</span>
+            </nav>
+            <div class="kg-loan-panel">
+                <div class="row g-4 g-xl-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="kg-loan-text">
+                            <span class="kg-loan-tag"><i class="ri-wallet-3-line" aria-hidden="true" data-loan-icon></i> <span data-loan-name>İhtiyaç Kredisi</span></span>
+                            <h1 data-loan-title><span class="kg-loan-mark">İhtiyaç Kredisi</span> Tekliflerini Karşılaştır</h1>
+                            <p data-loan-lead>Bankaların ihtiyaç kredisi tekliflerini aylık taksit ve toplam maliyetle yan yana gör, sana uygun olana tek formla başvur.</p>
+                            <ul class="kg-loan-facts">
+                                <li><span>En düşük aylık faiz</span><strong>%<b data-loan-rate>-</b></strong></li>
+                                <li><span>Kredi tutarı</span><strong data-loan-amount>-</strong></li>
+                                <li><span>Vade</span><strong data-loan-term>-</strong></li>
+                            </ul>
+                            <ul class="kg-loan-points" data-loan-points></ul>
+                            <a href="#loan-container" class="kg-loan-ghost">Teklifleri Gör <i class="ri-arrow-down-line" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="kg-calc">
+                            <div class="kg-calc-head">
+                                <span class="kg-calc-eyebrow"><i class="ri-calculator-line"></i> Kredi Hesapla</span>
+                                <h2 class="kg-calc-title">Ne kadar krediye ihtiyacın var?</h2>
                             </div>
 
-                        </div>
-
-                        <div class="col-xl-6 col-lg-12 col-md-12">
-                            <div class="kg-calc">
-                                <div class="kg-calc-head">
-                                    <span class="kg-calc-eyebrow"><i class="ri-calculator-line"></i> Kredi Hesapla</span>
-                                    <h2 class="kg-calc-title">Ne kadar krediye ihtiyacın var?</h2>
-                                </div>
-
-                                <div class="choose-btn kg-calc-types" role="tablist" aria-label="Kredi türü">
-                                    <button class="nav-link kg-calc-type active" data-tab="ihtiyac" type="button" role="tab">
-                                        <i class="ri-wallet-3-line"></i><span>İhtiyaç</span>
-                                    </button>
-                                    <button class="nav-link kg-calc-type" data-tab="konut" type="button" role="tab">
-                                        <i class="ri-home-4-line"></i><span>Konut</span>
-                                    </button>
-                                    <button class="nav-link kg-calc-type" data-tab="tasit" type="button" role="tab">
-                                        <i class="ri-car-line"></i><span>Taşıt</span>
-                                    </button>
-                                </div>
-
-                                <form id="kredi-hesaplama-formu" class="kg-calc-form" onsubmit="handleSubmit(event)">
-                                    <div class="kg-calc-field">
-                                        <div class="kg-calc-label">
-                                            <label for="tutar">Kredi Tutarı</label>
-                                            <small data-calc-range></small>
-                                        </div>
-                                        <div class="kg-calc-amount">
-                                            <input type="text" id="tutar" name="tutar" inputmode="numeric" placeholder="0" required
-                                                oninput="formatNumber(this)" onkeypress="return isNumber(event)" maxlength="9">
-                                            <span>₺</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="kg-calc-field">
-                                        <div class="kg-calc-label">
-                                            <label for="vade">Vade</label>
-                                            <div class="kg-calc-term">
-                                                <input type="number" id="vade" name="vade" min="1" max="36" value="12" required
-                                                    oninput="syncSliderWithInput()">
-                                                <span>ay</span>
-                                            </div>
-                                        </div>
-                                        <input type="range" id="vade-slider" class="kg-calc-slider" min="1" max="36" step="1" value="12"
-                                            oninput="syncInputWithSlider()" aria-label="Vade (ay)">
-                                        <div class="kg-calc-scale"><span data-calc-min></span><span data-calc-max></span></div>
-                                    </div>
-
-                                    <button type="submit" class="default-btn kg-calc-submit" id="hesapla-btn">
-                                        Teklifleri Karşılaştır <i class="ri-arrow-right-line"></i>
-                                    </button>
-                                </form>
+                            <div class="choose-btn kg-calc-types" role="tablist" aria-label="Kredi türü">
+                                <button class="nav-link kg-calc-type active" data-tab="ihtiyac" type="button" role="tab">
+                                    <i class="ri-wallet-3-line"></i><span>İhtiyaç</span>
+                                </button>
+                                <button class="nav-link kg-calc-type" data-tab="konut" type="button" role="tab">
+                                    <i class="ri-home-4-line"></i><span>Konut</span>
+                                </button>
+                                <button class="nav-link kg-calc-type" data-tab="tasit" type="button" role="tab">
+                                    <i class="ri-car-line"></i><span>Taşıt</span>
+                                </button>
                             </div>
-                        </div>
 
+                            <form id="kredi-hesaplama-formu" class="kg-calc-form" onsubmit="handleSubmit(event)">
+                                <div class="kg-calc-field">
+                                    <div class="kg-calc-label">
+                                        <label for="tutar">Kredi Tutarı</label>
+                                        <small data-calc-range></small>
+                                    </div>
+                                    <div class="kg-calc-amount">
+                                        <input type="text" id="tutar" name="tutar" inputmode="numeric" placeholder="0" required
+                                            oninput="formatNumber(this)" onkeypress="return isNumber(event)" maxlength="9">
+                                        <span>₺</span>
+                                    </div>
+                                </div>
+
+                                <div class="kg-calc-field">
+                                    <div class="kg-calc-label">
+                                        <label for="vade">Vade</label>
+                                        <div class="kg-calc-term">
+                                            <input type="number" id="vade" name="vade" min="1" max="36" value="12" required
+                                                oninput="syncSliderWithInput()">
+                                            <span>ay</span>
+                                        </div>
+                                    </div>
+                                    <input type="range" id="vade-slider" class="kg-calc-slider" min="1" max="36" step="1" value="12"
+                                        oninput="syncInputWithSlider()" aria-label="Vade (ay)">
+                                    <div class="kg-calc-scale"><span data-calc-min></span><span data-calc-max></span></div>
+                                </div>
+
+                                <button type="submit" class="default-btn kg-calc-submit" id="hesapla-btn">
+                                    Teklifleri Karşılaştır <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div id="id-modal-placeholder"></div>
     <div id="details-modal-placeholder"></div>
 
@@ -464,6 +449,66 @@
             updateLoanCalculations();
         }
 
+        // Üst bölüm: seçilen kredi türünün başlığı, açıklaması ve güncel oran/tutar/vade bilgileri.
+        const LOAN_HERO = {
+            ihtiyac: {
+                icon: 'ri-wallet-3-line',
+                lead: 'Tatil, eğitim ya da beklenmedik bir harcama için bankaların ihtiyaç kredisi tekliflerini aylık taksit ve toplam maliyetle yan yana gör, sana uygun olana tek formla başvur.',
+                points: ['KKDF, BSMV ve dosya masrafı dahil hesaplama', 'Tutara göre değişen vade seçenekleri', 'Üye olmadan teklifleri gör']
+            },
+            konut: {
+                icon: 'ri-home-4-line',
+                lead: 'Ev sahibi olma yolunda bankaların konut kredisi tekliflerini uzun vadeli taksit ve toplam geri ödemeyle karşılaştır, sana uygun olana tek formla başvur.',
+                points: ['KKDF ve BSMV muafiyeti hesaba katılır', 'Dosya masrafı dahil toplam geri ödeme', 'Üye olmadan teklifleri gör']
+            },
+            tasit: {
+                icon: 'ri-car-line',
+                lead: 'Hayalindeki araç için bankaların taşıt kredisi tekliflerini aylık taksit ve toplam maliyetle karşılaştır, sana uygun olana tek formla başvur.',
+                points: ['KKDF, BSMV ve dosya masrafı dahil hesaplama', 'Tutara göre değişen vade seçenekleri', 'Üye olmadan teklifleri gör']
+            }
+        };
+
+        function updateLoanHero(loanType) {
+            const hero = LOAN_HERO[loanType] || LOAN_HERO.ihtiyac;
+            const name = KG_RATES.typeNames[loanType] || KG_RATES.typeNames.ihtiyac;
+            const limits = LOAN_LIMITS[loanType] || [];
+            const fmt = n => Number(n).toLocaleString('tr-TR');
+
+            document.querySelectorAll('[data-loan-name]').forEach(el => { el.textContent = name; });
+            const icon = document.querySelector('[data-loan-icon]');
+            if (icon) icon.className = hero.icon;
+            const title = document.querySelector('[data-loan-title]');
+            if (title) {
+                title.innerHTML = '';
+                const mark = document.createElement('span');
+                mark.className = 'kg-loan-mark';
+                mark.textContent = name;
+                title.append(mark, ' Tekliflerini Karşılaştır');
+            }
+            const lead = document.querySelector('[data-loan-lead]');
+            if (lead) lead.textContent = hero.lead;
+
+            const rate = document.querySelector('[data-loan-rate]');
+            if (rate) rate.textContent = KGLoan.formatRate(KGLoan.lowestRate(loanType));
+            if (limits.length) {
+                const amount = document.querySelector('[data-loan-amount]');
+                if (amount) amount.textContent = fmt(Math.min(...limits.map(l => l.min))) + ' – ' + fmt(Math.max(...limits.map(l => l.max))) + ' ₺';
+                const term = document.querySelector('[data-loan-term]');
+                if (term) term.textContent = Math.min(...limits.map(l => l.minTerm || 1)) + ' – ' + Math.max(...limits.map(l => l.maxTerm)) + ' ay';
+            }
+
+            const points = document.querySelector('[data-loan-points]');
+            if (points) {
+                points.innerHTML = '';
+                hero.points.forEach(text => {
+                    const li = document.createElement('li');
+                    li.innerHTML = '<i class="ri-check-line" aria-hidden="true"></i> ';
+                    li.append(text);
+                    points.appendChild(li);
+                });
+            }
+        }
+
         // Event Listeners
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize from query params or defaults
@@ -474,6 +519,7 @@
             document.title = KG_RATES.typeNames[type] + ' Teklifleri ve Hesaplama - KredimGeldi';
             const canonical = document.querySelector('link[rel="canonical"]');
             if (canonical) canonical.href = 'https://kredimgeldi.com/products.html?type=' + type;
+            updateLoanHero(type);
 
             // Set active tab
             const navItems = document.querySelectorAll('.choose-btn .nav-link');
@@ -512,6 +558,9 @@
                     const loanType = item.getAttribute('data-tab');
                     setDefaultValues(loanType);
                     updateLimitsBasedOnType(loanType);
+                    updateLoanHero(loanType);
+                    document.title = KG_RATES.typeNames[loanType] + ' Teklifleri ve Hesaplama - KredimGeldi';
+                    history.replaceState(null, '', 'products.html?type=' + loanType);
                 });
             });
         });
@@ -527,28 +576,6 @@
             });
         });
 
-        var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            autoplay: {
-                delay: 3000,
-            },
-            effect: 'slide',
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            on: {
-                init: function () {
-                    this.el.style.overflow = 'hidden';
-                }
-            }
-        });
         fetch('components/identification_modal.html?v=5')
             .then(response => response.text())
             .then(data => {
@@ -633,11 +660,6 @@
             width: 100%;
             padding: 15px 15px;
             border: 1px solid #ccc;
-        }
-
-        .hero-area .container-fluid {
-            margin-top: 150px;
-            margin-bottom: 100px;
         }
 
         .pricing-bg {
@@ -731,25 +753,6 @@
 
         .main-navbar {
             background-color: white !important;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            margin: 0 10px;
-            width: 40px;
-            height: 40px;
-            background-color: white;
-            border-radius: 50%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            font-size: 18px;
-            color: black;
         }
 
         .main-navbar {
