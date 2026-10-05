@@ -32,7 +32,73 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/kredi-hesaplama.css?v=3">
+    <link rel="stylesheet" href="assets/css/ana-sayfa.css?v=1">
     <script src="assets/js/kredi-oranlari.js?v=1"></script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "KredimGeldi Kredi Karnesi Nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KredimGeldi Kredi Karnesi, geçmişteki kredi ve kredi kartı ödeme düzenini, finansal davranışlarını ve beyan ettiğin bilgileri analiz ederek, kredi geçmişini değerlendiren bir rapordur. Bu rapor, kredi başvurularında karşılaşabileceğin olası riskleri belirler ve kredi puanını iyileştirmen için sana özel tavsiyeler sunar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "İhtiyaç Kredisi Başvurusu Yaparken Nelere Dikkat Etmeliyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "İhtiyaç kredisi başvurusu yapmadan önce, farklı bankaların tekliflerini karşılaştırarak en uygun krediyi seçmeye özen göster. Ödeme planları ve vade seçeneklerini değerlendirerek, rahatlıkla geri ödeyebileceğin taksit tutarını belirle. Ayrıca, sigorta ve diğer ek ücretlerin olup olmadığını mutlaka öğren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ne Kadar Taşıt Kredisi Kullanabilirim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Taşıt kredisi tutarı, ilgili yönetmelikler doğrultusunda aracın değerine bağlı olarak değişir. Sıfır araçlarda nihai fatura bedelinin; ikinci el araçlarda ise kasko değerinin belirli bir yüzdesi kadar kredi kullanılabilir. 400.000 TL ve altındaki araçlar için kredi miktarı, araç değerinin %70'ini geçemezken, 400.001 TL ile 800.000 TL arasındaki araçlar için %50, 800.001 TL ile 1.200.000 TL arasındaki araçlar için %30, 1.200.001 TL ile 2.000.000 TL arasındaki araçlar için ise %20 oranında kredi kullanılabilir. Örneğin, 500.000 TL değerindeki bir araç için en fazla 250.000 TL taşıt kredisi alınabilir. Bu nedenle, taşıt kredisi hesaplamalarında aracın nihai fatura bedeli veya kasko değeri dikkate alınmalıdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Herkes Konut Kredisi Alabilir Mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Konut kredisi, genellikle yüksek tutarlarla ve uzun vadelerle sağlanan bir finansman aracıdır. Bu nedenle bankalar, başvuru yapan kişilerin yaşını, gelir düzeyini ve kredi geçmişini dikkatlice inceler. Yapılan değerlendirmeler sonrasında, banka kredi tahsis birimi, başvurulan konut kredisinin onaylanıp onaylanmayacağına karar verir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Teklifleri görmek için üye olmam gerekir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Kredi tutarını ve vadeyi seçtiğinizde bankaların tekliflerini üye olmadan görebilirsiniz. Üyelik, bilgilerinizi kaydetmek ve başvurularınızı takip etmek içindir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Başvurum nasıl ilerliyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Başvurunuz önce alınır ve ilgili bankanın değerlendirmesine iletilir. Üye olarak başvurduysanız her adımı Hesabım > Başvurularım bölümünden takip edebilir, sonuçlandığında onaylanan tutarı ve taksiti görebilirsiniz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kişisel bilgilerim güvende mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bilgileriniz şifreli bağlantıyla iletilir ve yalnızca başvurunuzun değerlendirilmesi için kullanılır. Ayrıntılar için Kişisel Verilerin Korunması ve Gizlilik Bildirimi sayfalarımızı inceleyebilirsiniz."
+      }
+    }
+  ]
+}
+    </script>
 
     <title>KredimGeldi - Kredi Tekliflerini Karşılaştır, Tek Tıkla Başvur</title>
 
@@ -69,56 +135,125 @@
     </div>
 
     <div id="videoContainer">
-        <video id="videoPlayer" autoplay muted playsinline></video>
+        <video id="videoPlayer" autoplay muted playsinline poster="assets/videos/kapak.webp"></video>
         <div id="loadingIndicator" class="loading" aria-hidden="true"></div>
     </div>
 
 
 
-    <div class="main-banner-area overflow-hidden position-relative"
-        style="background-image: url(assets/images/hero/hero-image-1.svg)">
-        <div class="container-fluid side-padding pb-100">
-            <div class="row align-items-center">
-                <div class="col-xl-5 col-lg-12" data-cues="slideInRight" data-duration="400">
-                    <div class="main-banner-content">
-                        <h1 style="position: relative; z-index: 99;">
-                            Sana Uygun
-                            <br />
-                            <span style="position: relative; display: inline-block;">
-                                <img loading="lazy" src="assets/images/svg/your.svg" alt="" style="
-                                    position: absolute; 
-                                    left: 50%; 
-                                    top: 50%; 
-                                    transform: translate(-50%, -50%); 
-                                    z-index: -1;
-                                    width: 110%; /* Adjust as needed */
-                                ">
-                                <span style="position: relative; z-index: 1;">Kredi</span>
-                            </span>
-                            Fırsatlarını Hemen İncele
-                        </h1>
+    <!-- Hero + Kredi Hesaplama -->
+    <section class="kg-home-hero" id="kredi-hesapla">
+        <div class="container">
+            <div class="kg-home-hero-panel">
+                <div class="row g-4 g-xl-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="kg-home-hero-text">
+                            <h1>
+                                Sana Uygun
+                                <span class="kg-home-mark">Kredi</span>
+                                Fırsatlarını Hemen İncele
+                            </h1>
+                            <p><strong>KredimGeldi</strong>, tüm bankaların tekliflerini tek bir platformda toplayarak
+                                başvurularınızı zahmetsizce tamamlamanızı ve süreci anlık takip etmenizi sağlar.</p>
+                            <ul class="kg-home-points">
+                                <li><i class="ri-check-line" aria-hidden="true"></i> Tüm bankaların teklifleri tek ekranda</li>
+                                <li><i class="ri-check-line" aria-hidden="true"></i> KKDF, BSMV ve dosya masrafı dahil hesaplama</li>
+                                <li><i class="ri-check-line" aria-hidden="true"></i> Üye olmadan teklifleri gör</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                                <div class="kg-calc">
+                                    <div class="kg-calc-head">
+                                        <span class="kg-calc-eyebrow"><i class="ri-calculator-line"></i> Kredi Hesapla</span>
+                                        <h2 class="kg-calc-title">Ne kadar krediye ihtiyacın var?</h2>
+                                    </div>
 
+                                    <div class="choose-btn kg-calc-types" role="tablist" aria-label="Kredi türü">
+                                        <button class="nav-link kg-calc-type active" data-tab="ihtiyac" type="button" role="tab">
+                                            <i class="ri-wallet-3-line"></i><span>İhtiyaç</span>
+                                        </button>
+                                        <button class="nav-link kg-calc-type" data-tab="konut" type="button" role="tab">
+                                            <i class="ri-home-4-line"></i><span>Konut</span>
+                                        </button>
+                                        <button class="nav-link kg-calc-type" data-tab="tasit" type="button" role="tab">
+                                            <i class="ri-car-line"></i><span>Taşıt</span>
+                                        </button>
+                                    </div>
 
+                                    <form id="kredi-hesaplama-formu" class="kg-calc-form" onsubmit="handleSubmit(event)">
+                                        <div class="kg-calc-field">
+                                            <div class="kg-calc-label">
+                                                <label for="tutar">Kredi Tutarı</label>
+                                                <small data-calc-range></small>
+                                            </div>
+                                            <div class="kg-calc-amount">
+                                                <input type="text" id="tutar" name="tutar" inputmode="numeric" placeholder="0" required
+                                                    oninput="formatNumber(this)" onkeypress="return isNumber(event)" maxlength="9">
+                                                <span>₺</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="kg-calc-field">
+                                            <div class="kg-calc-label">
+                                                <label for="vade">Vade</label>
+                                                <div class="kg-calc-term">
+                                                    <input type="number" id="vade" name="vade" min="1" max="36" value="12" required
+                                                        oninput="syncSliderWithInput()">
+                                                    <span>ay</span>
+                                                </div>
+                                            </div>
+                                            <input type="range" id="vade-slider" class="kg-calc-slider" min="1" max="36" step="1" value="12"
+                                                oninput="syncInputWithSlider()" aria-label="Vade (ay)">
+                                            <div class="kg-calc-scale"><span data-calc-min></span><span data-calc-max></span></div>
+                                        </div>
+
+                                        <button type="submit" class="default-btn kg-calc-submit" id="hesapla-btn">
+                                            Teklifleri Karşılaştır <i class="ri-arrow-right-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
                     </div>
                 </div>
-                <div class="col-xl-7 col-lg-12" data-cues="slideInLeft" data-duration="400">
-                    <div class="info">
-                        <p class="resp-text-1" style="margin-top: 30px;"><strong>KredimGeldi</strong>, tüm bankaların
-                            tekliflerini tek bir platformda toplayarak başvurularınızı zahmetsizce tamamlamanızı ve
-                            süreci anlık takip etmenizi sağlıyoruz. Finansal geleceğinizi kontrol altına
-                            almanız için buradayız!
-                        </p>
 
-                        <button type="button" class="default-btn" data-bs-toggle="modal" style="width: 200px;"
-                            onclick="scrollToElement('.hero-area')">
-                            Hemen Başvur <i class="ri-arrow-right-up-line"></i>
-                        </button>
-
+                <div class="kg-home-rates">
+                    <div class="kg-home-rates-head">
+                        <h2>Bugünün En Düşük Oranları</h2>
+                        <span>Son güncelleme: <span data-rate-updated></span></span>
+                    </div>
+                    <div class="kg-home-rates-grid">
+                        <a class="kg-home-rate" href="products.html?type=ihtiyac">
+                            <i class="ri-wallet-3-line" aria-hidden="true"></i>
+                            <span class="kg-home-rate-name">İhtiyaç Kredisi</span>
+                            <strong>%<span data-rate="ihtiyac">2,59</span> <small>aylık</small></strong>
+                            <span class="kg-home-rate-bank" data-rate-banks="ihtiyac"></span>
+                        </a>
+                        <a class="kg-home-rate" href="products.html?type=konut">
+                            <i class="ri-home-4-line" aria-hidden="true"></i>
+                            <span class="kg-home-rate-name">Konut Kredisi</span>
+                            <strong>%<span data-rate="konut">2,49</span> <small>aylık</small></strong>
+                            <span class="kg-home-rate-bank" data-rate-banks="konut"></span>
+                        </a>
+                        <a class="kg-home-rate" href="products.html?type=tasit">
+                            <i class="ri-car-line" aria-hidden="true"></i>
+                            <span class="kg-home-rate-name">Taşıt Kredisi</span>
+                            <strong>%<span data-rate="tasit">2,29</span> <small>aylık</small></strong>
+                            <span class="kg-home-rate-bank" data-rate-banks="tasit"></span>
+                        </a>
+                        <a class="kg-home-rate" href="service-details.html?type=mevduat">
+                            <i class="ri-safe-2-line" aria-hidden="true"></i>
+                            <span class="kg-home-rate-name">Mevduat</span>
+                            <strong>%<span data-rate="mevduat">53,5</span> <small>yıllık</small></strong>
+                            <span class="kg-home-rate-bank" data-rate-banks="mevduat"></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
+    <!-- Öne çıkan kartlar -->
+    <section class="kg-home-cards">
         <div class="card-area">
             <div class="container-fluid side-padding">
                 <div class="row g-4" data-cues="slideInUp" data-duration="400" style="justify-content: center;">
@@ -182,295 +317,130 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-
-    <!-- Start Banner Area -->
-    <div class="hero-area position-relative overflow-hidden" style="padding-top: 0;">
-        <div class="container-fluid eighteen-padding position-relative bg-color-0c3a30"
-            style=" margin-top: 0px; padding-bottom: 1rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);padding-top:60px;padding-bottom:60px">
-            <div class="hero-content">
-                <div class="hero-revenue">
-                    <div class="row g-4" data-cues="slideInUp" data-duration="400" style="margin-top: 0px;">
-                        <div class="col-xl-6 col-lg-12 col-md-12">
-                            <div class="feature-account radius-30 position-relative"
-                                style="display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; padding:0; height: 100%;">
-                                <div class="swiper-container" style="height: 100%; ">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/hero/slider-1.webp" alt="Image 1"
-                                                style="width: 100%; height: 100%; object-fit: cover;" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/hero/slider-2.webp" alt="Image 2"
-                                                style="width: 100%; height: 100%; object-fit: cover;" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/hero/slider-3.webp" alt="Image 3"
-                                                style="width: 100%; height: 100%; object-fit: cover;" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/hero/slider-4.webp" alt="Image 4"
-                                                style="width: 100%; height: 100%; object-fit: cover;" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 col-lg-12 col-md-12">
-                            <div class="kg-calc">
-                                <div class="kg-calc-head">
-                                    <span class="kg-calc-eyebrow"><i class="ri-calculator-line"></i> Kredi Hesapla</span>
-                                    <h2 class="kg-calc-title">Ne kadar krediye ihtiyacın var?</h2>
-                                </div>
-
-                                <div class="choose-btn kg-calc-types" role="tablist" aria-label="Kredi türü">
-                                    <button class="nav-link kg-calc-type active" data-tab="ihtiyac" type="button" role="tab">
-                                        <i class="ri-wallet-3-line"></i><span>İhtiyaç</span>
-                                    </button>
-                                    <button class="nav-link kg-calc-type" data-tab="konut" type="button" role="tab">
-                                        <i class="ri-home-4-line"></i><span>Konut</span>
-                                    </button>
-                                    <button class="nav-link kg-calc-type" data-tab="tasit" type="button" role="tab">
-                                        <i class="ri-car-line"></i><span>Taşıt</span>
-                                    </button>
-                                </div>
-
-                                <form id="kredi-hesaplama-formu" class="kg-calc-form" onsubmit="handleSubmit(event)">
-                                    <div class="kg-calc-field">
-                                        <div class="kg-calc-label">
-                                            <label for="tutar">Kredi Tutarı</label>
-                                            <small data-calc-range></small>
-                                        </div>
-                                        <div class="kg-calc-amount">
-                                            <input type="text" id="tutar" name="tutar" inputmode="numeric" placeholder="0" required
-                                                oninput="formatNumber(this)" onkeypress="return isNumber(event)" maxlength="9">
-                                            <span>₺</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="kg-calc-field">
-                                        <div class="kg-calc-label">
-                                            <label for="vade">Vade</label>
-                                            <div class="kg-calc-term">
-                                                <input type="number" id="vade" name="vade" min="1" max="36" value="12" required
-                                                    oninput="syncSliderWithInput()">
-                                                <span>ay</span>
-                                            </div>
-                                        </div>
-                                        <input type="range" id="vade-slider" class="kg-calc-slider" min="1" max="36" step="1" value="12"
-                                            oninput="syncInputWithSlider()" aria-label="Vade (ay)">
-                                        <div class="kg-calc-scale"><span data-calc-min></span><span data-calc-max></span></div>
-                                    </div>
-
-                                    <button type="submit" class="default-btn kg-calc-submit" id="hesapla-btn">
-                                        Teklifleri Karşılaştır <i class="ri-arrow-right-line"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-lg-12 col-md-12">
-                            <div class="feature-provide bg-color-ffffff radius-30" style="height: 100%;">
-                                <h3 class="resp-text-1">Kredini Akıllıca Seç, Geleceğini Güvenceye Al</h3>
-                                <span style="font-size: small;">Finansal kararlarınızı hızlı, güvenli ve bilinçli bir
-                                    şekilde vermek artık çok
-                                    daha kolay! <strong>KredimGeldi</strong>, en uygun kredi ve finansal ürünleri
-                                    tek
-                                    bir platformda
-                                    karşılaştırmanızı sağlar. Bankalara ayrı ayrı başvuru yaparak vakit kaybetmenize
-                                    gerek yok - biz sizin için en avantajlı teklifleri topluyor, şeffaf ve anlık
-                                    başvuru
-                                    süreciyle güvenli bir finansal yolculuk sunuyoruz.
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-12 col-md-12">
-                            <div class="feature-account bg-color-9edd05 radius-30 position-relative" style="padding:0px;display: flex;
-                                align-items: center;
-                                overflow: hidden;
-                                ">
-                                <div id="feature-account-info" style="padding:50px">
-
-                                    <h3 class="resp-text-1">Sana Uygun Kredi Tekliflerini Hemen Gör</h3>
-                                    <ul>
-                                        <li>
-                                            <h4 class="resp-text-2">İstediğin Kredi Tutarını Gir</h4>
-                                        </li>
-                                        <li>
-                                            <h4 class="resp-text-2">Vade Oranını Seç</h4>
-                                        </li>
-                                        <li>
-                                            <h4 class="resp-text-2"> Sana Özel Teklifleri Gör</h4>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div style="display: flex; align-items: center; min-height: 200px;">
-                                    <img loading="lazy" class="hero-image-2" src="assets/images/hero/sanauygunkrediteklifleri.png"
-                                        alt="" style="display: block;">
-                                </div>
-                            </div>
-                        </div>
-
+    <!-- Nasıl çalışır -->
+    <section class="kg-home-section" id="nasil-calisir">
+        <div class="container">
+            <div class="kg-home-heading text-center">
+                <span class="kg-home-eyebrow">Nasıl Çalışır?</span>
+                <h2>Üç adımda doğru krediye ulaş</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="kg-home-step">
+                        <span class="kg-home-step-no">01</span>
+                        <i class="ri-calculator-line" aria-hidden="true"></i>
+                        <h3>Tutarı ve vadeyi seç</h3>
+                        <p>İhtiyaç, konut ya da taşıt kredisi için istediğin tutarı ve vadeyi gir.</p>
+                        <a href="#kredi-hesapla" class="kg-home-link">Hesapla <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="kg-home-step">
+                        <span class="kg-home-step-no">02</span>
+                        <i class="ri-scales-3-line" aria-hidden="true"></i>
+                        <h3>Teklifleri karşılaştır</h3>
+                        <p>Bankaların tekliflerini aylık taksit, toplam geri ödeme ve yıllık maliyetle yan yana gör.</p>
+                        <a href="products.html?type=ihtiyac" class="kg-home-link">Teklifleri gör <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="kg-home-step">
+                        <span class="kg-home-step-no">03</span>
+                        <i class="ri-file-list-3-line" aria-hidden="true"></i>
+                        <h3>Başvur ve takip et</h3>
+                        <p>Tek formla başvur, başvurunun her adımını Hesabım &gt; Başvurularım bölümünden izle.</p>
+                        <a href="login.html" class="kg-home-link">Üye ol <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Banner Area -->
+    </section>
 
-    <!-- Start Features Area -->
-    <div class="features-area ptb-120">
+    <!-- Kampanyalar -->
+    <section class="kg-home-section kg-home-tint" id="kampanyalar">
         <div class="container">
-            <div class="section-title">
+            <div class="kg-home-heading kg-home-heading-row">
                 <h2>Kampanyalar</h2>
+                <a href="kampanyalar.html" class="kg-home-link">Tüm kampanyalar <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
             </div>
-            <div class="row g-4" data-cues="slideInUp" data-duration="400" style="justify-content: center;flex:1;">
-                <div class="col-lg-6 col-md-6">
-                    <div class="bg-color-fffaeb-grad radius-30 position-relative bank-card"
-                        style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 25px;box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);">
-                        <img class="app-image-3" src="assets/images/brands/akbank/akbank_logo.png" alt="Akbank"
-                            style="height: 30px; transform: scale(0.6);">
-                        <div class="divider"
-                            style="width: 100%; height: 1px; background-color: #969696; margin: 20px 0;"></div>
-
-                        <h4>%0 Faizli 55.000 TL'ye varan nakit fırsatı! </h4>
-                        <p class="resp-text-2" style="margin-top: 30px; text-align: center;">30.000 TL 6 ay vadeli
-                            ihtiyaç kredisi ve 25.000
-                            TL 3 ay vadeli taksitli avans.</p>
-                        <a href="https://www.akbank.com/basvuru/mobileappservice/#" class="default-btn two"
-                            style="width: 70%; margin-top: auto; margin-top: 30px; text-align:center;">Hemen
-                            Başvur</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="bg-color-fffaeb-grad radius-30 position-relative bank-card"
-                        style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 25px;box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); ">
-                        <img class="app-image-3" src="assets/images/brands/garanti/garanti_logo.png" alt="Garanti BBVA"
-                            style="height: 30px;transform: scale(1.2); ">
-                        <div class="divider"
-                            style="width: 100%; height: 1px; background-color: #969696; margin: 20px 0;"></div>
-
-                        <h4>Faizsiz 25.000 TL Fırsatı</h4>
-                        <p class="resp-text-2" style="margin-top: 30px; text-align: center;">Bonus Gold'a hemen
-                            başvurun,
-                            25.000 TL'ye varan faizsiz ve masrafsız Taksitli Nakit Avans fırsatından faydalanın! İlk
-                            kez
-                            Bonuslu olanlara özel!</p>
-                        <a href="https://www.bonus.com.tr/kredi-karti-basvurusu?SourceCode=5C062036"
-                            class="default-btn two"
-                            style="width: 70%; margin-top: auto; margin-top: 30px;  text-align:center;">Hemen
-                            Başvur</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="bg-color-fffaeb-grad radius-30 position-relative bank-card"
-                        style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 25px;box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);">
-                        <img class="app-image-3" src="assets/images/brands/ziraat/ziraatlogo.svg" alt="Ziraat Bankası"
-                            style="height: 30px;transform: scale(7); ">
-                        <div class="divider"
-                            style="width: 100%; height: 1px; background-color: #969696; margin: 20px 0;"></div>
-
-                        <h4>5.000 TL Bankkart Lira</h4>
-                        <p class="resp-text-2" style="margin-top: 30px; text-align: center;">Ziraat Mobil ile Ziraat
-                            Süper Şube müşterisi olun, 5.000 TL Bankkart Lira kazanın ve tüm avantajlardan faydalanmaya
-                            başlayın!</p>
-                        <a href="https://www.ziraatbank.com.tr/tr/kampanyalar/ziraat-mobil-musteri-avantajlar"
-                            class="default-btn two"
-                            style="width: 70%; margin-top: auto; margin-top: 30px;  text-align:center;">Hemen
-                            Başvur</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="bg-color-fffaeb-grad radius-30 position-relative bank-card"
-                        style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 25px;box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);">
-                        <img class="app-image-3" src="assets/images/brands/qnb/QNBFinansbank.svg" alt="QNB"
-                            style="height: 30px; ">
-                        <div class="divider"
-                            style="width: 100%; height: 1px; background-color: #969696; margin: 20px 0;"></div>
-
-                        <h4>%42.50'ye Varan Faizi Fırsatı</h4>
-                        <p class="resp-text-2" style="margin-top: 30px; text-align: center;">Size özel faiz oranları ile
-                            vadesiz ve vadelinin avantajlarını bir arada sunan fırsattan yararlanın, %42.50’ye varan
-                            tanışma faizi ve kişiye özel avantajlarla kazanmaya başlayın!</p>
-                        <a href="https://www.qnb.com.tr/kazandiran-gunluk-hesap" class="default-btn two"
-                            style="width: 70%; margin-top: auto; margin-top: 30px;  text-align:center;">Hemen
-                            Başvur</a>
-                    </div>
-                </div>
-
+            <div class="kg-camp-row">
+                <article class="kg-camp-card">
+                    <div class="kg-camp-logo"><img src="assets/images/brands/akbank/akbank_logo.png" alt="Akbank" style="transform: scale(0.6);"></div>
+                    <h3>%0 Faizli 55.000 TL'ye varan nakit fırsatı!</h3>
+                    <p>30.000 TL 6 ay vadeli ihtiyaç kredisi ve 25.000 TL 3 ay vadeli taksitli avans.</p>
+                    <a href="https://www.akbank.com/basvuru/mobileappservice/#" class="default-btn two" target="_blank" rel="noopener">Hemen Başvur <i class="ri-arrow-right-up-line"></i></a>
+                </article>
+                <article class="kg-camp-card">
+                    <div class="kg-camp-logo"><img src="assets/images/brands/garanti/garanti_logo.png" alt="Garanti BBVA" style="transform: scale(1.2);"></div>
+                    <h3>Faizsiz 25.000 TL Fırsatı</h3>
+                    <p>Bonus Gold'a hemen başvurun, 25.000 TL'ye varan faizsiz ve masrafsız Taksitli Nakit Avans fırsatından faydalanın! İlk kez Bonuslu olanlara özel!</p>
+                    <a href="https://www.bonus.com.tr/kredi-karti-basvurusu?SourceCode=5C062036" class="default-btn two" target="_blank" rel="noopener">Hemen Başvur <i class="ri-arrow-right-up-line"></i></a>
+                </article>
+                <article class="kg-camp-card">
+                    <div class="kg-camp-logo"><img src="assets/images/brands/ziraat/ziraatlogo.svg" alt="Ziraat Bankası" style="transform: scale(7);"></div>
+                    <h3>5.000 TL Bankkart Lira</h3>
+                    <p>Ziraat Mobil ile Ziraat Süper Şube müşterisi olun, 5.000 TL Bankkart Lira kazanın ve tüm avantajlardan faydalanmaya başlayın!</p>
+                    <a href="https://www.ziraatbank.com.tr/tr/kampanyalar/ziraat-mobil-musteri-avantajlar" class="default-btn two" target="_blank" rel="noopener">Hemen Başvur <i class="ri-arrow-right-up-line"></i></a>
+                </article>
+                <article class="kg-camp-card">
+                    <div class="kg-camp-logo"><img src="assets/images/brands/qnb/QNBFinansbank.svg" alt="QNB"></div>
+                    <h3>%42.50'ye Varan Faizi Fırsatı</h3>
+                    <p>Size özel faiz oranları ile vadesiz ve vadelinin avantajlarını bir arada sunan fırsattan yararlanın, %42.50’ye varan tanışma faizi ve kişiye özel avantajlarla kazanmaya başlayın!</p>
+                    <a href="https://www.qnb.com.tr/kazandiran-gunluk-hesap" class="default-btn two" target="_blank" rel="noopener">Hemen Başvur <i class="ri-arrow-right-up-line"></i></a>
+                </article>
             </div>
         </div>
-    </div>
-    <div class="financial-about-area ptb-120 overflow-hidden">
+    </section>
+
+    <!-- Avantajlar -->
+    <section class="kg-home-section" id="avantajlar">
         <div class="container">
-            <div class="row align-items-center">
-                <div id="advandages-logo" class="col-lg-3 col-md-3 col-sm-3" data-cues="slideInRight"
-                    data-duration="400" data-disabled="true">
-                    <div class="about-image position-relative" data-cue="slideInRight" data-duration="400"
-                        data-show="true"
-                        style="animation-name: slideInRight; animation-duration: 400ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                        <img loading="lazy" class="app-image-6" src="assets/images/hero/kredingeldiavantajları.png" alt="">
+            <div class="row g-4 align-items-end mb-4">
+                <div class="col-lg-7">
+                    <div class="kg-home-heading mb-0">
+                        <h2>KredimGeldi Avantajları</h2>
+                        <p>Bankaları tek tek gezmeden, kredinin gerçek maliyetini görerek karar ver.</p>
                     </div>
                 </div>
-                <div id="advandages-text" class="col-lg-9 col-md-9 col-sm-9" data-cues="slideInLeft" data-duration="400"
-                    data-disabled="true" style="display: flex;justify-content: end;">
-                    <div class="financial-about-content" data-cue="slideInLeft" data-duration="400" data-show="true"
-                        style="animation-name: slideInLeft; animation-duration: 400ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both; margin-left:0px">
-                        <div class="section-heading">
-                            <h2>KredimGeldi Avantajları</h2>
-                            <p class="resp-text-1" style="margin-top: 30px;"><strong>KredimGeldi</strong>, tüm bankaları
-                                tek platformda buluşturarak şeffaf ve hızlı hizmet, en iyi
-                                faiz oranları, kolay başvuru ve güvenli altyapı avantajlarıyla finansal özgürlüğünüze
-                                ulaşmanızı sağlıyor.</p>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                <ul class="check">
-                                    <li>
-                                        <i class="ri-check-line"></i>
-                                        <strong class="resp-text-2">Tüm bankalar tek platformda</strong>
-                                    </li>
-                                    <li>
-                                        <i class="ri-check-line"></i>
-                                        <strong class="resp-text-2">Şeffaf ve hızlı</strong>
-                                    </li>
-                                    <li>
-                                        <i class="ri-check-line"></i>
-                                        <strong class="resp-text-2">En iyi faiz oranları</strong>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul class="check">
-                                    <li>
-                                        <i class="ri-check-line"></i>
-                                        <strong class="resp-text-2">Kolay başvuru</strong>
-                                    </li>
-                                    <li>
-                                        <i class="ri-check-line"></i>
-                                        <strong class="resp-text-2">Güvenli altyapı</strong>
-                                    </li>
-                                    <li>
-                                        <i class="ri-check-line"></i>
-                                        <strong class="resp-text-2">Finansal özgürlüğünü yakala</strong>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="biz-kimiz.html" class="default-btn two mt-5">Daha Fazla Bilgi <i
-                                class="ri-arrow-right-up-line"></i></a>
+                <div class="col-lg-5 text-lg-end">
+                    <a href="biz-kimiz.html" class="default-btn two">Daha Fazla Bilgi <i class="ri-arrow-right-up-line"></i></a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="kg-home-adv">
+                        <i class="ri-bank-line" aria-hidden="true"></i>
+                        <h3>Tüm bankalar tek ekranda</h3>
+                        <p>Akbank, Garanti BBVA, İş Bankası, QNB ve Ziraat Bankası tekliflerini tek yerde karşılaştır.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="kg-home-adv">
+                        <i class="ri-percent-line" aria-hidden="true"></i>
+                        <h3>Gerçek maliyet</h3>
+                        <p>Taksitler KKDF, BSMV ve dosya masrafı dahil hesaplanır; yıllık maliyet oranını da görürsün.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="kg-home-adv">
+                        <i class="ri-user-unfollow-line" aria-hidden="true"></i>
+                        <h3>Üye olmadan teklif</h3>
+                        <p>Teklifleri görmek için üye olman gerekmez. Üyelik, bilgilerini kaydetmek ve takip için.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="kg-home-adv">
+                        <i class="ri-route-line" aria-hidden="true"></i>
+                        <h3>Başvuru takibi</h3>
+                        <p>Başvurunun hangi aşamada olduğunu Başvurularım bölümünden anlık takip et.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
     <div class="partner-area two bg-color-edf1ee ptb-120 overflow-hidden">
         <div class="container">
             <div class="title">
@@ -593,207 +563,79 @@
         </div>
     </div>
     <!-- End Our Services Area -->
-
-
-
-    <!-- Start Financial Planning Area -->
-    <div class="financial-planning-area overflow-hidden">
-        <div class="container-fluid eighteen-padding bg-color-edf1ee ptb-120 radius-30">
-            <div class="container">
-                <div class="about-top mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-7" data-cues="slideInRight" data-duration="400">
-                            <div class="section-heading mb-0">
-                                <h2 class="mb-0">Güncel Faiz Oranları</h2>
-                                <p class="mt-2 mb-0">Kredilerde bankaların en düşük aylık faizi, mevduatta en yüksek yıllık faiz. Son güncelleme: <span data-rate-updated></span></p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row g-4" data-cues="slideInUp" data-duration="400">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="planning-card bg-color-ffffff radius-30" style="padding:20px">
-                            <div class="title position-relative">
-                                <i class="flaticon-income partnership"></i>
-                                <h3>
-                                    <a href="products.html?type=ihtiyac">İhtiyaç Kredisi</a>
-
-                                    <div class="percentage-area" style="margin-top: 15px;">
-                                        <span>%</span><span class="percentage" data-rate="ihtiyac">2,99</span>
-                                        <!-- info icon -->
-                                    </div>
-                                </h3>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="planning-card bg-color-ffffff radius-30" style="padding:20px">
-                            <div class="title position-relative">
-                                <i class="flaticon-income partnership"></i>
-                                <h3>
-                                    <a href="products.html?type=konut">Konut Kredisi</a>
-
-                                    <div class="percentage-area" style="margin-top: 15px;">
-                                        <span>%</span><span class="percentage" data-rate="konut">2,75</span>
-                                        <!-- info icon -->
-                                    </div>
-                                </h3>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="planning-card bg-color-ffffff radius-30" style="padding:20px">
-                            <div class="title position-relative">
-                                <i class="flaticon-analytic partnership"></i>
-                                <h3>
-                                    <a href="products.html?type=tasit">Taşıt Kredisi</a>
-                                    <div class="percentage-area" style="margin-top: 15px;">
-                                        <span>%</span><span class="percentage" data-rate="tasit">2,94</span>
-                                        <!-- info icon -->
-                                    </div>
-                                </h3>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="planning-card bg-color-ffffff radius-30" style="padding:20px">
-                            <div class="title position-relative">
-                                <i class="flaticon-agreement partnership"></i>
-                                <h3>
-                                    <a href="service-details.html?type=mevduat">Mevduat</a>
-                                    <div class="percentage-area" style="margin-top: 15px;">
-                                        <span>%</span><span class="percentage" data-rate="mevduat">53</span>
-                                        <!-- info icon -->
-                                    </div>
-                                </h3>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Financial Planning Area -->
-
-
-
-    <!-- Start Account Area -->
-    <div class="account-area ptb-120">
+    <!-- Kredi Rehberi -->
+    <section class="kg-home-section" id="kredi-rehberi">
         <div class="container">
-            <div class="about-top mb-5">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-7">
-                        <div class="section-heading mb-0">
-                            <!-- <span class="sub-title">OPENING BANK ACCOUNT</span> -->
-                            <h2 class="mb-0">Kredi Skorunuzu Hemen Şimdi Öğrenin</h2>
-                        </div>
-                    </div>
+            <div class="kg-home-heading kg-home-heading-row">
+                <div>
+                    <span class="kg-home-eyebrow">Kredi Rehberi</span>
+                    <h2>Başvurmadan önce okuyun</h2>
                 </div>
+                <a href="blog.html" class="kg-home-link">Tüm yazılar <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
             </div>
-
-            <div class="row g-4 justify-content-center" data-cues="slideInUp" data-duration="400">
+            <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-account bg-color-fffaeb radius-30">
-                        <div class="consumer-icon position-relative">
-                            <i class="flaticon-consumer"></i>
-                            <div class="number">01</div>
+                    <article class="kg-home-post">
+                        <a href="kredi-maliyeti-nasil-hesaplanir.html" class="kg-home-post-cover" tabindex="-1" aria-hidden="true">
+                            <img src="assets/images/blog/kapak-kredi-maliyeti.svg" alt="" width="1200" height="675" loading="lazy">
+                        </a>
+                        <div class="kg-home-post-body">
+                            <span class="kg-home-chip">Kredi Rehberi</span>
+                            <h3><a href="kredi-maliyeti-nasil-hesaplanir.html">Kredinin Gerçek Maliyeti: Faiz, KKDF, BSMV ve Masraflar</a></h3>
+                            <p>Aylık faiz oranı tek başına yeterli değil. Vergiler, dosya masrafı ve yıllık maliyet oranıyla bir kredinin size gerçekte kaça mal olduğunu adım adım hesaplayın.</p>
+                            <span class="kg-home-post-meta"><i class="ri-time-line" aria-hidden="true"></i> 4 dk okuma</span>
                         </div>
-                        <h3>Bizi Instagram’da Takip Edin</h3>
-                        <p>En iyi kredi fırsatlarını kaçırmamak, finansal ipuçları almak ve özel kampanyalarımızdan
-                            haberdar olmak için Instagram hesabımızı takip edin.
-                        </p>
-                    </div>
+                    </article>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-account bg-color-fffaeb radius-30">
-                        <div class="consumer-icon position-relative">
-                            <i class="flaticon-strategic-plan"></i>
-                            <div class="number">02</div>
+                    <article class="kg-home-post">
+                        <a href="ihtiyac-kredisi-basvuru-rehberi.html" class="kg-home-post-cover" tabindex="-1" aria-hidden="true">
+                            <img src="assets/images/blog/kapak-ihtiyac-kredisi.svg" alt="" width="1200" height="675" loading="lazy">
+                        </a>
+                        <div class="kg-home-post-body">
+                            <span class="kg-home-chip">İhtiyaç Kredisi</span>
+                            <h3><a href="ihtiyac-kredisi-basvuru-rehberi.html">İhtiyaç Kredisi Başvurusundan Önce Kontrol Etmeniz Gereken 7 Şey</a></h3>
+                            <p>Doğru tutar, doğru vade ve hazır belgelerle başvurmak onay ihtimalini artırır, gereksiz maliyetten korur. Başvuru öncesi kontrol listemiz.</p>
+                            <span class="kg-home-post-meta"><i class="ri-time-line" aria-hidden="true"></i> 3 dk okuma</span>
                         </div>
-                        <h3>Hesabınızı Oluşturun</h3>
-                        <p>Kişisel bilgilerinizi girerek dakikalar içinde güvenli bir hesap oluşturun ve finansal
-                            durumunuzu yönetin.
-                        </p>
-                    </div>
+                    </article>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-account bg-color-fffaeb radius-30">
-                        <div class="consumer-icon position-relative">
-                            <i class="flaticon-advisor"></i>
-                            <div class="number">03</div>
+                <div class="col-lg-4 col-md-12">
+                    <article class="kg-home-post">
+                        <a href="kredi-notu-nasil-yukseltilir.html" class="kg-home-post-cover" tabindex="-1" aria-hidden="true">
+                            <img src="assets/images/blog/kapak-kredi-notu.svg" alt="" width="1200" height="675" loading="lazy">
+                        </a>
+                        <div class="kg-home-post-body">
+                            <span class="kg-home-chip">Kredi Notu</span>
+                            <h3><a href="kredi-notu-nasil-yukseltilir.html">Kredi Notu Nedir, Nasıl Yükseltilir?</a></h3>
+                            <p>Kredi başvurunuzun sonucunu ve size sunulan faizi en çok etkileyen şey kredi notunuz. Notun nasıl oluştuğunu ve yükseltmek için atabileceğiniz adımları anlattık.</p>
+                            <span class="kg-home-post-meta"><i class="ri-time-line" aria-hidden="true"></i> 3 dk okuma</span>
                         </div>
-                        <h3>Fırsatlardan Hemen Yararlanın</h3>
-                        <p>Kredi skorunuzu öğrenin, en iyi teklifleri karşılaştırın ve size özel avantajlardan
-                            faydalanmaya başlayın.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Account Area -->
-
-    <!-- Start Download Our App Area -->
-    <div class="app-download-area overflow-hidden">
-        <div class="container-fluid eighteen-padding bg-color-edf1ee ptb-120 radius-30">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6" data-cues="slideInRight" data-duration="400">
-                        <div class="download-image position-relative">
-                            <div class="text-center">
-                                <img loading="lazy" class="app-image-12" src="assets/images/app/telefon.png" alt="">
-                            </div>
-                            <img loading="lazy" class="app-image-11 radius-30" src="assets/images/app/app-image-11.jpg" alt="">
-                            <img loading="lazy" class="feature-shape-1" src="assets/images/shape/feature-shape-1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6" data-cues="slideInLeft" data-duration="400">
-                        <div class="section-heading mb-0 ms-auto">
-                            <h2>Bizi Instagram’da Takip Edin</h2>
-                            <p class="mb-5 resp-text-1">En iyi kredi fırsatlarını kaçırmamak, finansal ipuçları almak ve
-                                özel kampanyalarımızdan haberdar olmak için Instagram hesabımızı takip edin!
-                            </p>
-                            <img loading="lazy" src="assets/images/app/qr-code.png" alt="" style="width:250px;">
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Download Our App Area -->
+    </section>
 
-    <!-- Start Advice Area -->
-    <div class="advice-revenue-area pt-120" style="padding-bottom: 30px;">
-        <div class="container-fluid">
-            <div class="advice-content">
-                <ul>
-                    <li>Senin İçin En İyi Teklif En Hızlı Çözüm</li>
-                    <li>Senin İçin En İyi Teklif En Hızlı Çözüm</li>
-                    <li>Senin İçin En İyi Teklif En Hızlı Çözüm</li>
-                </ul>
+    <!-- Instagram -->
+    <section class="kg-home-insta-wrap">
+        <div class="container">
+            <div class="kg-home-insta">
+                <div class="kg-home-insta-text">
+                    <i class="ri-instagram-line" aria-hidden="true"></i>
+                    <div>
+                        <h2>Bizi Instagram’da Takip Edin</h2>
+                        <p>En iyi kredi fırsatlarını kaçırmamak, finansal ipuçları almak ve özel kampanyalarımızdan haberdar olmak için Instagram hesabımızı takip edin.</p>
+                    </div>
+                </div>
+                <div class="kg-home-insta-action">
+                    <a href="https://qr.me-qr.com/catmU1fS" class="default-btn" target="_blank" rel="noopener">Instagram’da Takip Et <i class="ri-arrow-right-up-line"></i></a>
+                    <img src="assets/images/app/qr-code.png" alt="Instagram hesabımızın QR kodu" class="kg-home-qr" loading="lazy">
+                </div>
             </div>
         </div>
-    </div>
-    <!-- End Advice Area -->
+    </section>
 
-    <!-- Start Advice Area -->
-    <div class="advice-revenue-area two">
-        <div class="container-fluid">
-            <div class="advice-content">
-                <ul>
-                    <li>En Uygun Krediyi Seç, Hayallerine Bir Adım Daha Yaklaş</li>
-                    <li>En Uygun Krediyi Seç, Hayallerine Bir Adım Daha Yaklaş</li>
-                    <li>En Uygun Krediyi Seç, Hayallerine Bir Adım Daha Yaklaş</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End Advice Area -->
 
     <!-- Start Faq Area -->
     <div class="faq-area two ptb-120">
@@ -888,6 +730,42 @@
                                             gelir düzeyini ve kredi geçmişini dikkatlice inceler. Yapılan
                                             değerlendirmeler sonrasında, banka kredi tahsis birimi, başvurulan konut
                                             kredisinin onaylanıp onaylanmayacağına karar verir.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                                    5. Teklifleri görmek için üye olmam gerekir mi?
+                                </button>
+                                <div id="collapse24" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionShould">
+                                    <div class="accordion-body">
+                                        <p>Hayır. Kredi tutarını ve vadeyi seçtiğinizde bankaların tekliflerini üye olmadan görebilirsiniz. Üyelik, bilgilerinizi kaydetmek ve başvurularınızı takip etmek içindir.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                                    6. Başvurum nasıl ilerliyor?
+                                </button>
+                                <div id="collapse25" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionShould">
+                                    <div class="accordion-body">
+                                        <p>Başvurunuz önce alınır ve ilgili bankanın değerlendirmesine iletilir. Üye olarak başvurduysanız her adımı Hesabım &gt; Başvurularım bölümünden takip edebilir, sonuçlandığında onaylanan tutarı ve taksiti görebilirsiniz.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                                    7. Kişisel bilgilerim güvende mi?
+                                </button>
+                                <div id="collapse26" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionShould">
+                                    <div class="accordion-body">
+                                        <p>Bilgileriniz şifreli bağlantıyla iletilir ve yalnızca başvurunuzun değerlendirilmesi için kullanılır. Ayrıntılar için Kişisel Verilerin Korunması ve Gizlilik Bildirimi sayfalarımızı inceleyebilirsiniz.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1165,47 +1043,6 @@
 
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 1,
-            autoplay: {
-                delay: 3000,
-            },
-            effect: 'slide',
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            on: {
-                init: function () {
-                    this.el.style.overflow = 'hidden';
-                }
-            }
-        });
-
-
-        function adjustLayout() {
-            const logo = document.getElementById('advandages-logo');
-            const text = document.getElementById('advandages-text');
-
-            if (window.innerWidth < 576) {
-                logo.style.width = '30%';
-                text.style.width = '70%';
-            } else {
-                logo.style.width = '';
-                text.style.width = '';
-            }
-        }
-
-        // Run the function on page load and window resize
-        window.addEventListener('resize', adjustLayout);
-        window.addEventListener('load', adjustLayout);
-
         const card1 = document.getElementById('card-1');
         card1.style.cursor = 'pointer';
         const card2 = document.getElementById('card-2');
@@ -1224,9 +1061,9 @@
             window.location.href = 'service-details.html?type=kredi-karnesi';
         });
 
-        // card 1 scrolls to class features-area
+        // card 1 scrolls to the campaigns section
         card1.addEventListener('click', function () {
-            scrollToElement('.features-area', -100);
+            scrollToElement('#kampanyalar', -100);
         });
     </script>
 
@@ -1316,25 +1153,6 @@
             border: 1px solid #ccc;
         }
 
-        .hero-area .container-fluid {
-            margin-top: 150px;
-            margin-bottom: 100px;
-            max-width: none !important;
-        }
-
-        .hero-area .container-fluid {
-            padding: 120px 240px;
-        }
-
-        @media (max-width: 1458px) {
-            .hero-area .container-fluid {
-                padding: 20px !important;
-            }
-        }
-
-        .main-banner-area {
-            padding-top: 100px;
-        }
 
         .pricing-bg {
             background-color: #f9f9f9;
@@ -1354,10 +1172,6 @@
             }
         }
 
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
 
         /* id="resp-text-1" must be font-size large when screen is larger than 768fx */
 
@@ -1435,9 +1249,6 @@
             border-bottom: 1px solid #ccc;
         }
 
-        .features-area {
-            padding-top: 0px;
-        }
 
         .our-services-area,
         .financial-planning-area {
@@ -1455,20 +1266,6 @@
             }
         }
 
-
-        .hero-image-2 {
-            margin-top: 0px !important;
-        }
-
-        #feature-account-info {
-            padding: 50px !important;
-        }
-
-        @media (max-width: 767.98px) {
-            #feature-account-info {
-                padding: 25px !important;
-            }
-        }
 
 
         .main-navbar {
@@ -1542,7 +1339,8 @@
                     });
                 });
             } else {
-                videoContainer.style.display = 'none';
+                // Video oynatılamıyorsa kapak görseli görünür kalır.
+                loadingIndicator.style.display = 'none';
                 console.error("HLS not supported in this browser");
             }
 
@@ -1614,6 +1412,7 @@
     <script src="assets/js/script.js?v=4"></script>
     <script src="assets/js/formlar.js?v=1"></script>
     <script src="assets/js/kredi-hesaplama.js?v=1"></script>
+    <script src="assets/js/ana-sayfa.js?v=1"></script>
 </body>
 
 </html>
