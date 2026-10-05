@@ -52,9 +52,6 @@
 
         // 4. Initialize plus/minus widgets
         initPlusMinusWidgets();
-
-        // 5. Initialize mobile menu
-        initMobileMenu();
     }
 
     function initStickyHeader() {
@@ -160,27 +157,20 @@
         }
     }
 
-    function initMobileMenu() {
-        try {
-            const menuItems = document.querySelectorAll('.mobile-menu-list');
-            menuItems.forEach(item => {
-                item.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    const wasActive = this.classList.contains('active');
+    // Mobile menu: listen on the document so it works no matter when
+    // components/mobile_navbar.html finishes loading (it is fetched separately
+    // from the header, so binding to the items directly could miss them).
+    document.addEventListener('click', function (e) {
+        const link = e.target.closest('.mobile-menu > .mobile-menu-list > a');
+        if (!link) return;
+        const item = link.parentElement;
+        if (!item.querySelector('.mobile-menu-items')) return; // plain link, let it navigate
 
-                    // Close all first
-                    menuItems.forEach(i => i.classList.remove('active'));
-
-                    // Open current if it wasn't active before
-                    if (!wasActive) {
-                        this.classList.add('active');
-                    }
-                });
-            });
-        } catch (err) {
-            console.error('Mobile menu error:', err);
-        }
-    }
+        e.preventDefault();
+        const wasActive = item.classList.contains('active');
+        item.parentElement.querySelectorAll(':scope > .mobile-menu-list').forEach(i => i.classList.remove('active'));
+        if (!wasActive) item.classList.add('active');
+    });
 
     var swiper = new Swiper(".partner-slide", {
         slidesPerView: "auto", // Allows smooth infinite scrolling
