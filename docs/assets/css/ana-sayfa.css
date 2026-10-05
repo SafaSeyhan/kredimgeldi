@@ -184,6 +184,10 @@
     background: rgba(255, 250, 235, 0.7);
 }
 
+.kg-home-soft {
+    background: #edf1ee;
+}
+
 .kg-home-heading {
     margin-bottom: 40px;
 }
@@ -482,6 +486,29 @@
 }
 
 /* Duyarlı düzen */
+/* Banka logoları (Biz Kimiz sayfasıyla aynı) */
+.kg-banks {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.kg-bank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 84px;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid var(--kg-line);
+    overflow: hidden;
+}
+
+.kg-bank img {
+    height: 30px;
+    width: auto;
+}
+
 @media (max-width: 1199.98px) {
     .kg-home-hero-text h1 {
         font-size: 44px;
@@ -505,6 +532,10 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 32px 28px;
+    }
+
+    .kg-banks {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -622,5 +653,14 @@
 
     .kg-home-qr {
         display: none;
+    }
+
+    .kg-banks {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .kg-bank {
+        height: 70px;
     }
 }
