@@ -19,11 +19,11 @@
         phone: 'Cep Telefonu'
     };
     const BANK_LOGOS = {
-        akbank: { file: 'akbank_logo.png', scale: 1 },
-        garanti: { file: 'garanti_logo.png', scale: 1 },
-        isbankasi: { file: 'isbankası.svg', scale: 3 },
-        qnb: { file: 'QNBFinansbank.svg', scale: 1.5 },
-        ziraat: { file: 'ziraatlogo.svg', scale: 4.2 }
+        akbank: { file: 'akbank.svg?v=20261005' },
+        garanti: { file: 'garanti.svg?v=20261005' },
+        isbankasi: { file: 'isbankasi.svg?v=20261005' },
+        qnb: { file: 'qnb.svg?v=20261005' },
+        ziraat: { file: 'ziraat.svg?v=20261005' }
     };
 
     let apps = [];
@@ -102,8 +102,7 @@
     function logo(app) {
         const l = BANK_LOGOS[app.bank_code];
         if (l) {
-            const style = l.scale > 1 ? ' style="transform: scale(' + l.scale + ')"' : '';
-            return '<span class="kg-bank-logo"><img src="assets/images/brands/' + esc(app.bank_code) + '/' + esc(l.file) + '" alt="' + esc(app.bank_name) + '"' + style + '></span>';
+            return '<span class="kg-bank-logo"><img src="assets/images/brands/' + esc(app.bank_code) + '/' + esc(l.file) + '" alt="' + esc(app.bank_name) + '"></span>';
         }
         return '<span class="kg-bank-logo kg-bank-mono"><i class="ri-bank-line"></i></span>';
     }
