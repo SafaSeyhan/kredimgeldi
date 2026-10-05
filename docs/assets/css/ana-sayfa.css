@@ -443,6 +443,19 @@
     color: var(--kg-ink);
 }
 
+.kg-home-insta-handle {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--kg-dark);
+}
+
+.kg-home-insta-handle:hover {
+    color: var(--kg-dark);
+    text-decoration: underline;
+}
+
 .kg-home-insta p {
     margin: 0;
     color: var(--kg-ink);
