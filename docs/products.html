@@ -360,7 +360,6 @@
 
             const logo = card.querySelector("[data-bank-logo]");
             logo.src = `assets/images/brands/${key}/${bank.logo}`;
-            if (bank.scale > 1) logo.style.transform = `scale(${bank.scale})`;
 
             return card;
         }

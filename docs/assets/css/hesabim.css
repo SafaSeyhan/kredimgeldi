@@ -595,7 +595,7 @@
 
 .kg-bank-logo img {
     height: 22px;
-    max-width: 96px;
+    max-width: calc(100% - 16px);
     object-fit: contain;
 }
 

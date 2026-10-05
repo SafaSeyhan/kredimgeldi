@@ -9,11 +9,11 @@
 
         // Aylık akdi faiz (%). Mevduat yıllık brüt faiz (%).
         banks: {
-            akbank: { name: 'Akbank', logo: 'akbank_logo.png', scale: 1, ihtiyac: 2.59, konut: 2.49, tasit: 2.29, mevduat: 53.4 },
-            garanti: { name: 'Garanti BBVA', logo: 'garanti_logo.png', scale: 1, ihtiyac: 2.99, konut: 2.99, tasit: 2.99, mevduat: 53.5 },
-            isbankasi: { name: 'İş Bankası', logo: 'isbankası.svg', scale: 4.3, ihtiyac: 2.69, konut: 2.49, tasit: 2.39, mevduat: 53.4 },
-            qnb: { name: 'QNB', logo: 'QNBFinansbank.svg', scale: 1.5, ihtiyac: 2.59, konut: 2.49, tasit: 2.29, mevduat: 53.35 },
-            ziraat: { name: 'Ziraat Bankası', logo: 'ziraatlogo.svg', scale: 7, ihtiyac: 2.69, konut: 2.95, tasit: 2.39, mevduat: 53.45 }
+            akbank: { name: 'Akbank', logo: 'akbank.svg?v=20261005', ihtiyac: 2.59, konut: 2.49, tasit: 2.29, mevduat: 53.4 },
+            garanti: { name: 'Garanti BBVA', logo: 'garanti.svg?v=20261005', ihtiyac: 2.99, konut: 2.99, tasit: 2.99, mevduat: 53.5 },
+            isbankasi: { name: 'İş Bankası', logo: 'isbankasi.svg?v=20261005', ihtiyac: 2.69, konut: 2.49, tasit: 2.39, mevduat: 53.4 },
+            qnb: { name: 'QNB', logo: 'qnb.svg?v=20261005', ihtiyac: 2.59, konut: 2.49, tasit: 2.29, mevduat: 53.35 },
+            ziraat: { name: 'Ziraat Bankası', logo: 'ziraat.svg?v=20261005', ihtiyac: 2.69, konut: 2.95, tasit: 2.39, mevduat: 53.45 }
         },
 
         // Faize eklenen vergiler: KKDF ve BSMV. Konut kredisi bu vergilerden muaftır.
