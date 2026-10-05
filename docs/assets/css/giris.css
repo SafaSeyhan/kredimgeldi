@@ -1,0 +1,289 @@
+/* Giriş Yap / Üye Ol ve Şifre sayfaları (hizmetler.css üzerine) */
+
+.kg-auth-page .kg-svc-hero {
+    padding-bottom: 100px;
+}
+
+.kg-auth-card {
+    max-width: 520px;
+    margin-left: auto;
+    padding: 26px 30px 30px;
+}
+
+/* Üstteki Giriş Yap / Üye Ol seçici */
+.kg-auth-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin-bottom: 24px;
+    padding: 5px;
+    border-radius: 14px;
+    background: var(--kg-soft);
+}
+
+.kg-auth-tab {
+    height: 46px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--kg-muted);
+    transition: all 0.2s ease;
+}
+
+.kg-auth-tab:hover {
+    color: var(--kg-ink);
+}
+
+.kg-auth-tab.active {
+    background: var(--kg-dark);
+    color: #ffffff;
+    box-shadow: 0 8px 18px -10px rgba(8, 39, 32, 0.7);
+}
+
+.kg-auth-tab:focus-visible,
+.kg-auth-eye:focus-visible,
+.kg-auth-social button:focus-visible {
+    outline: 2px solid var(--kg-green);
+    outline-offset: 2px;
+}
+
+/* Formlar */
+.kg-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.kg-auth-form[hidden] {
+    display: none;
+}
+
+.kg-auth-form h2 {
+    margin: 0 0 4px;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--kg-ink);
+}
+
+.kg-auth-form .kg-auth-message {
+    margin: 0;
+    font-size: 15px;
+}
+
+.kg-auth-form .kg-tool-input > i {
+    padding-left: 14px;
+    font-size: 18px;
+    color: var(--kg-muted);
+}
+
+.kg-auth-form .kg-tool-input input {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.kg-auth-form ::placeholder {
+    color: #94a29e;
+    font-weight: 400;
+}
+
+.kg-auth-eye {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 50px;
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+    color: var(--kg-muted);
+}
+
+.kg-auth-eye:hover {
+    color: var(--kg-ink);
+}
+
+.kg-auth-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.kg-auth-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    font-size: 15px;
+}
+
+.kg-auth-form .form-check {
+    margin: 0;
+    color: var(--kg-ink);
+}
+
+.kg-auth-form .form-check-input {
+    border-color: rgba(12, 58, 48, 0.35);
+}
+
+.kg-auth-form .form-check-input:checked {
+    background-color: var(--kg-dark);
+    border-color: var(--kg-dark);
+}
+
+.kg-auth-form .form-check-input:focus {
+    border-color: var(--kg-green);
+    box-shadow: 0 0 0 0.2rem rgba(158, 221, 5, 0.3);
+}
+
+.kg-auth-consent {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.kg-auth-consent a,
+.kg-auth-link,
+.kg-auth-switch a {
+    font-weight: 600;
+    color: var(--kg-dark);
+    text-decoration: underline;
+    text-decoration-color: var(--kg-green);
+    text-underline-offset: 3px;
+}
+
+.kg-auth-consent a:hover,
+.kg-auth-link:hover,
+.kg-auth-switch a:hover {
+    color: #4f7d00;
+}
+
+.kg-auth-form .default-btn {
+    width: 100%;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.kg-auth-switch {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+    color: var(--kg-muted);
+}
+
+/* Sosyal giriş */
+.kg-auth-or {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--kg-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.kg-auth-or::before,
+.kg-auth-or::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--kg-line);
+}
+
+.kg-auth-social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.kg-auth-social button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 50px;
+    padding: 0 12px;
+    border: 1px solid var(--kg-line);
+    border-radius: 12px;
+    background: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--kg-ink);
+    transition: all 0.2s ease;
+}
+
+.kg-auth-social button:hover {
+    border-color: var(--kg-dark);
+    background: #f7f9f8;
+}
+
+.kg-auth-social i {
+    font-size: 20px;
+}
+
+.kg-auth-social [data-provider="google"] i {
+    color: #ea4335;
+}
+
+.kg-auth-social [data-provider="facebook"] i {
+    color: #1877f2;
+}
+
+/* Şifre sayfası: tek kart, ortada */
+.kg-auth-page .kg-auth-card.kg-auth-single {
+    margin: 0 auto;
+}
+
+.kg-auth-single .kg-auth-form p.kg-auth-lead {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--kg-muted);
+}
+
+.kg-auth-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 4px;
+    border-radius: 16px;
+    background: var(--kg-green);
+    color: var(--kg-dark);
+    font-size: 26px;
+}
+
+@media (max-width: 991.98px) {
+    .kg-auth-card {
+        max-width: none;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .kg-auth-page .kg-svc-hero {
+        padding-bottom: 60px;
+    }
+
+    .kg-auth-page .kg-svc-points {
+        margin-bottom: 4px;
+    }
+
+    .kg-auth-card {
+        padding: 18px 16px 22px;
+        border-radius: 20px;
+    }
+
+    .kg-auth-form h2 {
+        font-size: 21px;
+    }
+
+    .kg-auth-pair,
+    .kg-auth-social {
+        grid-template-columns: 1fr;
+    }
+}
