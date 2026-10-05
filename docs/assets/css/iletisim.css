@@ -1,0 +1,302 @@
+/* İletişim sayfası (hizmetler.css üzerine) */
+
+/* Üst bölümdeki iletişim kanalları */
+.kg-channels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kg-channel {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: 100%;
+    padding: 24px 22px;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.kg-channel:hover {
+    border-color: var(--kg-green);
+    background: rgba(158, 221, 5, 0.1);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.kg-channel > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    background: var(--kg-green);
+    color: var(--kg-dark);
+    font-size: 24px;
+}
+
+.kg-channel span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.kg-channel small {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.kg-channel strong {
+    font-size: 17px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+/* Mesaj formu */
+.kg-contact-card {
+    box-shadow: 0 30px 60px -36px rgba(8, 39, 32, 0.45);
+    border: 1px solid var(--kg-line);
+}
+
+.kg-contact-card .kg-tool-head h2 {
+    font-size: 30px;
+}
+
+.kg-contact-form .kg-tool-field label small {
+    font-weight: 500;
+    color: var(--kg-muted);
+}
+
+.kg-contact-form .kg-tool-input input,
+.kg-contact-form .kg-tool-input select {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.kg-contact-form .kg-tool-input textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 14px;
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    color: var(--kg-ink);
+    outline: none;
+    resize: vertical;
+}
+
+.kg-contact-form ::placeholder {
+    color: #94a29e;
+    font-weight: 400;
+}
+
+.kg-select {
+    position: relative;
+}
+
+.kg-select select {
+    padding-right: 40px;
+}
+
+.kg-select select:invalid,
+.kg-select select option[value=""] {
+    color: #94a29e;
+}
+
+.kg-select i {
+    position: absolute;
+    right: 14px;
+    pointer-events: none;
+    font-size: 20px;
+    color: var(--kg-muted);
+}
+
+.kg-contact-form .kg-tool-hint {
+    margin: 16px 0 0;
+}
+
+.kg-contact-form .kg-tool-hint a {
+    color: var(--kg-dark);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.kg-contact-form .default-btn {
+    width: auto;
+    margin-top: 18px;
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+.kg-contact-form .kg-form-message {
+    margin-top: 16px;
+    border-radius: 12px;
+}
+
+/* Süreç kartı */
+.kg-contact-steps .kg-contact-tip {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 24px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.kg-contact-steps .kg-contact-tip i {
+    flex: 0 0 auto;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--kg-green);
+}
+
+.kg-contact-steps .kg-contact-tip a {
+    color: var(--kg-green);
+    font-weight: 600;
+}
+
+/* Harita */
+.kg-map {
+    position: relative;
+    overflow: hidden;
+    height: 460px;
+    border-radius: 30px;
+    border: 1px solid var(--kg-line);
+    background: var(--kg-soft) radial-gradient(rgba(12, 58, 48, 0.12) 1px, transparent 1px) 0 0 / 22px 22px;
+}
+
+.kg-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.kg-map-card {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    display: flex;
+    gap: 14px;
+    max-width: calc(100% - 48px);
+    padding: 20px 24px 20px 20px;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 20px 40px -20px rgba(8, 39, 32, 0.45);
+}
+
+.kg-map-card > i {
+    display: inline-flex;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: var(--kg-dark);
+    color: var(--kg-green);
+    font-size: 24px;
+}
+
+.kg-map-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.kg-map-card small {
+    font-size: 13px;
+    color: var(--kg-muted);
+}
+
+.kg-map-card strong {
+    margin-bottom: 6px;
+    font-size: 18px;
+    color: var(--kg-ink);
+}
+
+.kg-map-card .kg-svc-link {
+    font-size: 15px;
+}
+
+/* Hızlı yardım */
+.kg-contact-links {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 991.98px) {
+    .kg-contact-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .kg-map {
+        height: 400px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .kg-channels {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .kg-channel {
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .kg-channel > i {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+
+    .kg-channel small {
+        font-size: 12px;
+    }
+
+    .kg-channel strong {
+        font-size: 16px;
+    }
+
+    .kg-contact-card .kg-tool-head h2 {
+        font-size: 24px;
+    }
+
+    .kg-contact-form .kg-tool-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kg-contact-form .default-btn {
+        width: 100%;
+    }
+
+    .kg-map {
+        height: 360px;
+        border-radius: 22px;
+    }
+
+    .kg-map-card {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        max-width: none;
+        padding: 16px;
+        border-radius: 18px;
+    }
+}
