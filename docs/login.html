@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="assets/css/remixicon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/hizmetler.css?v=1">
+    <link rel="stylesheet" href="assets/css/giris.css?v=1">
 
     <!-- Title & Favicon -->
     <title>Giriş Yap veya Üye Ol - KredimGeldi</title>
@@ -70,61 +72,99 @@
 
 
 
-    <div class="my-account-page ptb-120 overflow-hidden">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-6 col-md-12" data-cues="slideInRight" data-duration="200">
-                    <form class="login-form bg-color-fffaeb radius-30" id="signin-form" novalidate>
-                        <h3>Giriş Yap</h3>
-                        <input type="email" name="email" class="form-control" placeholder="E-Posta" autocomplete="email" required>
-                        <input type="password" name="password" class="form-control" placeholder="Şifre" autocomplete="current-password" required>
-
-                        <div class="d-flex login-warp gap-4 align-items-center justify-content-between">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="remember" id="rememberMe" checked>
-                                <label class="form-check-label" for="rememberMe">
-                                    Beni Hatırla
-                                </label>
-                            </div>
-                            <div>
-                                <a href="password.html" class="password">Şifreni mi unuttun?</a>
+    <main class="kg-svc kg-auth-page">
+        <section class="kg-svc-hero">
+            <div class="container">
+                <nav class="kg-svc-crumb" aria-label="Sayfa yolu">
+                    <a href="index.html">Ana Sayfa</a><i class="ri-arrow-right-s-line" aria-hidden="true"></i><span>Giriş Yap / Üye Ol</span>
+                </nav>
+                <div class="kg-svc-panel">
+                    <div class="row g-4 g-xl-5 align-items-center">
+                        <div class="col-lg-6 order-2 order-lg-1">
+                            <div class="kg-svc-text">
+                                <span class="kg-svc-tag"><i class="ri-shield-user-line" aria-hidden="true"></i> KredimGeldi Hesabı</span>
+                                <h1>Krediye Giden Yol <span class="kg-svc-mark">Tek</span> Hesapta</h1>
+                                <p>Giriş yap ya da birkaç saniyede ücretsiz üye ol. Başvurularını tek yerden takip et, bilgilerin bir kez kaydedilsin.</p>
+                                <ul class="kg-svc-points">
+                                    <li><i class="ri-check-line" aria-hidden="true"></i> Tüm başvurularını Hesabım sayfasından izle</li>
+                                    <li><i class="ri-check-line" aria-hidden="true"></i> Kayıtlı bilgilerinle formlar otomatik dolsun</li>
+                                    <li><i class="ri-check-line" aria-hidden="true"></i> Üyelik tamamen ücretsiz</li>
+                                    <li><i class="ri-check-line" aria-hidden="true"></i> Bilgilerin KVKK kapsamında korunur</li>
+                                </ul>
                             </div>
                         </div>
+                        <div class="col-lg-6 order-1 order-lg-2">
+                            <div class="kg-tool kg-auth-card">
+                                <div class="kg-auth-tabs" role="tablist" aria-label="Giriş Yap veya Üye Ol">
+                                    <button type="button" class="kg-auth-tab active" role="tab" id="tab-signin" aria-controls="signin-form" aria-selected="true" data-auth-tab="signin">Giriş Yap</button>
+                                    <button type="button" class="kg-auth-tab" role="tab" id="tab-signup" aria-controls="signup-form" aria-selected="false" data-auth-tab="signup" tabindex="-1">Üye Ol</button>
+                                </div>
 
-                        <button type="submit" class="default-btn w-100 text-center">Giriş Yap</button>
+                                <form class="kg-auth-form" id="signin-form" role="tabpanel" aria-labelledby="tab-signin" novalidate>
+                                    <h2>Tekrar hoş geldin</h2>
+                                    <div class="kg-tool-field">
+                                        <label for="signin-email">E-Posta</label>
+                                        <div class="kg-tool-input"><i class="ri-mail-line" aria-hidden="true"></i><input type="email" id="signin-email" name="email" placeholder="ornek@eposta.com" autocomplete="email" required></div>
+                                    </div>
+                                    <div class="kg-tool-field">
+                                        <label for="signin-password">Şifre</label>
+                                        <div class="kg-tool-input"><i class="ri-lock-line" aria-hidden="true"></i><input type="password" id="signin-password" name="password" placeholder="Şifren" autocomplete="current-password" required><button type="button" class="kg-auth-eye" data-toggle-password aria-label="Şifreyi göster"><i class="ri-eye-line" aria-hidden="true"></i></button></div>
+                                    </div>
+                                    <div class="kg-auth-row">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember" id="rememberMe" checked>
+                                            <label class="form-check-label" for="rememberMe">Beni hatırla</label>
+                                        </div>
+                                        <a href="password.html" class="kg-auth-link">Şifreni mi unuttun?</a>
+                                    </div>
+                                    <button type="submit" class="default-btn">Giriş Yap <i class="ri-arrow-right-line" aria-hidden="true"></i></button>
+                                    <p class="kg-auth-switch">Hesabın yok mu? <a href="#uye-ol" data-auth-tab="signup">Ücretsiz üye ol</a></p>
+                                </form>
 
-                        <div class="underline position-relative"><span>VEYA</span></div>
+                                <form class="kg-auth-form" id="signup-form" role="tabpanel" aria-labelledby="tab-signup" novalidate hidden>
+                                    <h2>Ücretsiz hesabını oluştur</h2>
+                                    <div class="kg-tool-field">
+                                        <label for="signup-name">İsim Soyisim</label>
+                                        <div class="kg-tool-input"><i class="ri-user-line" aria-hidden="true"></i><input type="text" id="signup-name" name="name" placeholder="Adın ve soyadın" autocomplete="name" required></div>
+                                    </div>
+                                    <div class="kg-tool-field">
+                                        <label for="signup-email">E-Posta</label>
+                                        <div class="kg-tool-input"><i class="ri-mail-line" aria-hidden="true"></i><input type="email" id="signup-email" name="email" placeholder="ornek@eposta.com" autocomplete="email" required></div>
+                                    </div>
+                                    <div class="kg-auth-pair">
+                                        <div class="kg-tool-field">
+                                            <label for="signup-password">Şifre</label>
+                                            <div class="kg-tool-input"><i class="ri-lock-line" aria-hidden="true"></i><input type="password" id="signup-password" name="password" placeholder="En az 8 karakter" autocomplete="new-password" minlength="8" required><button type="button" class="kg-auth-eye" data-toggle-password aria-label="Şifreyi göster"><i class="ri-eye-line" aria-hidden="true"></i></button></div>
+                                        </div>
+                                        <div class="kg-tool-field">
+                                            <label for="signup-password2">Şifre Tekrar</label>
+                                            <div class="kg-tool-input"><i class="ri-lock-line" aria-hidden="true"></i><input type="password" id="signup-password2" name="password2" placeholder="Şifreni tekrar gir" autocomplete="new-password" required></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check kg-auth-consent">
+                                        <input class="form-check-input" type="checkbox" name="consent" id="signupConsent" required>
+                                        <label class="form-check-label" for="signupConsent">
+                                            <a href="kullanim-kosullari.html" target="_blank">Kullanım Koşulları</a>'nı kabul ediyorum,
+                                            <a href="kisisel-verilerin-korunmasi.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum.
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="default-btn">Üye Ol <i class="ri-arrow-right-line" aria-hidden="true"></i></button>
+                                    <p class="kg-auth-switch">Zaten hesabın var mı? <a href="#giris" data-auth-tab="signin">Giriş yap</a></p>
+                                </form>
 
-                        <button type="button" data-provider="facebook"
-                            class="default-btn facebook w-100 text-center mb-4">Facebook ile Giriş Yap</button>
-                        <button type="button" data-provider="google"
-                            class="default-btn facebook google w-100 text-center mb-4">Google ile Giriş Yap</button>
-
-                        <p>Hesabın mı yok? <a href="#signup-form">Kayıt Ol</a></p>
-
-                    </form>
-                </div>
-                <div class="col-lg-6 col-md-12" data-cues="slideInLeft" data-duration="200">
-                    <form class="login-form bg-color-fffaeb radius-30" id="signup-form" novalidate>
-                        <h3>Hesap Oluştur</h3>
-                        <input type="text" name="name" class="form-control" placeholder="İsim Soyisim" autocomplete="name" required>
-                        <input type="email" name="email" class="form-control" placeholder="E-Posta" autocomplete="email" required>
-                        <input type="password" name="password" class="form-control" placeholder="Şifre (en az 8 karakter)" autocomplete="new-password" minlength="8" required>
-                        <input type="password" name="password2" class="form-control" placeholder="Şifre Tekrar" autocomplete="new-password" required>
-                        <div class="form-check mb-4 text-start">
-                            <input class="form-check-input" type="checkbox" name="consent" id="signupConsent" required>
-                            <label class="form-check-label" for="signupConsent">
-                                <a href="kullanim-kosullari.html" target="_blank">Kullanım Koşulları</a>'nı kabul ediyorum,
-                                <a href="kisisel-verilerin-korunmasi.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum.
-                            </label>
+                                <div class="kg-auth-or"><span>veya</span></div>
+                                <div class="kg-auth-social">
+                                    <button type="button" data-provider="google"><i class="ri-google-fill" aria-hidden="true"></i> Google ile devam et</button>
+                                    <button type="button" data-provider="facebook"><i class="ri-facebook-circle-fill" aria-hidden="true"></i> Facebook ile devam et</button>
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="default-btn w-100 text-center mb-4">Kayıt Ol</button>
-                        <p>Zaten hesabın var mı? <a href="#signin-form">Giriş Yap</a></p>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
+
     <div id="footer-placeholder" class="footer-area bg-color-0c3a30 pt-120">
     </div>
     <div class="go-top">
@@ -148,20 +188,6 @@
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
-    <style>
-        .main-navbar {
-            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            width: 100%;
-        }
-
-        .my-account-page{
-            padding-top:180px;
-        }
-
-
-
-    </style>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
@@ -180,6 +206,86 @@
             const params = new URLSearchParams(window.location.search);
             // Sadece site içi sayfalara yönlendir (açık yönlendirme olmasın).
             const next = /^[\w-]+\.html$/.test(params.get('next') || '') ? params.get('next') : 'hesabim.html';
+
+            // Giriş Yap / Üye Ol sekmeleri. Eski "login.html#signup-form" bağlantıları da Üye Ol'u açar.
+            const SIGNUP_HASHES = ['#uye-ol', '#signup-form', '#kayit'];
+            const tabs = document.querySelectorAll('.kg-auth-tab');
+            const forms = { signin: signinForm, signup: signupForm };
+
+            function showTab(name, focus) {
+                tabs.forEach(tab => {
+                    const on = tab.dataset.authTab === name;
+                    tab.classList.toggle('active', on);
+                    tab.setAttribute('aria-selected', on ? 'true' : 'false');
+                    tab.tabIndex = on ? 0 : -1;
+                });
+                Object.keys(forms).forEach(key => { forms[key].hidden = key !== name; });
+                document.title = (name === 'signup' ? 'Üye Ol' : 'Giriş Yap') + ' - KredimGeldi';
+                // Supabase'in e-posta bağlantılarıyla gelen # bilgisine dokunma.
+                if (!/access_token|error/.test(location.hash)) {
+                    history.replaceState(null, '', location.pathname + location.search + (name === 'signup' ? '#uye-ol' : ''));
+                }
+                if (focus) {
+                    const input = forms[name].querySelector('input');
+                    if (input) input.focus();
+                }
+            }
+
+            function tabFromHash() {
+                showTab(SIGNUP_HASHES.includes(location.hash) ? 'signup' : 'signin');
+            }
+
+            document.querySelectorAll('[data-auth-tab]').forEach(el => {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    showTab(el.dataset.authTab, !el.classList.contains('kg-auth-tab'));
+                });
+            });
+
+            // Sol/sağ ok tuşlarıyla sekmeler arasında geçiş.
+            tabs.forEach(tab => {
+                tab.addEventListener('keydown', function (e) {
+                    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+                    e.preventDefault();
+                    const name = tab.dataset.authTab === 'signin' ? 'signup' : 'signin';
+                    showTab(name);
+                    document.querySelector('.kg-auth-tab[data-auth-tab="' + name + '"]').focus();
+                });
+            });
+
+            // Sayfadayken menüdeki "Üye Ol" / "Giriş" bağlantısına tıklanınca.
+            function closeMenu() {
+                const menu = document.getElementById('navbarOffcanvas');
+                const instance = window.bootstrap && bootstrap.Offcanvas.getInstance(menu);
+                if (instance) instance.hide();
+            }
+            window.addEventListener('hashchange', function () {
+                closeMenu();
+                tabFromHash();
+            });
+            document.addEventListener('click', function (e) {
+                if (e.target.closest('a[href="login.html"]')) {
+                    e.preventDefault();
+                    closeMenu();
+                    showTab('signin', true);
+                }
+            });
+            tabFromHash();
+
+            // Şifreyi göster / gizle
+            document.querySelectorAll('[data-toggle-password]').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const input = btn.parentElement.querySelector('input');
+                    const show = input.type === 'password';
+                    input.type = show ? 'text' : 'password';
+                    btn.setAttribute('aria-label', show ? 'Şifreyi gizle' : 'Şifreyi göster');
+                    btn.querySelector('i').className = show ? 'ri-eye-off-line' : 'ri-eye-line';
+                });
+            });
+
+            function activeForm() {
+                return signupForm.hidden ? signinForm : signupForm;
+            }
 
             KGAuth.getUser().then(user => { if (user) window.location.replace(next); });
 
@@ -201,10 +307,10 @@
                 window.location.replace(next);
             });
 
-            signinForm.querySelectorAll('[data-provider]').forEach(btn => {
+            document.querySelectorAll('.kg-auth-social [data-provider]').forEach(btn => {
                 btn.addEventListener('click', async function () {
                     const { error } = await KGAuth.signInWithProvider(btn.dataset.provider);
-                    if (error) KGAuth.showMessage(signinForm, KGAuth.translateError(error));
+                    if (error) KGAuth.showMessage(activeForm(), KGAuth.translateError(error));
                 });
             });
 
