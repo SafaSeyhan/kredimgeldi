@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bankaların mevduat faizlerini karşılaştır, birikiminin vade sonunda stopaj sonrası ne kadar kazandıracağını hemen hesapla.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kredimgeldi.com/mevduat.html">
+    <meta property="og:site_name" content="KredimGeldi">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:title" content="Mevduat Faizi Hesaplama ve Banka Karşılaştırma - KredimGeldi">
+    <meta property="og:description" content="Bankaların mevduat faizlerini karşılaştır, birikiminin vade sonunda stopaj sonrası ne kadar kazandıracağını hemen hesapla.">
+    <meta property="og:image" content="https://kredimgeldi.com/assets/images/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://kredimgeldi.com/mevduat.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mevduat Faizi Hesaplama ve Banka Karşılaştırma - KredimGeldi">
+    <meta name="twitter:description" content="Bankaların mevduat faizlerini karşılaştır, birikiminin vade sonunda stopaj sonrası ne kadar kazandıracağını hemen hesapla.">
+    <meta name="twitter:image" content="https://kredimgeldi.com/assets/images/preview.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap">
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon_finto.css">
+    <link rel="stylesheet" href="assets/css/scrollCue.css">
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/basvuru.css?v=3">
+    <link rel="stylesheet" href="assets/css/hizmetler.css?v=1">
+
+    <title>Mevduat Faizi Hesaplama ve Banka Karşılaştırma - KredimGeldi</title>
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vadesi dolmadan paramı çekebilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Çekebilirsin, ancak vade sonundan önce çekilen vadeli mevduatta faiz getirisi genellikle kaybedilir. Vade süresini paraya ihtiyaç duymayacağın süreye göre seçmeni öneririz."}}, {"@type": "Question", "name": "Stopaj nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Stopaj, mevduat faiz gelirinden kaynakta kesilen vergidir. Banka, faiz getirisini hesabına yatırırken stopajı keser; hesaplayıcıdaki net getiri bu kesinti sonrası tutardır. Oran vadeye göre değişebildiği için hesaplayıcıda değiştirebilirsin."}}, {"@type": "Question", "name": "Mevduatım güvende mi?", "acceptedAnswer": {"@type": "Answer", "text": "Türkiye’deki bankalarda tutulan tasarruf mevduatı, Tasarruf Mevduatı Sigorta Fonu (TMSF) güvencesi altındadır. Her yıl belirlenen tutara kadar olan mevduat sigortalıdır."}}, {"@type": "Question", "name": "Faiz getirisi ne zaman hesabıma geçer?", "acceptedAnswer": {"@type": "Answer", "text": "Vadeli mevduatta faiz getirisi vade sonunda, stopaj kesildikten sonra anaparayla birlikte hesabına aktarılır."}}, {"@type": "Question", "name": "En yüksek faizi nasıl bulurum?", "acceptedAnswer": {"@type": "Answer", "text": "Oranlar tabloda bankaların ilan ettiği yıllık brüt faizlere göre sıralanır. Yeni müşterilere özel tanışma faizleri için Kampanyalar sayfasına da göz atabilirsin."}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://kredimgeldi.com/"}, {"@type": "ListItem", "position": 2, "name": "Mevduat", "item": "https://kredimgeldi.com/mevduat.html"}]}</script>
+</head>
+
+<body>
+    <div class="preloader-area text-center position-fixed top-0 bottom-0 start-0 end-0" id="preloader">
+        <div class="loader position-absolute start-0 end-0">
+            <img src="assets/images/favicon.png" alt="favicon" class="img-fluid" style="width: 70px; height: 70px;">
+            <div class="wavy position-relative fw-light">
+                <span class="d-inline-block"></span>
+                <span class="d-inline-block">K</span>
+                <span class="d-inline-block">R</span>
+                <span class="d-inline-block">E</span>
+                <span class="d-inline-block">D</span>
+                <span class="d-inline-block">I</span>
+                <span class="d-inline-block">M</span>
+                <span class="d-inline-block">G</span>
+                <span class="d-inline-block">E</span>
+                <span class="d-inline-block">L</span>
+                <span class="d-inline-block">D</span>
+                <span class="d-inline-block">I</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="header-placeholder"></div>
+    <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
+        id="navbarOffcanvas">
+    </div>
+
+    <main class="kg-svc">
+        <section class="kg-svc-hero">
+            <div class="container">
+                <nav class="kg-svc-crumb" aria-label="Sayfa yolu">
+                    <a href="index.html">Ana Sayfa</a><i class="ri-arrow-right-s-line" aria-hidden="true"></i>Hizmetler<i class="ri-arrow-right-s-line" aria-hidden="true"></i><span>Mevduat</span>
+                </nav>
+                <div class="kg-svc-panel">
+                    <div class="row g-4 g-xl-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="kg-svc-text">
+                                <span class="kg-svc-tag"><i class="ri-safe-2-line" aria-hidden="true"></i> Mevduat</span>
+                                <h1>Birikimin <span class="kg-svc-mark">Faizle</span> Büyüsün</h1>
+                                <p>Bankaların mevduat faizlerini karşılaştır, paranın vade sonunda ne kadar kazandıracağını stopaj dahil hemen hesapla.</p>
+                                <ul class="kg-svc-points">
+                                <li><i class="ri-check-line" aria-hidden="true"></i> <span>Yıllık %<span data-rate="mevduat">53,5</span>'e varan mevduat faizi</span></li>
+                                <li><i class="ri-check-line" aria-hidden="true"></i> <span>Stopaj sonrası net getiri hesabı</span></li>
+                                <li><i class="ri-check-line" aria-hidden="true"></i> <span>TMSF güvencesindeki bankalar</span></li>
+                                </ul>
+                                <div class="kg-svc-actions">
+                                    <a href="iletisim.html" class="default-btn" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Mevduat Hesabı">Mevduat Hesabı Aç <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="#oranlar" class="kg-svc-ghost">Faiz Oranları <i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="kg-tool" data-tool="mevduat">
+                                <div class="kg-tool-head">
+                                    <span class="kg-tool-eyebrow"><i class="ri-calculator-line" aria-hidden="true"></i> Getiri Hesaplama</span>
+                                    <h2>Paran ne kadar kazandırır?</h2>
+                                </div>
+                                <div class="kg-tool-grid">
+                                <div class="kg-tool-field wide">
+                                    <label for="t-amount">Yatırılacak tutar</label>
+                                    <div class="kg-tool-input">
+                                        <input type="text" id="t-amount" name="amount" inputmode="numeric" value="100.000" data-money>
+                                        <span>TL</span>
+                                    </div>
+                                </div>
+                                <div class="kg-tool-field">
+                                    <label for="t-days">Vade</label>
+                                    <div class="kg-tool-input">
+                                        <select id="t-days" name="days">
+                                            <option value="32" selected>32 gün</option>
+                                            <option value="46">46 gün</option>
+                                            <option value="92">92 gün</option>
+                                            <option value="181">181 gün</option>
+                                            <option value="365">365 gün</option>
+                                        </select>
+                                        <span><i class="ri-arrow-down-s-line"></i></span>
+                                    </div>
+                                </div>
+                                <div class="kg-tool-field">
+                                    <label for="t-tax">Stopaj oranı</label>
+                                    <div class="kg-tool-input">
+                                        <input type="text" id="t-tax" name="tax" inputmode="decimal" value="17,5">
+                                        <span>%</span>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="kg-tool-result" aria-live="polite">
+                                    <div class="kg-tool-result-main"><span>Net getiri<br><small data-mevduat-bank></small></span><strong data-mevduat-net>-</strong></div>
+                                    <ul class="kg-tool-list">
+                                        <li><span>Brüt faiz getirisi</span><b data-mevduat-gross>-</b></li>
+                                        <li><span>Stopaj kesintisi</span><b data-mevduat-tax>-</b></li>
+                                        <li><span>Vade sonu toplam</span><b data-mevduat-end>-</b></li>
+                                    </ul>
+                                </div>
+                                <p class="kg-tool-hint">Oranlar bankaların ilan ettiği yıllık brüt faizlerdir; tutara, vadeye ve müşteri durumuna göre değişebilir. Tüm bankaların getirisini aşağıdaki tabloda görebilirsin.</p>
+                                <a href="iletisim.html" class="default-btn two" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Mevduat Hesabı">Mevduat Hesabı Aç <i class="ri-arrow-right-up-line"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="kg-svc-section kg-svc-tint" id="oranlar">
+            <div class="container">
+                <div class="kg-svc-heading">
+                    <span class="kg-svc-eyebrow">Faiz Oranları</span>
+<h2>Bankaların mevduat getirileri</h2>
+                    <p>Hesaplayıcıya girdiğin tutar ve <span data-mevduat-days>32</span> günlük vade için bankaların stopaj sonrası net getirileri. Son güncelleme: <span data-rate-updated></span></p>
+                </div>
+                <div class="kg-table-wrap">
+                    <table class="kg-table">
+                        <thead><tr><th scope="col">Banka</th><th scope="col">Yıllık brüt faiz</th><th scope="col" class="kg-hide-sm">Brüt getiri</th><th scope="col">Net getiri</th></tr></thead>
+                        <tbody data-mevduat-rows></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-section">
+            <div class="container">
+                <div class="kg-svc-heading text-center">
+                    <span class="kg-svc-eyebrow">Neden Vadeli Mevduat?</span>
+<h2>Birikimini risksiz değerlendir</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-6 col-lg-3">
+                        <div class="kg-feature">
+                            <i class="ri-percent-line" aria-hidden="true"></i>
+                            <h3>Yüksek faiz</h3>
+                            <p>Bankaların güncel faiz oranlarını karşılaştırarak birikimini en iyi oranla değerlendir.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="kg-feature">
+                            <i class="ri-calendar-check-line" aria-hidden="true"></i>
+                            <h3>Esnek vade</h3>
+                            <p>32 günden 1 yıla kadar, ihtiyacına uygun vadeyi kendin seç.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="kg-feature">
+                            <i class="ri-shield-check-line" aria-hidden="true"></i>
+                            <h3>Güvence</h3>
+                            <p>Tasarruf mevduatın yasal limite kadar TMSF güvencesi altındadır.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="kg-feature">
+                            <i class="ri-smartphone-line" aria-hidden="true"></i>
+                            <h3>Kolay hesap açılışı</h3>
+                            <p>Tek formla başvur, mevduat hesabını hızlıca açmanın yolunu öğren.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-section">
+            <div class="container">
+                <div class="row g-4 g-xl-5">
+                    <div class="col-lg-7">
+                        <div class="kg-info">
+                            <span class="kg-svc-eyebrow">Vadeli Mevduat Nedir?</span>
+                            <h2>Birikimini vadeli mevduatla değerlendir</h2>
+                            <p>Vadeli mevduat hesabı, birikimini belirli bir vade süresi boyunca bankada tutarak faiz geliri elde etmeni sağlayan güvenli bir seçenektir. Faiz oranları vade süresine ve bankaların kampanyalarına göre değişir. Birikimini risksiz değerlendirmek isteyenler için hem güvenli hem de kazançlı bir yoldur.</p>
+                            <p>Vade boyunca paranı çekmediğin sürece faiz geliri elde edersin. Vade sonunda anaparan ve stopaj kesildikten sonraki faiz gelirin hesabına aktarılır.</p>
+                            <h3>Vade süresini nasıl seçmeli?</h3>
+                            <p>Vade sonundan önce paranı çekersen faiz kaybı yaşayabilirsin. Bu nedenle vade süresini belirlerken finansal ihtiyaçlarını göz önünde bulundur ve paranı vade sonuna kadar kullanmayacağından emin ol. Kısa vadeler esneklik, uzun vadeler ise faiz oranını sabitleme imkânı sunar.</p>
+                            <h3>Mevduat güvencesi</h3>
+                            <p>Türkiye’deki bankalarda tutulan tasarruf mevduatı, Tasarruf Mevduatı Sigorta Fonu (TMSF) tarafından her yıl belirlenen tutara kadar güvence altındadır.</p>
+                            <p class="kg-note"><i class="ri-lightbulb-line" aria-hidden="true"></i><span>Yeni müşterilere özel tanışma faizleri için <a href="kampanyalar.html" class="kg-svc-link">Kampanyalar</a> sayfasına da göz at.</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="kg-checklist">
+                            <h3>Mevduat Kazancını Artırmanın 5 Yolu</h3>
+                            <ol>
+                            <li>Tutarını ve vadeni belirle</li>
+                            <li>Banka faiz oranlarını karşılaştır</li>
+                            <li>Stopaj sonrası net getiriye bak</li>
+                            <li>Tanışma faizi kampanyalarını takip et</li>
+                            <li>Mevduat hesabını aç</li>
+                            </ol>
+                            <a href="iletisim.html" class="default-btn" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Mevduat Hesabı">Mevduat Hesabı Aç <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-section kg-svc-soft">
+            <div class="container">
+                <div class="kg-svc-heading kg-svc-heading-row">
+                    <div>
+                        <span class="kg-svc-eyebrow">Kredi Rehberi</span>
+<h2>Bunlar da işine yarayabilir</h2>
+                    </div>
+                    <a href="blog.html" class="kg-svc-link">Tüm yazılar <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-4">
+                        <a class="kg-guide" href="enflasyon-ve-kredi-faizleri.html">
+                            <img src="assets/images/blog/kapak-enflasyon.svg" alt="" width="120" height="68" loading="lazy">
+                            <div><span>Ekonomi</span><h3>Enflasyon Kredi Faizlerini Nasıl Etkiler?</h3></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="kg-guide" href="butce-planlama-ve-kredi-taksiti.html">
+                            <img src="assets/images/blog/kapak-butce.svg" alt="" width="120" height="68" loading="lazy">
+                            <div><span>Kredi Rehberi</span><h3>Kredi Taksiti Bütçenizin Ne Kadarı Olmalı?</h3></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="kg-guide" href="katilim-bankasi-finansmani.html">
+                            <img src="assets/images/blog/kapak-katilim.svg" alt="" width="120" height="68" loading="lazy">
+                            <div><span>Kredi Rehberi</span><h3>Katılım Bankalarında Finansman Nasıl İşler?</h3></div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="kg-svc-heading mb-0">
+                            <span class="kg-svc-eyebrow">SSS</span>
+                            <h2>Sıkça Sorulan Sorular</h2>
+                            <p>Aradığın cevabı bulamazsan <a href="iletisim.html" class="kg-svc-link">bize yaz</a>.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="faq-content kg-svc-faq">
+                            <div class="accordion" id="sss-mevduat">
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sss-mevduat-0" aria-expanded="true" aria-controls="sss-mevduat-0">
+                                    Vadesi dolmadan paramı çekebilir miyim?
+                                </button>
+                                <div id="sss-mevduat-0" class="accordion-collapse collapse show" data-bs-parent="#sss-mevduat">
+                                    <div class="accordion-body">
+                                        <p>Çekebilirsin, ancak vade sonundan önce çekilen vadeli mevduatta faiz getirisi genellikle kaybedilir. Vade süresini paraya ihtiyaç duymayacağın süreye göre seçmeni öneririz.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sss-mevduat-1" aria-expanded="false" aria-controls="sss-mevduat-1">
+                                    Stopaj nedir?
+                                </button>
+                                <div id="sss-mevduat-1" class="accordion-collapse collapse" data-bs-parent="#sss-mevduat">
+                                    <div class="accordion-body">
+                                        <p>Stopaj, mevduat faiz gelirinden kaynakta kesilen vergidir. Banka, faiz getirisini hesabına yatırırken stopajı keser; hesaplayıcıdaki net getiri bu kesinti sonrası tutardır. Oran vadeye göre değişebildiği için hesaplayıcıda değiştirebilirsin.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sss-mevduat-2" aria-expanded="false" aria-controls="sss-mevduat-2">
+                                    Mevduatım güvende mi?
+                                </button>
+                                <div id="sss-mevduat-2" class="accordion-collapse collapse" data-bs-parent="#sss-mevduat">
+                                    <div class="accordion-body">
+                                        <p>Türkiye’deki bankalarda tutulan tasarruf mevduatı, Tasarruf Mevduatı Sigorta Fonu (TMSF) güvencesi altındadır. Her yıl belirlenen tutara kadar olan mevduat sigortalıdır.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sss-mevduat-3" aria-expanded="false" aria-controls="sss-mevduat-3">
+                                    Faiz getirisi ne zaman hesabıma geçer?
+                                </button>
+                                <div id="sss-mevduat-3" class="accordion-collapse collapse" data-bs-parent="#sss-mevduat">
+                                    <div class="accordion-body">
+                                        <p>Vadeli mevduatta faiz getirisi vade sonunda, stopaj kesildikten sonra anaparayla birlikte hesabına aktarılır.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sss-mevduat-4" aria-expanded="false" aria-controls="sss-mevduat-4">
+                                    En yüksek faizi nasıl bulurum?
+                                </button>
+                                <div id="sss-mevduat-4" class="accordion-collapse collapse" data-bs-parent="#sss-mevduat">
+                                    <div class="accordion-body">
+                                        <p>Oranlar tabloda bankaların ilan ettiği yıllık brüt faizlere göre sıralanır. Yeni müşterilere özel tanışma faizleri için Kampanyalar sayfasına da göz atabilirsin.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-cta-wrap pb-5">
+            <div class="container">
+                <div class="kg-cta">
+                    <div>
+                        <h2>Birikimini değerlendirmeye hazır mısın?</h2>
+                        <p>Mevduat hesabı başvurunu tek formla yap, sana en uygun faiz seçenekleriyle dönüş yapalım.</p>
+                    </div>
+                    <a href="iletisim.html" class="default-btn" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Mevduat Hesabı">Mevduat Hesabı Aç <i class="ri-arrow-right-up-line"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="kg-svc-section kg-svc-soft">
+            <div class="container">
+                <div class="kg-svc-heading">
+                    <h2>Diğer Hizmetlerimiz</h2>
+                </div>
+                <div class="kg-others">
+                    <a class="kg-other" href="kampanyalar.html">
+                        <i class="ri-gift-line" aria-hidden="true"></i>
+                        <strong>Kampanyalar</strong>
+                        <span>Faizsiz kredi, nakit avans ve mevduat fırsatları.</span>
+                    </a>
+                    <a class="kg-other" href="kredi-karnesi.html">
+                        <i class="ri-dashboard-3-line" aria-hidden="true"></i>
+                        <strong>Kredi Karnesi</strong>
+                        <span>Kredi notunu öğren, onay şansını artır.</span>
+                    </a>
+                    <a class="kg-other" href="kredi-karti.html">
+                        <i class="ri-bank-card-line" aria-hidden="true"></i>
+                        <strong>Kredi Kartı</strong>
+                        <span>Sana uygun kartı bul, borcunu planla.</span>
+                    </a>
+                    <a class="kg-other" href="yatirim.html">
+                        <i class="ri-line-chart-line" aria-hidden="true"></i>
+                        <strong>Yatırım</strong>
+                        <span>Yatırım araçlarını tanı, birikimini planla.</span>
+                    </a>
+                    <a class="kg-other" href="sigorta.html">
+                        <i class="ri-shield-check-line" aria-hidden="true"></i>
+                        <strong>Sigorta</strong>
+                        <span>Kaskodan DASK'a ihtiyacın olan sigortalar.</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="id-modal-placeholder"></div>
+
+    <div id="footer-placeholder" class="footer-area bg-color-0c3a30 pt-120">
+    </div>
+
+    <div class="go-top">
+        <i class="ri-arrow-up-fill"></i>
+    </div>
+
+    <script>
+        fetch('components/mobile_navbar.html?v=5')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarOffcanvas').innerHTML = data;
+            });
+
+        fetch('components/footer.html?v=7')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        fetch('components/identification_modal.html?v=5')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('id-modal-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="assets/js/kredi-oranlari.js?v=1"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fslightbox.min.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+    <script src="assets/js/auth-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/script.js?v=4"></script>
+    <script src="assets/js/formlar.js?v=1"></script>
+    <script src="assets/js/basvuru.js?v=4"></script>
+    <script src="assets/js/hizmetler.js?v=1"></script>
+</body>
+
+</html>

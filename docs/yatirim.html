@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mevduattan fonlara yatırım araçlarını risk seviyesine göre tanı, düzenli birikiminin zaman içinde nasıl büyüyebileceğini hesapla.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kredimgeldi.com/yatirim.html">
+    <meta property="og:site_name" content="KredimGeldi">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:title" content="Yatırım Araçları ve Birikim Hesaplama - KredimGeldi">
+    <meta property="og:description" content="Mevduattan fonlara yatırım araçlarını risk seviyesine göre tanı, düzenli birikiminin zaman içinde nasıl büyüyebileceğini hesapla.">
+    <meta property="og:image" content="https://kredimgeldi.com/assets/images/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://kredimgeldi.com/yatirim.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yatırım Araçları ve Birikim Hesaplama - KredimGeldi">
+    <meta name="twitter:description" content="Mevduattan fonlara yatırım araçlarını risk seviyesine göre tanı, düzenli birikiminin zaman içinde nasıl büyüyebileceğini hesapla.">
+    <meta name="twitter:image" content="https://kredimgeldi.com/assets/images/preview.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap">
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon_finto.css">
+    <link rel="stylesheet" href="assets/css/scrollCue.css">
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/basvuru.css?v=3">
+    <link rel="stylesheet" href="assets/css/hizmetler.css?v=1">
+
+    <title>Yatırım Araçları ve Birikim Hesaplama - KredimGeldi</title>
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Yatırıma ne kadarla başlayabilirim?", "acceptedAnswer": {"@type": "Answer", "text": "Vadeli mevduat, yatırım fonları ve altın hesapları gibi araçlarla küçük tutarlarla başlayabilirsin. Önemli olan tutardan çok düzenli birikim yapmaktır."}}, {"@type": "Question", "name": "Risk seviyemi nasıl belirlerim?", "acceptedAnswer": {"@type": "Answer", "text": "Birikimine ne zaman ihtiyaç duyacağını ve değer kaybına ne kadar katlanabileceğini düşün. Kısa vadeli ve güvenli birikim için mevduat, uzun vadeli ve büyüme odaklı birikim için fon ve hisse gibi araçlar öne çıkar."}}, {"@type": "Question", "name": "Mevduat mı, yatırım fonu mu?", "acceptedAnswer": {"@type": "Answer", "text": "Mevduat sabit ve öngörülebilir bir getiri sunar. Yatırım fonları ise içeriğine göre daha yüksek getiri potansiyeli taşır ama değeri dalgalanabilir. Birçok yatırımcı ikisini birlikte kullanarak riskini dağıtır."}}, {"@type": "Question", "name": "Başvurumdan sonra ne olur?", "acceptedAnswer": {"@type": "Answer", "text": "Talebin bize ulaştıktan sonra seninle iletişime geçer, yatırım hesabı açabileceğin banka seçeneklerini ve başvuru adımlarını paylaşırız."}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://kredimgeldi.com/"}, {"@type": "ListItem", "position": 2, "name": "Yatırım", "item": "https://kredimgeldi.com/yatirim.html"}]}</script>
+</head>
+
+<body>
+    <div class="preloader-area text-center position-fixed top-0 bottom-0 start-0 end-0" id="preloader">
+        <div class="loader position-absolute start-0 end-0">
+            <img src="assets/images/favicon.png" alt="favicon" class="img-fluid" style="width: 70px; height: 70px;">
+            <div class="wavy position-relative fw-light">
+                <span class="d-inline-block"></span>
+                <span class="d-inline-block">K</span>
+                <span class="d-inline-block">R</span>
+                <span class="d-inline-block">E</span>
+                <span class="d-inline-block">D</span>
+                <span class="d-inline-block">I</span>
+                <span class="d-inline-block">M</span>
+                <span class="d-inline-block">G</span>
+                <span class="d-inline-block">E</span>
+                <span class="d-inline-block">L</span>
+                <span class="d-inline-block">D</span>
+                <span class="d-inline-block">I</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="header-placeholder"></div>
+    <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
+        id="navbarOffcanvas">
+    </div>
+
+    <main class="kg-svc">
+        <section class="kg-svc-hero">
+            <div class="container">
+                <nav class="kg-svc-crumb" aria-label="Sayfa yolu">
+                    <a href="index.html">Ana Sayfa</a><i class="ri-arrow-right-s-line" aria-hidden="true"></i>Hizmetler<i class="ri-arrow-right-s-line" aria-hidden="true"></i><span>Yatırım</span>
+                </nav>
+                <div class="kg-svc-panel">
+                    <div class="row g-4 g-xl-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="kg-svc-text">
+                                <span class="kg-svc-tag"><i class="ri-line-chart-line" aria-hidden="true"></i> Yatırım</span>
+                                <h1>Birikimini <span class="kg-svc-mark">Planla</span>, Geleceğini Güçlendir</h1>
+                                <p>Hedeflerine ve risk tercihine uygun yatırım araçlarını tanı, düzenli birikiminin zaman içinde nasıl büyüyebileceğini hesapla.</p>
+                                <ul class="kg-svc-points">
+                                <li><i class="ri-check-line" aria-hidden="true"></i> <span>Mevduattan fonlara yatırım araçları</span></li>
+                                <li><i class="ri-check-line" aria-hidden="true"></i> <span>Risk seviyesine göre karşılaştırma</span></li>
+                                <li><i class="ri-check-line" aria-hidden="true"></i> <span>Düzenli birikim hesaplayıcı</span></li>
+                                </ul>
+                                <div class="kg-svc-actions">
+                                    <a href="iletisim.html" class="default-btn" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Yatırım Hesabı">Yatırım Hesabı Başvurusu <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="#araclar" class="kg-svc-ghost">Yatırım Araçları <i class="ri-arrow-right-line"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="kg-tool" data-tool="yatirim">
+                                <div class="kg-tool-head">
+                                    <span class="kg-tool-eyebrow"><i class="ri-line-chart-line" aria-hidden="true"></i> Birikim Hesaplama</span>
+                                    <h2>Düzenli birikimin ne kadar büyür?</h2>
+                                </div>
+                                <div class="kg-tool-grid">
+                                <div class="kg-tool-field">
+                                    <label for="t-start">Başlangıç tutarı</label>
+                                    <div class="kg-tool-input">
+                                        <input type="text" id="t-start" name="start" inputmode="numeric" value="50.000" data-money>
+                                        <span>TL</span>
+                                    </div>
+                                </div>
+                                <div class="kg-tool-field">
+                                    <label for="t-monthly">Aylık birikim</label>
+                                    <div class="kg-tool-input">
+                                        <input type="text" id="t-monthly" name="monthly" inputmode="numeric" value="5.000" data-money>
+                                        <span>TL</span>
+                                    </div>
+                                </div>
+                                <div class="kg-tool-field">
+                                    <label for="t-years">Süre</label>
+                                    <div class="kg-tool-input">
+                                        <input type="text" id="t-years" name="years" inputmode="numeric" maxlength="2" value="10">
+                                        <span>yıl</span>
+                                    </div>
+                                    <input type="range" name="years-range" class="kg-tool-slider" min="1" max="30" step="1" value="10" aria-label="Süre (yıl)">
+                                </div>
+                                <div class="kg-tool-field">
+                                    <label for="t-rate">Beklenen yıllık getiri</label>
+                                    <div class="kg-tool-input">
+                                        <input type="text" id="t-rate" name="rate" inputmode="decimal" value="30">
+                                        <span>%</span>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="kg-tool-result" aria-live="polite">
+                                    <div class="kg-tool-result-main"><span data-yatirim-years>10 yıl sonra</span><strong data-yatirim-total>-</strong></div>
+                                    <ul class="kg-tool-list">
+                                        <li><span>Toplam yatırdığın</span><b data-yatirim-paid>-</b></li>
+                                        <li><span>Getiri</span><b data-yatirim-gain>-</b></li>
+                                    </ul>
+                                </div>
+                                <p class="kg-tool-hint">Hesaplama, girdiğin sabit yıllık getiriyle aylık bileşik olarak yapılan bir tahmindir. Gerçek getiriler piyasa koşullarına ve seçtiğin araca göre değişir.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="kg-svc-section kg-svc-tint" id="araclar">
+            <div class="container">
+                <div class="kg-svc-heading">
+                    <span class="kg-svc-eyebrow">Yatırım Araçları</span>
+<h2>Riskine uygun aracı seç</h2>
+                    <p>Her yatırım aracının getiri potansiyeli ve riski farklıdır. Birikimini farklı araçlara dağıtmak riskini azaltır.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="kg-type">
+                            <i class="ri-safe-2-line" aria-hidden="true"></i>
+                            <h3>Vadeli Mevduat</h3>
+                            <div class="kg-risk">Risk: <span class="kg-risk-dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span> Çok düşük</div>
+                            <p>Sabit faizle öngörülebilir getiri. Kısa vadeli birikim ve acil durum fonu için uygundur.</p>
+                            <a href="mevduat.html" class="kg-svc-link">Getirini hesapla <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="kg-type">
+                            <i class="ri-government-line" aria-hidden="true"></i>
+                            <h3>Devlet Tahvili ve Bono</h3>
+                            <div class="kg-risk">Risk: <span class="kg-risk-dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> Düşük</div>
+                            <p>Devletin borçlanma araçları. Vadesine kadar tutulduğunda getirisi baştan bellidir.</p>
+                            <a href="iletisim.html" class="default-btn two" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Yatırım Hesabı: Devlet Tahvili ve Bono">Bilgi Al <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="kg-type">
+                            <i class="ri-funds-line" aria-hidden="true"></i>
+                            <h3>Yatırım Fonları</h3>
+                            <div class="kg-risk">Risk: <span class="kg-risk-dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> Orta</div>
+                            <p>Uzman yönetimiyle farklı varlıklara dağıtılmış sepet. Para piyasası fonundan hisse fonuna kadar farklı risk seviyeleri vardır.</p>
+                            <a href="iletisim.html" class="default-btn two" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Yatırım Hesabı: Yatırım Fonları">Bilgi Al <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="kg-type">
+                            <i class="ri-copper-coin-line" aria-hidden="true"></i>
+                            <h3>Altın</h3>
+                            <div class="kg-risk">Risk: <span class="kg-risk-dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> Orta</div>
+                            <p>Enflasyona ve kur dalgalanmalarına karşı geleneksel koruma aracı. Banka altın hesabıyla gram gram biriktirilebilir.</p>
+                            <a href="iletisim.html" class="default-btn two" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Yatırım Hesabı: Altın">Bilgi Al <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="kg-type">
+                            <i class="ri-stock-line" aria-hidden="true"></i>
+                            <h3>Hisse Senedi</h3>
+                            <div class="kg-risk">Risk: <span class="kg-risk-dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> Çok yüksek</div>
+                            <p>Şirketlere ortak olarak uzun vadede yüksek getiri potansiyeli. Kısa vadede değer dalgalanması yüksektir.</p>
+                            <a href="iletisim.html" class="default-btn two" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Yatırım Hesabı: Hisse Senedi">Bilgi Al <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="kg-type">
+                            <i class="ri-umbrella-line" aria-hidden="true"></i>
+                            <h3>Bireysel Emeklilik (BES)</h3>
+                            <div class="kg-risk">Risk: <span class="kg-risk-dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> Düşük</div>
+                            <p>Devlet katkısıyla desteklenen uzun vadeli emeklilik birikimi. Katkı payların seçtiğin fonlarda değerlendirilir.</p>
+                            <a href="iletisim.html" class="default-btn two" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Yatırım Hesabı: Bireysel Emeklilik (BES)">Bilgi Al <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-section">
+            <div class="container">
+                <div class="kg-svc-heading text-center">
+                    <span class="kg-svc-eyebrow">Yatırım Yaparken</span>
+<h2>Bilinçli yatırımın dört temeli</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-6 col-lg-3">
+                        <div class="kg-feature">
+                            <i class="ri-focus-3-line" aria-hidden="true"></i>
+                            <h3>Hedefini belirle</h3>
+                            <p>Ev, araç, eğitim ya da emeklilik: birikimini ne için yaptığını netleştir.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="kg-feature">
+                            <i class="ri-scales-3-line" aria-hidden="true"></i>
+                            <h3>Riskini tanı</h3>
+                            <p>Paranın değer kaybına ne kadar katlanabileceğini bil, araçları buna göre seç.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="kg-feature">
+                            <i class="ri-pie-chart-line" aria-hidden="true"></i>
+                            <h3>Çeşitlendir</h3>
+                            <p>Birikimini farklı araçlara dağıtarak tek bir riske bağlı kalma.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="kg-feature">
+                            <i class="ri-time-line" aria-hidden="true"></i>
+                            <h3>Sabırlı ol</h3>
+                            <p>Uzun vadeli ve düzenli birikim, kısa vadeli dalgalanmaların etkisini azaltır.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-section">
+            <div class="container">
+                <div class="row g-4 g-xl-5">
+                    <div class="col-lg-7">
+                        <div class="kg-info">
+                            <span class="kg-svc-eyebrow">Yatırım Rehberi</span>
+                            <h2>Birikimini doğru araçlarla büyüt</h2>
+                            <p>Yatırım, birikimini değerlendirerek uzun vadede finansal hedeflerine ulaşmanın en etkili yollarından biridir. Doğru araçları seçmek hem gelirini artırmana hem de birikimini enflasyona karşı korumana yardımcı olur. Mevduat, tahvil, altın, yatırım fonları ve hisse senetleri; risk tercihine ve hedeflerine göre bir arada kullanılabilir.</p>
+                            <p>Yatırım yapmadan önce risk toleransını ve hedeflerini belirlemelisin. Yüksek getiri potansiyeli olan araçlar genellikle daha yüksek risk taşır. Birikimini dengeli bir şekilde dağıtarak hem riskini azaltabilir hem de getirini artırabilirsin.</p>
+                            <h3>Uzun vadenin gücü</h3>
+                            <p>Düzenli ve uzun vadeli birikim, getirinin de getiri kazandığı bileşik etki sayesinde zamanla hızlanır. Yukarıdaki hesaplayıcıda süreyi uzatarak bu etkiyi kendin görebilirsin.</p>
+                            <p class="kg-note"><i class="ri-information-line" aria-hidden="true"></i><span>Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır ve yatırım danışmanlığı kapsamında değildir. Yatırım danışmanlığı hizmeti, aracı kurumlar, portföy yönetim şirketleri ve mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır.</span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="kg-checklist">
+                            <h3>Yatırım Yapmanın 5 Etkili Yolu</h3>
+                            <ol>
+                            <li>Finansal hedeflerini belirle</li>
+                            <li>Risk toleransını değerlendir</li>
+                            <li>Araçları araştır ve karşılaştır</li>
+                            <li>Birikimini çeşitlendir</li>
+                            <li>Düzenli olarak gözden geçir</li>
+                            </ol>
+                            <a href="iletisim.html" class="default-btn" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Yatırım Hesabı">Yatırım Hesabı Başvurusu <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-section kg-svc-soft">
+            <div class="container">
+                <div class="kg-svc-heading kg-svc-heading-row">
+                    <div>
+                        <span class="kg-svc-eyebrow">Kredi Rehberi</span>
+<h2>Bunlar da işine yarayabilir</h2>
+                    </div>
+                    <a href="blog.html" class="kg-svc-link">Tüm yazılar <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-4">
+                        <a class="kg-guide" href="enflasyon-ve-kredi-faizleri.html">
+                            <img src="assets/images/blog/kapak-enflasyon.svg" alt="" width="120" height="68" loading="lazy">
+                            <div><span>Ekonomi</span><h3>Enflasyon Kredi Faizlerini Nasıl Etkiler?</h3></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="kg-guide" href="butce-planlama-ve-kredi-taksiti.html">
+                            <img src="assets/images/blog/kapak-butce.svg" alt="" width="120" height="68" loading="lazy">
+                            <div><span>Kredi Rehberi</span><h3>Kredi Taksiti Bütçenizin Ne Kadarı Olmalı?</h3></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="kg-guide" href="katilim-bankasi-finansmani.html">
+                            <img src="assets/images/blog/kapak-katilim.svg" alt="" width="120" height="68" loading="lazy">
+                            <div><span>Kredi Rehberi</span><h3>Katılım Bankalarında Finansman Nasıl İşler?</h3></div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="kg-svc-heading mb-0">
+                            <span class="kg-svc-eyebrow">SSS</span>
+                            <h2>Sıkça Sorulan Sorular</h2>
+                            <p>Aradığın cevabı bulamazsan <a href="iletisim.html" class="kg-svc-link">bize yaz</a>.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="faq-content kg-svc-faq">
+                            <div class="accordion" id="sss-yatirim">
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sss-yatirim-0" aria-expanded="true" aria-controls="sss-yatirim-0">
+                                    Yatırıma ne kadarla başlayabilirim?
+                                </button>
+                                <div id="sss-yatirim-0" class="accordion-collapse collapse show" data-bs-parent="#sss-yatirim">
+                                    <div class="accordion-body">
+                                        <p>Vadeli mevduat, yatırım fonları ve altın hesapları gibi araçlarla küçük tutarlarla başlayabilirsin. Önemli olan tutardan çok düzenli birikim yapmaktır.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sss-yatirim-1" aria-expanded="false" aria-controls="sss-yatirim-1">
+                                    Risk seviyemi nasıl belirlerim?
+                                </button>
+                                <div id="sss-yatirim-1" class="accordion-collapse collapse" data-bs-parent="#sss-yatirim">
+                                    <div class="accordion-body">
+                                        <p>Birikimine ne zaman ihtiyaç duyacağını ve değer kaybına ne kadar katlanabileceğini düşün. Kısa vadeli ve güvenli birikim için mevduat, uzun vadeli ve büyüme odaklı birikim için fon ve hisse gibi araçlar öne çıkar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sss-yatirim-2" aria-expanded="false" aria-controls="sss-yatirim-2">
+                                    Mevduat mı, yatırım fonu mu?
+                                </button>
+                                <div id="sss-yatirim-2" class="accordion-collapse collapse" data-bs-parent="#sss-yatirim">
+                                    <div class="accordion-body">
+                                        <p>Mevduat sabit ve öngörülebilir bir getiri sunar. Yatırım fonları ise içeriğine göre daha yüksek getiri potansiyeli taşır ama değeri dalgalanabilir. Birçok yatırımcı ikisini birlikte kullanarak riskini dağıtır.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sss-yatirim-3" aria-expanded="false" aria-controls="sss-yatirim-3">
+                                    Başvurumdan sonra ne olur?
+                                </button>
+                                <div id="sss-yatirim-3" class="accordion-collapse collapse" data-bs-parent="#sss-yatirim">
+                                    <div class="accordion-body">
+                                        <p>Talebin bize ulaştıktan sonra seninle iletişime geçer, yatırım hesabı açabileceğin banka seçeneklerini ve başvuru adımlarını paylaşırız.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="kg-svc-cta-wrap pb-5">
+            <div class="container">
+                <div class="kg-cta">
+                    <div>
+                        <h2>Birikimine yön vermeye hazır mısın?</h2>
+                        <p>Yatırım hesabı başvurunu bırak, hesabını açabileceğin banka seçenekleriyle sana dönüş yapalım.</p>
+                    </div>
+                    <a href="iletisim.html" class="default-btn" data-bs-toggle="modal" data-bs-target="#identificationModal" data-type-name="Yatırım Hesabı">Yatırım Hesabı Başvurusu <i class="ri-arrow-right-up-line"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="kg-svc-section kg-svc-soft">
+            <div class="container">
+                <div class="kg-svc-heading">
+                    <h2>Diğer Hizmetlerimiz</h2>
+                </div>
+                <div class="kg-others">
+                    <a class="kg-other" href="kampanyalar.html">
+                        <i class="ri-gift-line" aria-hidden="true"></i>
+                        <strong>Kampanyalar</strong>
+                        <span>Faizsiz kredi, nakit avans ve mevduat fırsatları.</span>
+                    </a>
+                    <a class="kg-other" href="kredi-karnesi.html">
+                        <i class="ri-dashboard-3-line" aria-hidden="true"></i>
+                        <strong>Kredi Karnesi</strong>
+                        <span>Kredi notunu öğren, onay şansını artır.</span>
+                    </a>
+                    <a class="kg-other" href="kredi-karti.html">
+                        <i class="ri-bank-card-line" aria-hidden="true"></i>
+                        <strong>Kredi Kartı</strong>
+                        <span>Sana uygun kartı bul, borcunu planla.</span>
+                    </a>
+                    <a class="kg-other" href="mevduat.html">
+                        <i class="ri-safe-2-line" aria-hidden="true"></i>
+                        <strong>Mevduat</strong>
+                        <span>Mevduat faizlerini karşılaştır, getirini hesapla.</span>
+                    </a>
+                    <a class="kg-other" href="sigorta.html">
+                        <i class="ri-shield-check-line" aria-hidden="true"></i>
+                        <strong>Sigorta</strong>
+                        <span>Kaskodan DASK'a ihtiyacın olan sigortalar.</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="id-modal-placeholder"></div>
+
+    <div id="footer-placeholder" class="footer-area bg-color-0c3a30 pt-120">
+    </div>
+
+    <div class="go-top">
+        <i class="ri-arrow-up-fill"></i>
+    </div>
+
+    <script>
+        fetch('components/mobile_navbar.html?v=5')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarOffcanvas').innerHTML = data;
+            });
+
+        fetch('components/footer.html?v=7')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        fetch('components/identification_modal.html?v=5')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('id-modal-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="assets/js/kredi-oranlari.js?v=1"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fslightbox.min.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+    <script src="assets/js/auth-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/script.js?v=4"></script>
+    <script src="assets/js/formlar.js?v=1"></script>
+    <script src="assets/js/basvuru.js?v=4"></script>
+    <script src="assets/js/hizmetler.js?v=1"></script>
+</body>
+
+</html>
