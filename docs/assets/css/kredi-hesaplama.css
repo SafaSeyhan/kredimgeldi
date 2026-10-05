@@ -387,15 +387,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
+    width: 100%;
+    max-width: 170px;
     height: 56px;
     overflow: hidden;
 }
 
 .kg-offer-bank img {
-    max-width: 150px;
+    max-width: 100%;
     height: 32px;
     object-fit: contain;
+}
+
+/* Yazısı ince olan logolar bu satırda biraz daha büyük gösterilir */
+.kg-offer-bank img[data-bank="isbankasi"],
+.kg-offer-bank img[data-bank="ziraat"] {
+    height: 40px;
 }
 
 .kg-offer-figures {
@@ -467,7 +474,7 @@
     }
 
     .kg-offer-bank {
-        height: 40px;
+        height: 44px;
     }
 
     .kg-offer-figures {
