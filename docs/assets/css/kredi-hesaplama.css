@@ -400,7 +400,9 @@
 }
 
 /* Yazısı ince olan logolar bu satırda biraz daha büyük gösterilir */
+.kg-offer-bank img[data-bank="halkbank"],
 .kg-offer-bank img[data-bank="isbankasi"],
+.kg-offer-bank img[data-bank="yapikredi"],
 .kg-offer-bank img[data-bank="ziraat"] {
     height: 40px;
 }

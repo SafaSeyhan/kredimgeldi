@@ -489,7 +489,7 @@
 /* Banka logoları (Biz Kimiz sayfasıyla aynı) */
 .kg-banks {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
@@ -535,7 +535,7 @@
     }
 
     .kg-banks {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -662,5 +662,9 @@
 
     .kg-bank {
         height: 70px;
+    }
+
+    .kg-bank img {
+        height: 24px;
     }
 }

@@ -5,15 +5,18 @@
 
     const KG_RATES = {
         // Ana sayfada ve krediler sayfasında "Son güncelleme" olarak gösterilir.
-        updated: '04.10.2026',
+        updated: '06.10.2026',
 
         // Aylık akdi faiz (%). Mevduat yıllık brüt faiz (%).
         banks: {
-            akbank: { name: 'Akbank', logo: 'akbank.svg?v=20261005', ihtiyac: 2.59, konut: 2.49, tasit: 2.29, mevduat: 53.4 },
-            garanti: { name: 'Garanti BBVA', logo: 'garanti.svg?v=20261005', ihtiyac: 2.99, konut: 2.99, tasit: 2.99, mevduat: 53.5 },
-            isbankasi: { name: 'İş Bankası', logo: 'isbankasi.svg?v=20261005', ihtiyac: 2.69, konut: 2.49, tasit: 2.39, mevduat: 53.4 },
-            qnb: { name: 'QNB', logo: 'qnb.svg?v=20261005', ihtiyac: 2.59, konut: 2.49, tasit: 2.29, mevduat: 53.35 },
-            ziraat: { name: 'Ziraat Bankası', logo: 'ziraat.svg?v=20261005', ihtiyac: 2.69, konut: 2.95, tasit: 2.39, mevduat: 53.45 }
+            akbank: { name: 'Akbank', logo: 'akbank.svg?v=20261006', ihtiyac: 2.59, konut: 2.49, tasit: 2.29, mevduat: 53.4 },
+            garanti: { name: 'Garanti BBVA', logo: 'garanti.svg?v=20261006', ihtiyac: 2.99, konut: 2.99, tasit: 2.99, mevduat: 53.5 },
+            halkbank: { name: 'Halkbank', logo: 'halkbank.svg?v=20261006', ihtiyac: 2.65, konut: 2.45, tasit: 2.25, mevduat: 53.4 },
+            isbankasi: { name: 'İş Bankası', logo: 'isbankasi.svg?v=20261006', ihtiyac: 2.69, konut: 2.49, tasit: 2.39, mevduat: 53.4 },
+            qnb: { name: 'QNB', logo: 'qnb.svg?v=20261006', ihtiyac: 2.59, konut: 2.49, tasit: 2.29, mevduat: 53.35 },
+            vakifbank: { name: 'VakıfBank', logo: 'vakifbank.svg?v=20261006', ihtiyac: 2.55, konut: 2.55, tasit: 2.35, mevduat: 53.55 },
+            yapikredi: { name: 'Yapı Kredi', logo: 'yapikredi.svg?v=20261006', ihtiyac: 2.79, konut: 2.59, tasit: 2.35, mevduat: 53.3 },
+            ziraat: { name: 'Ziraat Bankası', logo: 'ziraat.svg?v=20261006', ihtiyac: 2.69, konut: 2.95, tasit: 2.39, mevduat: 53.45 }
         },
 
         // Faize eklenen vergiler: KKDF ve BSMV. Konut kredisi bu vergilerden muaftır.
