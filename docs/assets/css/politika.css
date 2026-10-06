@@ -1,0 +1,633 @@
+/* Politika sayfaları: Kullanım Koşulları, Açık Rıza, Gizlilik, KVKK, Bilgi Güvenliği */
+html {
+    scroll-padding-top: 110px;
+}
+
+/* Üst bölüm */
+.kg-policy-panel {
+    position: relative;
+    overflow: hidden;
+    padding: 52px 56px;
+}
+
+.kg-policy-panel .kg-svc-text {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+.kg-policy-panel .kg-svc-text h1 {
+    font-size: 48px;
+}
+
+.kg-policy-panel .kg-svc-text > p {
+    max-width: 640px;
+}
+
+.kg-policy-mark {
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-8deg);
+    font-size: 220px;
+    line-height: 1;
+    color: rgba(158, 221, 5, 0.12);
+    pointer-events: none;
+}
+
+.kg-policy-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.kg-policy-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.kg-policy-meta i {
+    color: var(--kg-green);
+}
+
+/* Gövde */
+.kg-policy-body {
+    padding: 40px 0 90px;
+}
+
+.kg-policy-side {
+    position: sticky;
+    top: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.kg-policy-toc {
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid var(--kg-line);
+}
+
+.kg-policy-toc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #4f7d00;
+}
+
+.kg-policy-toc summary::-webkit-details-marker {
+    display: none;
+}
+
+.kg-policy-toc summary span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kg-policy-toc summary > i {
+    font-size: 20px;
+    color: var(--kg-dark);
+    transition: transform 0.2s ease;
+}
+
+.kg-policy-toc[open] summary > i {
+    transform: rotate(180deg);
+}
+
+.kg-policy-toc ol {
+    margin: 0;
+    padding: 0 10px 12px;
+    list-style: none;
+}
+
+.kg-policy-toc a {
+    display: flex;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--kg-muted);
+    transition: all 0.2s ease;
+}
+
+.kg-policy-toc a span {
+    flex: 0 0 auto;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.55;
+    color: rgba(12, 58, 48, 0.4);
+}
+
+.kg-policy-toc a:hover {
+    background: var(--kg-soft);
+    color: var(--kg-ink);
+}
+
+.kg-policy-toc a.is-active {
+    background: rgba(158, 221, 5, 0.2);
+    font-weight: 600;
+    color: var(--kg-ink);
+}
+
+.kg-policy-toc a.is-active span {
+    color: var(--kg-dark);
+}
+
+.kg-policy-switch {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-radius: 22px;
+    background: var(--kg-dark);
+}
+
+.kg-policy-switch a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.78);
+    transition: all 0.2s ease;
+}
+
+.kg-policy-switch a i {
+    font-size: 18px;
+    color: var(--kg-green);
+}
+
+.kg-policy-switch a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.kg-policy-switch a.is-active {
+    background: var(--kg-green);
+    font-weight: 600;
+    color: var(--kg-ink);
+}
+
+.kg-policy-switch a.is-active i {
+    color: var(--kg-ink);
+}
+
+.kg-policy-print {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 14px;
+    border: 1px solid var(--kg-line);
+    background: #ffffff;
+    font-weight: 600;
+    color: var(--kg-dark);
+    transition: all 0.2s ease;
+}
+
+.kg-policy-print:hover {
+    border-color: var(--kg-dark);
+}
+
+/* Metin */
+.kg-policy-doc {
+    padding: 48px 52px;
+    border-radius: 30px;
+    background: #ffffff;
+    border: 1px solid var(--kg-line);
+}
+
+.kg-policy-lead {
+    margin: 0 0 30px;
+    padding: 2px 0 2px 22px;
+    border-left: 4px solid var(--kg-green);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--kg-ink);
+}
+
+.kg-policy-sec {
+    padding: 30px 0;
+    border-top: 1px solid var(--kg-line);
+}
+
+.kg-policy-lead + .kg-policy-sec {
+    border-top: 0;
+}
+
+.kg-policy-sec:last-child {
+    padding-bottom: 0;
+}
+
+.kg-policy-sec h2 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 16px;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--kg-ink);
+}
+
+.kg-policy-no {
+    display: inline-flex;
+    flex: 0 0 40px;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--kg-cream);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--kg-dark);
+}
+
+.kg-policy-sec p {
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #3d4d49;
+}
+
+.kg-policy-sec p:last-child {
+    margin-bottom: 0;
+}
+
+.kg-policy-sec a,
+.kg-policy-contact p a {
+    font-weight: 600;
+    color: var(--kg-dark);
+    text-decoration: underline;
+    text-decoration-color: var(--kg-green);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.kg-policy-sec ul {
+    display: grid;
+    gap: 10px;
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.kg-policy-sec ul li {
+    position: relative;
+    padding: 14px 18px 14px 50px;
+    border-radius: 16px;
+    background: var(--kg-soft);
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3d4d49;
+}
+
+.kg-policy-sec ul li::before {
+    content: "\eb7b";
+    font-family: "remixicon";
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--kg-green);
+    font-size: 14px;
+    line-height: 1;
+    color: var(--kg-ink);
+}
+
+/* Veri türleri tablosu */
+.kg-policy-data {
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--kg-line);
+    overflow: hidden;
+}
+
+.kg-policy-data-head,
+.kg-policy-data-row {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+.kg-policy-data-head {
+    background: var(--kg-dark);
+}
+
+.kg-policy-data-head span {
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.kg-policy-data-row {
+    border-top: 1px solid var(--kg-line);
+}
+
+.kg-policy-data-row:nth-child(odd) {
+    background: rgba(255, 250, 235, 0.6);
+}
+
+.kg-policy-data-row strong,
+.kg-policy-data-row span {
+    padding: 16px 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.kg-policy-data-row strong {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--kg-ink);
+}
+
+.kg-policy-data-row strong i {
+    font-size: 18px;
+    line-height: 1.35;
+    color: #4f7d00;
+}
+
+.kg-policy-data-row span {
+    color: #3d4d49;
+}
+
+/* İletişim kutusu */
+.kg-policy-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
+    padding: 28px 32px;
+    border-radius: 26px;
+    background: var(--kg-green);
+}
+
+.kg-policy-contact > i {
+    display: inline-flex;
+    flex: 0 0 52px;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: var(--kg-dark);
+    font-size: 24px;
+    color: var(--kg-green);
+}
+
+.kg-policy-contact div {
+    flex: 1 1 auto;
+}
+
+.kg-policy-contact strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 20px;
+    color: var(--kg-ink);
+}
+
+.kg-policy-contact p {
+    margin: 0;
+    color: var(--kg-ink);
+}
+
+.kg-policy-contact .default-btn {
+    flex: 0 0 auto;
+    background: var(--kg-dark);
+    color: #ffffff;
+}
+
+.kg-policy-contact .default-btn:hover {
+    background: #ffffff;
+    color: var(--kg-ink);
+}
+
+.kg-policy-others .kg-others {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Duyarlı düzen */
+@media (max-width: 1199.98px) {
+    .kg-policy-panel .kg-svc-text h1 {
+        font-size: 40px;
+    }
+
+    .kg-policy-doc {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .kg-policy-mark {
+        font-size: 160px;
+        right: 24px;
+    }
+
+    .kg-policy-side {
+        position: static;
+    }
+
+    .kg-policy-switch,
+    .kg-policy-print {
+        display: none;
+    }
+
+    .kg-policy-others .kg-others {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .kg-policy-contact {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 767.98px) {
+    html {
+        scroll-padding-top: 90px;
+    }
+
+    .kg-policy-panel {
+        padding: 28px 20px 24px;
+    }
+
+    .kg-policy-panel .kg-svc-text {
+        padding: 0;
+    }
+
+    .kg-policy-panel .kg-svc-text h1 {
+        font-size: 30px;
+    }
+
+    .kg-policy-mark {
+        top: 18px;
+        right: -14px;
+        transform: rotate(-8deg);
+        font-size: 120px;
+    }
+
+    .kg-policy-meta span {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .kg-policy-body {
+        padding: 24px 0 60px;
+    }
+
+    .kg-policy-toc summary {
+        padding: 16px 18px;
+    }
+
+    .kg-policy-doc {
+        padding: 26px 18px;
+        border-radius: 24px;
+    }
+
+    .kg-policy-lead {
+        margin-bottom: 22px;
+        padding: 2px 0 2px 16px;
+        font-size: 16px;
+    }
+
+    .kg-policy-sec {
+        padding: 24px 0;
+    }
+
+    .kg-policy-sec h2 {
+        gap: 12px;
+        font-size: 19px;
+    }
+
+    .kg-policy-no {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .kg-policy-sec p,
+    .kg-policy-sec ul li {
+        font-size: 15px;
+    }
+
+    .kg-policy-sec ul li {
+        padding: 12px 14px 12px 44px;
+    }
+
+    .kg-policy-sec ul li::before {
+        left: 12px;
+        top: 13px;
+    }
+
+    .kg-policy-data-head {
+        display: none;
+    }
+
+    .kg-policy-data-row {
+        grid-template-columns: 1fr;
+    }
+
+    .kg-policy-data-row:first-of-type {
+        border-top: 0;
+    }
+
+    .kg-policy-data-row strong {
+        padding: 14px 16px 4px;
+    }
+
+    .kg-policy-data-row span {
+        padding: 0 16px 14px 44px;
+        font-size: 14px;
+    }
+
+    .kg-policy-contact {
+        padding: 22px 18px;
+        border-radius: 22px;
+    }
+
+    .kg-policy-contact .default-btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .kg-policy-others .kg-others {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Yazdırma */
+@media print {
+    #header-placeholder,
+    .main-navbar,
+    .footer-area,
+    .go-top,
+    .kg-svc-crumb,
+    .kg-policy-side,
+    .kg-policy-contact,
+    .kg-policy-others,
+    .kg-policy-mark {
+        display: none !important;
+    }
+
+    .kg-svc-hero {
+        padding: 0;
+    }
+
+    .kg-policy-panel {
+        padding: 0 0 16px;
+        background: none;
+        box-shadow: none;
+    }
+
+    .kg-policy-panel .kg-svc-text h1,
+    .kg-policy-panel .kg-svc-text > p,
+    .kg-policy-meta span {
+        color: #000000;
+    }
+
+    .kg-svc-tag {
+        display: none;
+    }
+
+    .kg-policy-body .col-lg-8 {
+        width: 100%;
+    }
+
+    .kg-policy-doc {
+        padding: 0;
+        border: 0;
+    }
+
+    .kg-policy-sec {
+        break-inside: avoid;
+    }
+}
