@@ -19,11 +19,14 @@
         phone: 'Cep Telefonu'
     };
     const BANK_LOGOS = {
-        akbank: { file: 'akbank.svg?v=20261005' },
-        garanti: { file: 'garanti.svg?v=20261005' },
-        isbankasi: { file: 'isbankasi.svg?v=20261005' },
-        qnb: { file: 'qnb.svg?v=20261005' },
-        ziraat: { file: 'ziraat.svg?v=20261005' }
+        akbank: { file: 'akbank.svg?v=20261006' },
+        garanti: { file: 'garanti.svg?v=20261006' },
+        halkbank: { file: 'halkbank.svg?v=20261006' },
+        isbankasi: { file: 'isbankasi.svg?v=20261006' },
+        qnb: { file: 'qnb.svg?v=20261006' },
+        vakifbank: { file: 'vakifbank.svg?v=20261006' },
+        yapikredi: { file: 'yapikredi.svg?v=20261006' },
+        ziraat: { file: 'ziraat.svg?v=20261006' }
     };
 
     let apps = [];
