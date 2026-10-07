@@ -1,0 +1,39 @@
+{
+ "text": {
+  "Giriş Yap - KredimGeldi": "Log In - KredimGeldi",
+  "KredimGeldi hesabınıza giriş yapın veya ücretsiz üye olun.": "Log in to your KredimGeldi account or sign up for free.",
+  "Giriş Yap / Üye Ol": "Log In / Sign Up",
+  "Krediye Giden Yol": "Your Path to a Loan in",
+  "Tek": "One",
+  "Hesapta": "Account",
+  "Giriş yap ya da birkaç saniyede ücretsiz üye ol. Başvurularını tek yerden takip et, bilgilerin bir kez kaydedilsin.": "Log in or sign up for free in seconds. Track your applications in one place and save your details just once.",
+  "Giriş Yap veya Üye Ol": "Log In or Sign Up",
+  "Üye Ol": "Sign Up",
+  "Tekrar hoş geldin": "Welcome back",
+  "Üyelik sistemi henüz yapılandırılmadı. Lütfen daha sonra tekrar deneyin.": "The membership system has not been set up yet. Please try again later.",
+  "Şifre": "Password",
+  "Şifren": "Your password",
+  "Şifreyi göster": "Show password",
+  "Beni hatırla": "Remember me",
+  "Hesabın yok mu?": "Don't have an account?",
+  "Ücretsiz üye ol": "Sign up for free",
+  "Ücretsiz hesabını oluştur": "Create your free account",
+  "İsim Soyisim": "Full Name",
+  "Şifre Tekrar": "Confirm Password",
+  "Zaten hesabın var mı?": "Already have an account?",
+  "Giriş yap": "Log in",
+  "veya": "or"
+ },
+ "html": {
+  "<i class=\"ri-shield-user-line\" aria-hidden=\"true\"></i> KredimGeldi Hesabı": "<i class=\"ri-shield-user-line\" aria-hidden=\"true\"></i> KredimGeldi Account",
+  "<i class=\"ri-check-line\" aria-hidden=\"true\"></i> Tüm başvurularını Hesabım sayfasından izle": "<i class=\"ri-check-line\" aria-hidden=\"true\"></i> Track all your applications on the My Account page",
+  "<i class=\"ri-check-line\" aria-hidden=\"true\"></i> Kayıtlı bilgilerinle formlar otomatik dolsun": "<i class=\"ri-check-line\" aria-hidden=\"true\"></i> Forms fill in automatically with your saved details",
+  "<i class=\"ri-check-line\" aria-hidden=\"true\"></i> Üyelik tamamen ücretsiz": "<i class=\"ri-check-line\" aria-hidden=\"true\"></i> Membership is completely free",
+  "<i class=\"ri-check-line\" aria-hidden=\"true\"></i> Bilgilerin KVKK kapsamında korunur": "<i class=\"ri-check-line\" aria-hidden=\"true\"></i> Your information is protected under KVKK",
+  "Giriş Yap <i class=\"ri-arrow-right-line\" aria-hidden=\"true\"></i>": "Log In <i class=\"ri-arrow-right-line\" aria-hidden=\"true\"></i>",
+  "<a href=\"kullanim-kosullari.html\" target=\"_blank\">Kullanım Koşulları</a>'nı kabul ediyorum, <a href=\"kisisel-verilerin-korunmasi.html\" target=\"_blank\">KVKK Aydınlatma Metni</a>'ni okudum.": "I accept the <a href=\"kullanim-kosullari.html\" target=\"_blank\">Terms of Use</a> and have read the <a href=\"kisisel-verilerin-korunmasi.html\" target=\"_blank\">KVKK Privacy Information Notice</a>.",
+  "Üye Ol <i class=\"ri-arrow-right-line\" aria-hidden=\"true\"></i>": "Sign Up <i class=\"ri-arrow-right-line\" aria-hidden=\"true\"></i>",
+  "<i class=\"ri-google-fill\" aria-hidden=\"true\"></i> Google ile devam et": "<i class=\"ri-google-fill\" aria-hidden=\"true\"></i> Continue with Google",
+  "<i class=\"ri-facebook-circle-fill\" aria-hidden=\"true\"></i> Facebook ile devam et": "<i class=\"ri-facebook-circle-fill\" aria-hidden=\"true\"></i> Continue with Facebook"
+ }
+}
