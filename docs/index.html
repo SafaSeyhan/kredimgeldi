@@ -136,7 +136,7 @@
     </div>
 
     <div id="videoContainer">
-        <video id="videoPlayer" autoplay muted playsinline poster="assets/videos/kapak.webp"></video>
+        <video id="videoPlayer" autoplay muted loop playsinline poster="assets/videos/kapak.webp"></video>
         <script>
             if (document.documentElement.getAttribute('data-kg-lang') === 'en') {
                 document.getElementById('videoPlayer').poster = 'assets/videos/en/kapak.webp';
@@ -1316,11 +1316,6 @@
                     }
                 });
 
-                video.addEventListener('ended', function () {
-                    video.currentTime = 0;
-                    video.play().catch(e => console.log("Playback error:", e));
-                });
-
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 loadingIndicator.style.display = 'none';
                 video.src = videoSrc;
@@ -1334,6 +1329,12 @@
                 loadingIndicator.style.display = 'none';
                 console.error("HLS not supported in this browser");
             }
+
+            // Video bittiğinde baştan oynar (loop desteklemeyen tarayıcılar için yedek).
+            video.addEventListener('ended', function () {
+                video.currentTime = 0;
+                video.play().catch(e => console.log("Playback error:", e));
+            });
 
             const resizeObserver = new ResizeObserver(entries => {
                 for (let entry of entries) {
