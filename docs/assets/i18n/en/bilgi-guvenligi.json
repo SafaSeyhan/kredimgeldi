@@ -1,0 +1,27 @@
+{
+ "text": {
+  "Bilgi Güvenliği Politikamız - KredimGeldi": "Our Information Security Policy - KredimGeldi",
+  "KredimGeldi bilgi güvenliği politikası: bilgi varlıklarının ve kişisel verilerin korunmasına yönelik ilkelerimiz.": "KredimGeldi Information Security Policy: our principles for the protection of information assets and personal data.",
+  "Bilgi Güvenliği": "Information Security",
+  "Bilgi varlıklarını ve kişisel verileri korumak için benimsediğimiz ilkeleri ve taahhütlerimizi bu sayfada bulabilirsiniz.": "On this page, you can find the principles we have adopted and the commitments we have made to protect information assets and personal data.",
+  "Politikamızın Kapsamı": "Scope of Our Policy",
+  "Özel Nitelikli Kişisel Veriler": "Special Categories of Personal Data",
+  "Hedefimiz": "Our Goal",
+  "360Dijital olarak, kuruluşumuz yasal şartlara uyum sağlamak ve faaliyetlerimiz kapsamında gizlilik, bütünlük ile tüm fiziksel ve elektronik bilgi varlıklarını korumak amacıyla taahhütte bulunmaktadır.": "As 360Dijital, our organization is committed to complying with legal requirements and, within the scope of our activities, to protecting confidentiality and integrity as well as all physical and electronic information assets.",
+  "Bilgi Güvenliği Yönetim Sistemi (BGYS) gereksinimleri, BGYS hedefleri ile uyumlu şekilde yürütülmektedir. ISO 27001:2019 BGYS Kapsamına Göre Politikamız şunları içermektedir:": "Information Security Management System (ISMS) requirements are carried out in alignment with ISMS objectives. In accordance with the ISO 27001:2019 ISMS Scope, our Policy includes the following:",
+  "Bilgi güvenliği yönetim sistemimizin ISO 27001:2019 standardı gerekliliklerine uygun şekilde dokümante edilmesi, belgelendirilmesi ve sürekli iyileştirilmesini sağlamak,": "Ensuring that our information security management system is documented, certified and continuously improved in accordance with the requirements of the ISO 27001:2019 standard,",
+  "Personelimizin BGYS farkındalığını sürekli artırmak,": "Continuously increasing our personnel's ISMS awareness,",
+  "Stratejik iş planları ve BGYS hedefleri doğrultusunda risk ve fırsat yönetimi kapsamında ilgili riskleri tanımlamak, belirlemek, değerlendirmek ve kontrol etmek,": "Defining, identifying, assessing and controlling the relevant risks within the scope of risk and opportunity management, in line with strategic business plans and ISMS objectives,",
+  "BGYS ile ilgili tüm yasal mevzuat ve sözleşmelere tam uyum sağlamak,": "Ensuring full compliance with all legal regulations and contracts relating to the ISMS,",
+  "BGYS varlıklarına yönelik risklerin izlenmesini ve etkin şekilde yönetilmesini sağlamak,": "Ensuring that risks to ISMS assets are monitored and managed effectively,",
+  "BGYS kapsamında paydaşlarımızın bilgi varlıklarının gizliliğini korumak,": "Protecting the confidentiality of our stakeholders' information assets within the scope of the ISMS,",
+  "7 Nisan 2016 tarihli ve 29677 sayılı Resmi Gazete’de yayımlanan, 24 Mart 2016 tarihli ve 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında özel önem verilen kişisel veriler; ırk, etnik köken, din veya diğer inançlar, kılık ve kıyafet, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verilerdir.": "Under the Personal Data Protection Law (KVKK) No. 6698 dated 24 March 2016, published in Official Gazette No. 29677 dated 7 April 2016, personal data given special importance are data relating to race, ethnic origin, religion or other beliefs, attire and clothing, criminal convictions and security measures.",
+  "Kuruluşumuz, KVKK ile “özel nitelikli” olarak belirlenen kişisel verilerin hukuka uygun olarak işlenmesi ve korunmasında yüksek hassasiyet göstermektedir. Bu kapsamda, alınan teknik ve idari tedbirler özel nitelikli kişisel veriler açısından özenle uygulanmakta ve düzenli denetimler gerçekleştirilmektedir.": "Our organization exercises a high degree of sensitivity in the lawful processing and protection of personal data designated as “special category” under KVKK. In this context, the technical and administrative measures taken are meticulously applied with respect to special categories of personal data, and regular audits are carried out.",
+  "Sektörümüzde bilgi güvenliği alanında örnek bir kuruluş olmak hedefiyle, BGYS hedeflerimiz doğrultusunda sistemimizi sürekli geliştirmeyi ve sürdürülebilir bilgi güvenliği şartlarını sağlamayı taahhüt ederiz.": "With the goal of being an exemplary organization in the field of information security in our sector, we are committed to continuously improving our system in line with our ISMS objectives and to ensuring sustainable information security conditions."
+ },
+ "html": {
+  "<i class=\"ri-lock-2-line\" aria-hidden=\"true\"></i> Politikalar": "<i class=\"ri-lock-2-line\" aria-hidden=\"true\"></i> Policies",
+  "<i class=\"ri-list-check\" aria-hidden=\"true\"></i>3 bölüm": "<i class=\"ri-list-check\" aria-hidden=\"true\"></i>3 sections",
+  "<i class=\"ri-time-line\" aria-hidden=\"true\"></i>Yaklaşık 1 dk okuma": "<i class=\"ri-time-line\" aria-hidden=\"true\"></i>Approx. 1 min read"
+ }
+}

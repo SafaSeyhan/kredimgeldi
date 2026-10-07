@@ -1,0 +1,567 @@
+{
+ "text": {
+  "favicon": "favicon",
+  "K": "K",
+  "R": "R",
+  "E": "E",
+  "D": "D",
+  "I": "I",
+  "M": "M",
+  "G": "G",
+  "L": "L",
+  "Sayfa yolu": "Breadcrumb",
+  "Ana Sayfa": "Home",
+  "Politikalar": "Policies",
+  "Açık Rıza Metni": "Explicit Consent Statement",
+  "Son güncelleme:": "Last updated:",
+  "Sorunuz mu var?": "Have a question?",
+  "Diğer Politikalarımız": "Our Other Policies",
+  "Kullanım Koşulları": "Terms of Use",
+  "kredimgeldi.com'u kullanırken geçerli olan koşullar, telif hakları ve hizmetlerden yararlanma şartları.": "The terms that apply when you use kredimgeldi.com, copyright, and the conditions for using our services.",
+  "Gizlilik Bildirimi": "Privacy Notice",
+  "Web sitesinde toplanan bilgilerin nasıl kullanıldığı ve korunduğu.": "How information collected on the website is used and protected.",
+  "Kişisel Verilerin Korunması": "Personal Data Protection",
+  "6698 sayılı KVKK kapsamında kişisel verilerin işlenmesine dair aydınlatma.": "Information on the processing of personal data under KVKK, Law No. 6698.",
+  "Bilgi Güvenliği Politikamız": "Our Information Security Policy",
+  "Bilgi varlıklarını ve kişisel verileri korumak için benimsenen ilkeler.": "The principles we follow to protect information assets and personal data.",
+  "KredimGeldi": "KredimGeldi",
+  "Krediler": "Loans",
+  "İhtiyaç Kredisi": "Personal Loan",
+  "Konut Kredisi": "Home Loan",
+  "Taşıt Kredisi": "Vehicle Loan",
+  "Hizmetler": "Services",
+  "Kampanyalar": "Campaigns",
+  "Kredi Karnesi": "Credit Report",
+  "Kredi Kartı": "Credit Card",
+  "Mevduat": "Deposits",
+  "Yatırım": "Investment",
+  "Sigorta": "Insurance",
+  "Hakkımızda": "About Us",
+  "Biz Kimiz": "Who We Are",
+  "Sıkça Sorulan Sorular": "Frequently Asked Questions",
+  "Blog": "Blog",
+  "İletişim": "Contact",
+  "Fırsatları kaçırma!": "Don't miss out on deals!",
+  "E-Posta": "Email",
+  "E-posta": "Email",
+  "E-posta adresiniz": "Your email address",
+  "Bizi Takip Edin:": "Follow Us:",
+  "Facebook": "Facebook",
+  "X": "X",
+  "Instagram: @kredimgeldiofficial": "Instagram: @kredimgeldiofficial",
+  "LinkedIn": "LinkedIn",
+  "Hizmetlerimiz": "Our Services",
+  "Adres:": "Address:",
+  "İstanbul, Türkiye": "Istanbul, Türkiye",
+  "Telefon:": "Phone:",
+  "E-Posta:": "Email:",
+  "info@kredimgeldi.com": "info@kredimgeldi.com",
+  "Tüm hakları": "All rights reserved by",
+  "360Dijital": "360Dijital",
+  "tarafından saklıdır.": ".",
+  "logo": "logo",
+  "close": "close",
+  "Hangi kişisel verilerin, hangi yöntemlerle ve hangi amaçlarla işlendiği.": "Which personal data is processed, by what methods and for what purposes.",
+  "Kredi notunu öğren, onay şansını artır.": "Check your credit score and improve your approval odds.",
+  "Kaskodan DASK'a ihtiyacın olan sigortalar.": "The insurance you need, from comprehensive car cover to DASK.",
+  "Çalıştığımız Bankalar": "Banks We Work With",
+  "Akbank": "Akbank",
+  "Garanti BBVA": "Garanti BBVA",
+  "Halkbank": "Halkbank",
+  "İş Bankası": "İş Bankası",
+  "QNB": "QNB",
+  "VakıfBank": "VakıfBank",
+  "Yapı Kredi": "Yapı Kredi",
+  "Ziraat Bankası": "Ziraat Bankası",
+  "Blogda ara": "Search the blog",
+  "Ara": "Search",
+  "Kredi Rehberi": "Loan Guide",
+  "Kredi Notu": "Credit Score",
+  "Ekonomi": "Economy",
+  "Kredinin Gerçek Maliyeti: Faiz, KKDF, BSMV ve Masraflar": "The True Cost of a Loan: Interest, KKDF, BSMV and Fees",
+  "Aylık faiz oranı tek başına yeterli değil. Vergiler, dosya masrafı ve yıllık maliyet oranıyla bir kredinin size gerçekte kaça mal olduğunu adım adım hesaplayın.": "The monthly interest rate alone does not tell the whole story. Work out step by step what a loan really costs you, including taxes, the processing fee and the annual cost rate.",
+  "Kredi Notu Nedir, Nasıl Yükseltilir?": "What Is a Credit Score and How Can You Raise It?",
+  "Kredi başvurunuzun sonucunu ve size sunulan faizi en çok etkileyen şey kredi notunuz. Notun nasıl oluştuğunu ve yükseltmek için atabileceğiniz adımları anlattık.": "Your credit score is what most affects the outcome of your loan application and the interest rate you are offered. We explain how the score is calculated and the steps you can take to raise it.",
+  "İhtiyaç Kredisi Başvurusundan Önce Kontrol Etmeniz Gereken 7 Şey": "7 Things to Check Before Applying for a Personal Loan",
+  "Doğru tutar, doğru vade ve hazır belgelerle başvurmak onay ihtimalini artırır, gereksiz maliyetten korur. Başvuru öncesi kontrol listemiz.": "Applying with the right amount, the right term and your documents ready improves your approval odds and saves you unnecessary costs. Our pre-application checklist.",
+  "Konut Kredisi Rehberi: Peşinat, Ekspertiz ve Vade Seçimi": "Home Loan Guide: Down Payment, Appraisal and Choosing a Term",
+  "Ev almak büyük bir karar. Peşinattan ekspertize, tapu masraflarından vade seçimine kadar konut kredisi sürecini baştan sona anlattık.": "Buying a home is a big decision. We walk you through the home loan process from start to finish, from the down payment and appraisal to title deed costs and choosing a term.",
+  "Taşıt Kredisi Alırken Bilmeniz Gerekenler": "What You Need to Know Before Taking Out a Vehicle Loan",
+  "Borç Kapatma Kredisi: Kart Borçlarını Tek Taksitte Toplamak Mantıklı mı?": "Debt Consolidation Loans: Does It Make Sense to Combine Card Debt into One Installment?",
+  "Birden fazla kart ve hesap borcunu tek bir krediyle toplamak faizi düşürebilir ve takibi kolaylaştırır. Ama her durumda kazandırmaz. Nasıl karar verileceğini anlattık.": "Combining several card and overdraft debts into a single loan can lower your interest and make payments easier to track. But it does not always pay off. We explain how to decide.",
+  "Krediyi Erken Kapatmak Avantajlı mı?": "Is Paying Off a Loan Early Worth It?",
+  "Elinize toplu para geçtiğinde krediyi kapatmak mı, birikimde tutmak mı? Erken kapamanın kuralları ve hesabı.": "When you come into a lump sum, should you pay off the loan or keep it as savings? The rules and the math of early repayment.",
+  "Kredi Taksiti Bütçenizin Ne Kadarı Olmalı?": "How Much of Your Budget Should a Loan Installment Take?",
+  "Kredi çekmeden önce taksitin bütçenize nasıl oturacağını görün. 50/30/20 kuralı, borç-gelir oranı ve örnek bir bütçe planı.": "Before you borrow, see how the installment will fit into your budget. The 50/30/20 rule, the debt-to-income ratio and a sample budget plan.",
+  "Enflasyon Kredi Faizlerini Nasıl Etkiler?": "How Does Inflation Affect Loan Interest Rates?",
+  "Enflasyon, politika faizi ve kredi faizleri arasındaki bağlantıyı sade bir dille anlattık. Kredi kararlarınızda enflasyonu nasıl hesaba katmalısınız?": "We explain the link between inflation, the policy rate and loan interest rates in plain language. How should you factor inflation into your borrowing decisions?",
+  "Katılım Bankalarında Finansman Nasıl İşler?": "How Does Financing Work at Participation Banks?",
+  "Faizsiz finans ilkelerine göre çalışan katılım bankaları kredi yerine finansman sunar. Kâr payı, murabaha ve klasik krediyle farkları.": "Participation banks follow interest-free finance principles and offer financing instead of loans. Profit share, murabaha and how they differ from a conventional loan.",
+  "İhtiyaç": "Personal",
+  "Konut": "Home",
+  "Taşıt": "Vehicle",
+  "KredimGeldi Editör Ekibi": "KredimGeldi Editorial Team",
+  "Vade": "Term",
+  "Aylık taksit": "Monthly installment",
+  "Sık sorulan sorular": "Frequently asked questions",
+  "Paylaş": "Share",
+  "WhatsApp ile paylaş": "Share on WhatsApp",
+  "X'te paylaş": "Share on X",
+  "Facebook'ta paylaş": "Share on Facebook",
+  "LinkedIn'de paylaş": "Share on LinkedIn",
+  "Bağlantıyı kopyala": "Copy link",
+  "İçindekiler": "Contents",
+  "Bu yazıda": "In this article",
+  "Bankalardaki en düşük aylık faiz": "Lowest monthly rate at banks",
+  "Bunlar da ilginizi çekebilir": "You may also like",
+  "Ad Soyad": "Full Name",
+  "Giriş Yap": "Log In",
+  "ornek@eposta.com": "name@email.com",
+  "Şifreni mi unuttun?": "Forgot your password?",
+  "Adın ve soyadın": "Your first and last name",
+  "En az 8 karakter": "At least 8 characters",
+  "Şifreni tekrar gir": "Re-enter your password",
+  "Kredi tutarı": "Loan amount",
+  "Faizsiz kredi, nakit avans ve mevduat fırsatları.": "Interest-free loans, cash advances and deposit deals.",
+  "Kredi": "Loan",
+  "Kredi türü": "Loan type",
+  "Kredi Tutarı": "Loan Amount",
+  "SSS": "FAQ",
+  "Diğer Hizmetlerimiz": "Our Other Services",
+  "Sana uygun kartı bul, borcunu planla.": "Find the right card for you and plan your payments.",
+  "Mevduat faizlerini karşılaştır, getirini hesapla.": "Compare deposit rates and calculate your return.",
+  "Yatırım araçlarını tanı, birikimini planla.": "Get to know investment options and plan your savings.",
+  "Kapat": "Close",
+  "Hemen Başvur": "Apply Now",
+  "Kimlik bilgilerinle hemen başvur": "Apply now with your ID details",
+  "Aylık Taksit": "Monthly Installment",
+  "Toplam Geri Ödeme": "Total Repayment",
+  "Hesabınız var mı?": "Have an account?",
+  "Giriş yapın": "Log in",
+  ", bilgileriniz otomatik dolsun.": " and your details will be filled in automatically.",
+  "T.C. Kimlik No": "Turkish ID Number",
+  "Doğum Tarihi": "Date of Birth",
+  "Cep Telefonu": "Mobile Phone",
+  "Bilgileriniz yanlışsa \"Düzenle\" ile düzeltebilirsiniz.": "If any details are wrong, you can correct them with \"Edit\".",
+  "Ad": "First Name",
+  "Soyad": "Last Name",
+  "11 haneli": "11 digits",
+  "GG.AA.YYYY": "DD.MM.YYYY",
+  "05XX XXX XX XX": "05XX XXX XX XX",
+  "Başvur": "Apply",
+  "Başvurunuz alındı": "Your application has been received",
+  "Başvurunuz için teşekkür ederiz.": "Thank you for your application.",
+  "Başvuru numaranız": "Your application number",
+  "Tamam": "OK",
+  "Bunlar da işine yarayabilir": "You may also find these useful",
+  "TL": "TL",
+  "36 ay": "36 months",
+  "5 Ekim 2026": "5 October 2026",
+  "Geçerli bir T.C. kimlik numarası girin.": "Enter a valid Turkish ID number.",
+  "Tarihi GG.AA.YYYY biçiminde girin (ör. 14.05.1990).": "Enter the date as DD.MM.YYYY (e.g. 14.05.1990).",
+  "Geçerli bir doğum tarihi girin.": "Enter a valid date of birth.",
+  "Kredi başvurusu için 18 yaşından büyük olmalısınız.": "You must be over 18 to apply for a loan.",
+  "05XX XXX XX XX biçiminde geçerli bir cep telefonu girin.": "Enter a valid mobile number in the format 05XX XXX XX XX.",
+  "Posta kodu 5 haneli olmalıdır.": "The postal code must be 5 digits.",
+  "Tarihi AA.YYYY biçiminde girin (ör. 04.2021).": "Enter the date as MM.YYYY (e.g. 04.2021).",
+  "Başlama tarihi gelecekte olamaz.": "The start date cannot be in the future.",
+  "0 ile 20 arasında bir sayı girin.": "Enter a number between 0 and 20.",
+  "Kredi tutarı en az 1.000 ₺ olmalıdır.": "The loan amount must be at least ₺1,000.",
+  "Geçerli bir tutar girin.": "Enter a valid amount.",
+  "Tamamlandı": "Completed",
+  "Eksik": "Incomplete",
+  "Profiliniz tamamlandı. Kredi başvurusuna hazırsınız.": "Your profile is complete. You are ready to apply for a loan.",
+  "Kredi başvurusu için bilgilerinizi tamamlayın.": "Complete your details to apply for a loan.",
+  "Lütfen işaretli alanları kontrol edin.": "Please check the highlighted fields.",
+  "Kaydettiğiniz tüm başvuru bilgileri kalıcı olarak silinecek. Emin misiniz?": "All the application details you saved will be permanently deleted. Are you sure?",
+  "Başvuru bilgileriniz silindi.": "Your application details have been deleted.",
+  "Şifre en az 8 karakter olmalı.": "Your password must be at least 8 characters.",
+  "Şifreler eşleşmiyor.": "The passwords do not match.",
+  "Şifreniz güncellendi.": "Your password has been updated.",
+  "Başvuru bilgileri şu anda kaydedilemiyor; sistem kurulumu tamamlanmak üzere. Lütfen daha sonra tekrar deneyin.": "Application details cannot be saved right now while system setup is being completed. Please try again later.",
+  "Emekli": "Retired",
+  "Öğrenci": "Student",
+  "Ev hanımı": "Homemaker",
+  "Çalışmıyor": "Not working",
+  "Diğer": "Other",
+  "Maaşımı bankadan almıyorum": "I do not receive my salary through a bank",
+  "Kredi Başvurusu": "Loan Application",
+  "Anlaşmalı bankalarımız": "Our partner banks",
+  "Başvuru Alındı": "Application Received",
+  "Banka İncelemesinde": "Under Bank Review",
+  "Başvuru Alınamadı": "Application Not Accepted",
+  "Onaylandı": "Approved",
+  "Olumsuz Sonuçlandı": "Declined",
+  "Eksik Bilgilerden Ötürü Başvuru Alınamadı": "Application Not Accepted Due to Missing Information",
+  "Değerlendiriliyor": "Being evaluated",
+  "Banka İncelemesi Tamamlandı": "Bank Review Completed",
+  "Sıradaki adım": "Next step",
+  "Başvuru Onaylandı": "Application Approved",
+  "Başvuru Olumsuz Sonuçlandı": "Application Declined",
+  "Başvuru Sonucunu İncele": "View Application Result",
+  "Banka değerlendirmesinin ardından": "After the bank review",
+  "Başvurunuz alındı ve bilgileriniz kontrol ediliyor. Kontrol tamamlandığında başvurunuz değerlendirme için bankaya iletilecek.": "Your application has been received and your details are being checked. Once the check is complete, your application will be forwarded to the bank for evaluation.",
+  "Bilgilerinizi tamamlayıp yeniden başvurabilirsiniz.": "You can complete your details and apply again.",
+  "Bilgilerimi Tamamla": "Complete My Details",
+  "Yeniden Başvur": "Apply Again",
+  "Diğer Teklifler": "Other Offers",
+  "Faiz Oranı": "Interest Rate",
+  "Başvuru Detayları": "Application Details",
+  "Krediniz onaylandı": "Your loan has been approved",
+  "Onaylanan Tutar": "Approved Amount",
+  "Sonuç Tarihi": "Result Date",
+  "Kredinin kullandırılması için banka yetkilisi kayıtlı telefon numaranız üzerinden sizinle iletişime geçecektir.": "A bank representative will contact you on your registered phone number to disburse the loan.",
+  "Başvurunuz olumlu sonuçlanmadı": "Your application was not approved",
+  "Diğer Teklifleri İncele": "View Other Offers",
+  "Başvurunuz oluşturuldu": "Your application was created",
+  "Bilgileriniz kontrol ediliyor": "Your details are being checked",
+  "Eksik bilgilerden ötürü başvuru alınamadı": "Application not accepted due to missing information",
+  "Bilgileriniz doğrulandı": "Your details were verified",
+  "Banka değerlendirmesi sürüyor": "Bank review in progress",
+  "Sonuçlandığında bu sayfada görüntülenecek": "It will appear on this page once concluded",
+  "Başvurunuz onaylandı": "Your application was approved",
+  "Süreç": "Process",
+  "Kredi Bilgileri": "Loan Details",
+  "Banka": "Bank",
+  "Kredi Türü": "Loan Type",
+  "Dosya Masrafı": "Processing Fee",
+  "Başvuru Sahibi": "Applicant",
+  "Başvuru Tarihi": "Application Date",
+  "Lütfen adınızı, e-posta adresinizi ve mesajınızı yazın.": "Please enter your name, email address and message.",
+  "Geçerli bir e-posta adresi girin.": "Enter a valid email address.",
+  "Mesajınız şu anda gönderilemedi. Lütfen info@kredimgeldi.com adresine yazın.": "Your message could not be sent right now. Please write to info@kredimgeldi.com.",
+  "Mesajınız şu anda gönderilemedi. Lütfen biraz sonra tekrar deneyin veya info@kredimgeldi.com adresine yazın.": "Your message could not be sent right now. Please try again shortly or write to info@kredimgeldi.com.",
+  "Teşekkürler! Mesajınız bize ulaştı, en kısa sürede size dönüş yapacağız.": "Thank you! We have received your message and will get back to you as soon as possible.",
+  "Aboneliğiniz şu anda alınamadı. Lütfen biraz sonra tekrar deneyin.": "We could not complete your subscription right now. Please try again shortly.",
+  "Teşekkürler! Kampanya ve fırsatları e-posta ile göndereceğiz.": "Thank you! We will email you campaigns and deals.",
+  "Bu aralıkta kredi ve kart başvuruları çoğunlukla olumsuz sonuçlanır. Önce gecikmiş borçlarını kapatmaya ve ödemeleri düzenli hale getirmeye odaklan.": "In this range, loan and card applications are usually declined. Focus first on clearing overdue debts and making your payments regularly.",
+  "Bazı bankalar başvurunu değerlendirebilir ama limit ve faiz şartları sınırlı kalabilir. Kart borcunu limitinin altında tutmak notunu hızla yukarı taşır.": "Some banks may consider your application, but limits and rates may be restrictive. Keeping your card balance below its limit quickly lifts your score.",
+  "Çoğu bankada başvurun değerlendirmeye alınır. Birkaç ay düzenli ödeme ve az sayıda yeni başvuru ile daha iyi tekliflere ulaşabilirsin.": "Most banks will consider your application. A few months of regular payments and fewer new applications can get you better offers.",
+  "Bankaların büyük çoğunluğu için güçlü bir profil. Teklifleri karşılaştırarak daha düşük faizli seçenekleri tercih edebilirsin.": "A strong profile for most banks. Compare offers to choose options with lower interest rates.",
+  "En avantajlı faiz ve limit tekliflerine ulaşabileceğin aralıktasın. Bu seviyeyi korumak için ödemelerini aksatma.": "You are in the range for the most favorable rate and limit offers. Keep up with your payments to stay at this level.",
+  "En Riskli": "Highest Risk",
+  "Orta Riskli": "Medium Risk",
+  "Az Riskli": "Low Risk",
+  "İyi": "Good",
+  "Çok İyi": "Very Good",
+  "En yüksek": "Highest",
+  "DASK (Zorunlu Deprem Sigortası)": "DASK (Compulsory Earthquake Insurance)",
+  "Konut Sigortası": "Home Insurance",
+  "Konut Sigortası (eşya teminatı)": "Home Insurance (contents cover)",
+  "Eşya": "Contents",
+  "Zorunlu Trafik Sigortası": "Compulsory Traffic Insurance",
+  "Trafik": "Traffic",
+  "Hayat Sigortası": "Life Insurance",
+  "Hayat": "Life",
+  "Tamamlayıcı Sağlık Sigortası": "Supplementary Health Insurance",
+  "Seyahat Sağlık Sigortası": "Travel Health Insurance",
+  "Seyahat": "Travel",
+  "Zorunlu": "Compulsory",
+  "Önerilir": "Recommended",
+  "E-posta veya şifre hatalı.": "Incorrect email or password.",
+  "Giriş yapmadan önce e-posta adresinizi doğrulamanız gerekiyor. Gelen kutunuzu kontrol edin.": "You need to verify your email address before logging in. Please check your inbox.",
+  "Bu e-posta adresiyle zaten bir hesap var. Giriş yapmayı deneyin.": "An account with this email address already exists. Try logging in.",
+  "Yeni şifre eski şifrenizden farklı olmalı.": "Your new password must be different from your old one.",
+  "Oturumunuzun süresi doldu. Lütfen tekrar deneyin.": "Your session has expired. Please try again.",
+  "Çok fazla deneme yapıldı. Lütfen biraz bekleyip tekrar deneyin.": "Too many attempts. Please wait a moment and try again.",
+  "Bu giriş yöntemi henüz aktif değil.": "This sign-in method is not available yet.",
+  "Sunucuya ulaşılamadı. İnternet bağlantınızı kontrol edin.": "Could not reach the server. Please check your internet connection.",
+  "Üyelik sistemi henüz yapılandırılmadı. Lütfen daha sonra tekrar deneyin.": "Membership is temporarily unavailable. Please try again later.",
+  "Bağlantının süresi dolmuş veya geçersiz. Lütfen yeni bir bağlantı isteyin.": "This link has expired or is invalid. Please request a new link.",
+  "Çıkış Yap": "Log Out",
+  "Üye Ol": "Sign Up",
+  "Devam etmek için onay vermeniz gerekiyor.": "You need to give your consent to continue.",
+  "Başvurunuz şu anda gönderilemedi. Lütfen birkaç dakika sonra tekrar deneyin.": "Your application could not be submitted right now. Please try again in a few minutes.",
+  "Başvurunuz alındı. Teşekkür ederiz.": "Your application has been received. Thank you.",
+  "Başvurunuzun durumunu Hesabım > Başvurularım bölümünden adım adım takip edebilirsiniz.": "You can track the status of your application step by step under My Account > My Applications.",
+  "Başvuru numaranızı not edin. Bundan sonraki başvurularınızı adım adım takip etmek için üye olabilirsiniz.": "Note down your application number. Sign up to track your future applications step by step.",
+  "Şifreyi gizle": "Hide password",
+  "Şifreyi göster": "Show password",
+  "E-posta ve şifrenizi girin.": "Enter your email and password.",
+  "Lütfen tüm alanları doldurun.": "Please fill in all fields.",
+  "Devam etmek için Kullanım Koşulları ve KVKK metnini kabul etmelisiniz.": "To continue, you must accept the Terms of Use and the KVKK notice.",
+  "Kredi tutarı boş olamaz.": "The loan amount cannot be empty.",
+  "Bu tutar için geçersiz vade seçimi.": "Invalid term for this amount.",
+  "Bu adrese kayıtlı bir hesap varsa şifre sıfırlama bağlantısı gönderdik. Gelen kutunuzu kontrol edin.": "If an account is registered to this address, we have sent a password reset link. Please check your inbox.",
+  "Şifreniz güncellendi. Hesabınıza yönlendiriliyorsunuz...": "Your password has been updated. Redirecting you to your account...",
+  "Hesaplanamadı": "Could not be calculated",
+  "Kesin oran ve taksit, bankanın değerlendirmesinden sonra belirlenir; sigorta gibi isteğe bağlı ürünler dahil değildir.": "The final rate and installment are set after the bank's evaluation; optional products such as insurance are not included.",
+  "Tatil, eğitim ya da beklenmedik bir harcama için bankaların ihtiyaç kredisi tekliflerini aylık taksit ve toplam maliyetle yan yana gör, sana uygun olana tek formla başvur.": "Whether it is for a holiday, education or an unexpected expense, see banks' personal loan offers side by side with monthly installments and total cost, and apply for the right one with a single form.",
+  "KKDF, BSMV ve dosya masrafı dahil hesaplama": "Calculated including KKDF, BSMV and the processing fee",
+  "Tutara göre değişen vade seçenekleri": "Term options that vary with the amount",
+  "Üye olmadan teklifleri gör": "See offers without signing up",
+  "Ev sahibi olma yolunda bankaların konut kredisi tekliflerini uzun vadeli taksit ve toplam geri ödemeyle karşılaştır, sana uygun olana tek formla başvur.": "On your way to owning a home, compare banks' home loan offers by long-term installment and total repayment, and apply for the right one with a single form.",
+  "KKDF ve BSMV muafiyeti hesaba katılır": "KKDF and BSMV exemption taken into account",
+  "Dosya masrafı dahil toplam geri ödeme": "Total repayment including the processing fee",
+  "Hayalindeki araç için bankaların taşıt kredisi tekliflerini aylık taksit ve toplam maliyetle karşılaştır, sana uygun olana tek formla başvur.": "For the car of your dreams, compare banks' vehicle loan offers by monthly installment and total cost, and apply for the right one with a single form.",
+  "Tekliflerini Karşılaştır": "Offers Side by Side",
+  "En Uygun Teklif": "Best Offer"
+ },
+ "html": {
+  "<i class=\"ri-time-line\" aria-hidden=\"true\"></i>Yaklaşık 2 dk okuma": "<i class=\"ri-time-line\" aria-hidden=\"true\"></i>About a 2 min read",
+  "<i class=\"ri-list-unordered\" aria-hidden=\"true\"></i> Bu Sayfada": "<i class=\"ri-list-unordered\" aria-hidden=\"true\"></i> On This Page",
+  "<i class=\"ri-file-list-2-line\" aria-hidden=\"true\"></i>Kullanım Koşulları": "<i class=\"ri-file-list-2-line\" aria-hidden=\"true\"></i>Terms of Use",
+  "<i class=\"ri-checkbox-circle-line\" aria-hidden=\"true\"></i>Açık Rıza Metni": "<i class=\"ri-checkbox-circle-line\" aria-hidden=\"true\"></i>Explicit Consent Statement",
+  "<i class=\"ri-eye-off-line\" aria-hidden=\"true\"></i>Gizlilik Bildirimi": "<i class=\"ri-eye-off-line\" aria-hidden=\"true\"></i>Privacy Notice",
+  "<i class=\"ri-file-shield-2-line\" aria-hidden=\"true\"></i>Kişisel Verilerin Korunması": "<i class=\"ri-file-shield-2-line\" aria-hidden=\"true\"></i>Personal Data Protection",
+  "<i class=\"ri-lock-2-line\" aria-hidden=\"true\"></i>Bilgi Güvenliği": "<i class=\"ri-lock-2-line\" aria-hidden=\"true\"></i>Information Security",
+  "<i class=\"ri-printer-line\" aria-hidden=\"true\"></i> Yazdır": "<i class=\"ri-printer-line\" aria-hidden=\"true\"></i> Print",
+  "Bu metinle veya kişisel verilerinizle ilgili her türlü soru ve talebiniz için <a href=\"mailto:info@kredimgeldi.com\">info@kredimgeldi.com</a> adresine yazabilirsiniz.": "For any questions or requests about this text or your personal data, you can write to <a href=\"mailto:info@kredimgeldi.com\">info@kredimgeldi.com</a>.",
+  "İletişime Geç <i class=\"ri-arrow-right-up-line\"></i>": "Get in Touch <i class=\"ri-arrow-right-up-line\"></i>",
+  "<i class=\"ri-account-circle-line\"></i> Giriş Yap": "<i class=\"ri-account-circle-line\"></i> Log In",
+  "Üye Ol <i class=\"ri-arrow-right-up-line\"></i>": "Sign Up <i class=\"ri-arrow-right-up-line\"></i>",
+  "Abone Ol <i class=\"ri-arrow-right-up-line\"></i>": "Subscribe <i class=\"ri-arrow-right-up-line\"></i>",
+  "<i class=\"ri-arrow-right-up-line\"></i> Üye Ol": "<i class=\"ri-arrow-right-up-line\"></i> Sign Up",
+  "<i class=\"ri-time-line\" aria-hidden=\"true\"></i> 4 dk okuma": "<i class=\"ri-time-line\" aria-hidden=\"true\"></i> 4 min read",
+  "<i class=\"ri-time-line\" aria-hidden=\"true\"></i> 3 dk okuma": "<i class=\"ri-time-line\" aria-hidden=\"true\"></i> 3 min read",
+  "Yazıyı oku <i class=\"ri-arrow-right-line\" aria-hidden=\"true\"></i>": "Read article <i class=\"ri-arrow-right-line\" aria-hidden=\"true\"></i>",
+  "Teklifleri karşılaştır <i class=\"ri-arrow-right-up-line\" aria-hidden=\"true\"></i>": "Compare offers <i class=\"ri-arrow-right-up-line\" aria-hidden=\"true\"></i>",
+  "<i class=\"ri-information-line\" aria-hidden=\"true\"></i> Bu yazı genel bilgilendirme amaçlıdır. Oranlar, vergiler ve yasal sınırlar değişebilir; kesin koşullar için bankanızın sözleşme öncesi bilgi formunu inceleyin.": "<i class=\"ri-information-line\" aria-hidden=\"true\"></i> This article is for general information only. Rates, taxes and legal limits may change; for exact terms, review your bank's pre-contract information form.",
+  "Taksitleri hesapla <i class=\"ri-arrow-right-up-line\" aria-hidden=\"true\"></i>": "Calculate installments <i class=\"ri-arrow-right-up-line\" aria-hidden=\"true\"></i>",
+  "Tüm yazılar <i class=\"ri-arrow-right-line\" aria-hidden=\"true\"></i>": "All articles <i class=\"ri-arrow-right-line\" aria-hidden=\"true\"></i>",
+  "Aradığın cevabı bulamazsan <a href=\"iletisim.html\" class=\"kg-svc-link\">bize yaz</a>.": "If you can't find the answer you're looking for, <a href=\"iletisim.html\" class=\"kg-svc-link\">write to us</a>.",
+  "<i class=\"ri-shield-check-line\"></i> Hesabınızdaki bilgiler": "<i class=\"ri-shield-check-line\"></i> Details from your account",
+  "<i class=\"ri-edit-line\"></i> Düzenle": "<i class=\"ri-edit-line\"></i> Edit",
+  "<i class=\"ri-information-line\"></i> Değişiklikleriniz Hesabım sayfanızdaki bilgilere de kaydedilir.": "<i class=\"ri-information-line\"></i> Your changes are also saved to your details on the My Account page.",
+  "<a href=\"kisisel-verilerin-korunmasi.html\" target=\"_blank\" rel=\"noopener\">KVKK Aydınlatma Metni</a>'ni okudum, <a href=\"acik-riza-metni.html\" target=\"_blank\" rel=\"noopener\">Açık Rıza Metni</a> kapsamında bilgilerimin işlenmesini onaylıyorum.": "I have read the <a href=\"kisisel-verilerin-korunmasi.html\" target=\"_blank\" rel=\"noopener\">KVKK Privacy Information Notice</a> and consent to the processing of my data under the <a href=\"acik-riza-metni.html\" target=\"_blank\" rel=\"noopener\">Explicit Consent Statement</a>.",
+  "Başvurumu Takip Et <i class=\"ri-arrow-right-line\"></i>": "Track My Application <i class=\"ri-arrow-right-line\"></i>",
+  "Üye Ol <i class=\"ri-arrow-right-line\"></i>": "Sign Up <i class=\"ri-arrow-right-line\"></i>",
+  "Çıkış Yap <i class=\"ri-logout-box-r-line\"></i>": "Log Out <i class=\"ri-logout-box-r-line\"></i>"
+ },
+ "patterns": [
+  [
+   "^%(\\d+),(\\d+)$",
+   "$1.$2%"
+  ],
+  [
+   "^%(\\d+)$",
+   "$1%"
+  ],
+  [
+   "^1 ay$",
+   "1 month"
+  ],
+  [
+   "^(\\d+) ay$",
+   "$1 months"
+  ],
+  [
+   "^(\\d+) – (\\d+) ay$",
+   "$1 – $2 months"
+  ],
+  [
+   "^(\\d+) yıl$",
+   "$1 years"
+  ],
+  [
+   "^(\\d+) yıl (\\d+) ay$",
+   "$1 years $2 months"
+  ],
+  [
+   "^(\\d+) yıl sonra$",
+   "after $1 years"
+  ],
+  [
+   "^(.+) · (%[\\d,]+) yıllık$",
+   "$1 · $2 annual"
+  ],
+  [
+   "^(\\d+)\\. Aşama$",
+   "Stage $1"
+  ],
+  [
+   "^(\\d{1,2} \\S+ \\d{4})( \\d{1,2}:\\d{2})?$",
+   "$1$2"
+  ],
+  [
+   "^(\\d{1,2} \\S+ \\d{4}) (?:saat )?(\\d{1,2}:\\d{2})$",
+   "$1 $2"
+  ],
+  [
+   "^Tahmini kalan süre: (.+)$",
+   "Estimated time remaining: $1"
+  ],
+  [
+   "^Bankaya iletilme: (.+)$",
+   "Forwarded to the bank: $1"
+  ],
+  [
+   "^Başvuru No: (.+)$",
+   "Application No: $1"
+  ],
+  [
+   "^(.+) · No: (.+)$",
+   "$1 · No: $2"
+  ],
+  [
+   "^Başvurunuz (.+) tarafından inceleniyor\\. Değerlendirme tamamlandığında sonucu bu sayfadan inceleyebileceksiniz\\.$",
+   "Your application is being reviewed by $1. Once the review is complete, you can see the result on this page."
+  ],
+  [
+   "^Başvurunuzda (.+) bilgisi eksik olduğu için başvurunuz alınamadı\\.$",
+   "Your application could not be accepted because the following information is missing: $1."
+  ],
+  [
+   "^Başvurunuzda (.+) bilgisi eksik olduğu için başvurunuz alınamadı\\. Bilgilerinizi tamamlayıp yeniden başvurabilirsiniz\\.$",
+   "Your application could not be accepted because the following information is missing: $1. You can complete your details and apply again."
+  ],
+  [
+   "^Tebrikler! Başvurunuz (.+) tarafından onaylandı\\. Kredi koşullarını ve sonraki adımları inceleyebilirsiniz\\.$",
+   "Congratulations! Your application has been approved by $1. You can now review the loan terms and next steps."
+  ],
+  [
+   "^Başvurunuz (.+) tarafından olumlu değerlendirilemedi\\. Diğer bankaların tekliflerini inceleyebilirsiniz\\.$",
+   "Your application was not approved by $1. You can review offers from other banks."
+  ],
+  [
+   "^(.+) başvurunuzu aşağıdaki koşullarla onayladı\\.$",
+   "$1 approved your application with the following terms."
+  ],
+  [
+   "^(.+) bu başvuruyu şu an için onaylayamadı\\.$",
+   "$1 could not approve this application at this time."
+  ],
+  [
+   "^Başvurunuz (.+) değerlendirmesine iletildi$",
+   "Your application was forwarded to $1 for review"
+  ],
+  [
+   "^(.+) için başvurunuz alındı\\. Teşekkür ederiz\\.$",
+   "Your application for $1 has been received. Thank you."
+  ],
+  [
+   "^Bir hata oluştu: (.+)$",
+   "An error occurred: $1"
+  ],
+  [
+   "^Başvuru bilgileriniz yüklenemedi\\. (.*)$",
+   "Your application details could not be loaded. $1"
+  ],
+  [
+   "^Hesabınız oluşturuldu! (.+) adresine bir doğrulama bağlantısı gönderdik\\. Bağlantıya tıkladıktan sonra giriş yapabilirsiniz\\.$",
+   "Your account has been created! We sent a verification link to $1. You can log in after clicking the link."
+  ],
+  [
+   "^Kredi tutarı en az (.+) TL olmalıdır\\.$",
+   "The loan amount must be at least $1 TL."
+  ],
+  [
+   "^(.+) Teklifleri ve Hesaplama - KredimGeldi$",
+   "$1 Offers and Calculator - KredimGeldi"
+  ],
+  [
+   "^En düşük aylık taksitten başlayarak sıralandı\\. Oranlar (.+) tarihinde güncellendi\\.$",
+   "Sorted from the lowest monthly installment. Rates updated on $1."
+  ],
+  [
+   "^(\\d+) saat (\\d+) dakika$",
+   "$1 h $2 min"
+  ],
+  [
+   "^(\\d+) saat$",
+   "$1 h"
+  ],
+  [
+   "^(\\d+) dakika$",
+   "$1 min"
+  ]
+ ],
+ "subs": [
+  [
+   "(\\d) Ocak( \\d{4})",
+   "$1 January$2"
+  ],
+  [
+   "(\\d) Şubat( \\d{4})",
+   "$1 February$2"
+  ],
+  [
+   "(\\d) Mart( \\d{4})",
+   "$1 March$2"
+  ],
+  [
+   "(\\d) Nisan( \\d{4})",
+   "$1 April$2"
+  ],
+  [
+   "(\\d) Mayıs( \\d{4})",
+   "$1 May$2"
+  ],
+  [
+   "(\\d) Haziran( \\d{4})",
+   "$1 June$2"
+  ],
+  [
+   "(\\d) Temmuz( \\d{4})",
+   "$1 July$2"
+  ],
+  [
+   "(\\d) Ağustos( \\d{4})",
+   "$1 August$2"
+  ],
+  [
+   "(\\d) Eylül( \\d{4})",
+   "$1 September$2"
+  ],
+  [
+   "(\\d) Ekim( \\d{4})",
+   "$1 October$2"
+  ],
+  [
+   "(\\d) Kasım( \\d{4})",
+   "$1 November$2"
+  ],
+  [
+   "(\\d) Aralık( \\d{4})",
+   "$1 December$2"
+  ],
+  [
+   "\\b(\\d+) saat (\\d+) dakika",
+   "$1 h $2 min"
+  ],
+  [
+   "\\b(\\d+) saat\\b",
+   "$1 h"
+  ],
+  [
+   "\\b(\\d+) dakika\\b",
+   "$1 min"
+  ],
+  [
+   "İhtiyaç Kredisi",
+   "Personal Loan"
+  ],
+  [
+   "Konut Kredisi",
+   "Home Loan"
+  ],
+  [
+   "Taşıt Kredisi",
+   "Vehicle Loan"
+  ],
+  [
+   "Anlaşmalı bankalarımız",
+   "our partner banks"
+  ],
+  [
+   "Cep Telefonu",
+   "Mobile Phone"
+  ],
+  [
+   "Doğum Tarihi",
+   "Date of Birth"
+  ],
+  [
+   "T\\.C\\. Kimlik No",
+   "Turkish ID Number"
+  ],
+  [
+   "\\bSoyad\\b",
+   "Last Name"
+  ],
+  [
+   "(^|, )Ad(?=,|$)",
+   "$1First Name"
+  ]
+ ]
+}
