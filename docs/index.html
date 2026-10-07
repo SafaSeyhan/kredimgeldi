@@ -137,6 +137,11 @@
 
     <div id="videoContainer">
         <video id="videoPlayer" autoplay muted playsinline poster="assets/videos/kapak.webp"></video>
+        <script>
+            if (document.documentElement.getAttribute('data-kg-lang') === 'en') {
+                document.getElementById('videoPlayer').poster = 'assets/videos/en/kapak.webp';
+            }
+        </script>
         <div id="loadingIndicator" class="loading" aria-hidden="true"></div>
     </div>
 
@@ -1263,6 +1268,10 @@
 
             const loadingIndicator = document.getElementById('loadingIndicator');
             const videoContainer = document.getElementById('videoContainer');
+            // İngilizce sürümde videonun İngilizce yazılı kopyası oynatılır.
+            const videoSrc = document.documentElement.getAttribute('data-kg-lang') === 'en'
+                ? 'assets/videos/en/master.m3u8?v=1'
+                : 'assets/videos/master.m3u8?v=2';
 
             if (typeof Hls !== 'undefined' && Hls.isSupported()) {
                 const hls = new Hls({
@@ -1279,7 +1288,7 @@
                     abrMaxWithRealBitrate: true
                 });
 
-                hls.loadSource('assets/videos/master.m3u8?v=2');
+                hls.loadSource(videoSrc);
                 hls.attachMedia(video);
 
                 hls.on(Hls.Events.MANIFEST_PARSED, function () {
@@ -1314,7 +1323,7 @@
 
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 loadingIndicator.style.display = 'none';
-                video.src = 'assets/videos/master.m3u8?v=2';
+                video.src = videoSrc;
                 video.addEventListener('loadedmetadata', function () {
                     video.play().catch(error => {
                         console.log("Autoplay blocked:", error);
