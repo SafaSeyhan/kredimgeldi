@@ -1,0 +1,41 @@
+{
+ "text": {
+  "Başvuru Takip - KredimGeldi": "Application Tracking - KredimGeldi",
+  "Başvuru numaranız ve cep telefonunuzla kredi başvurunuzun hangi aşamada olduğunu öğrenin.": "Find out which stage your loan application is at using your application number and mobile phone.",
+  "Başvuru Takip": "Application Tracking",
+  "Başvurunuz hangi aşamada?": "Where is your application?",
+  "Başvuru numaranızı ve başvuruda kullandığınız cep telefonu numarasını girin, başvurunuzun durumunu adım adım görün.": "Enter your application number and the mobile phone number you used when applying to see the status of your application step by step.",
+  "Üyelik gerekmez": "No account needed",
+  "Kimlik bilgileriniz gösterilmez": "Your identity details are never shown",
+  "Başvurumu Sorgula": "Check My Application",
+  "Başvuru Numarası": "Application Number",
+  "Başvuru formunda yazdığınız numara": "The number you entered on the application form",
+  "Üye misiniz?": "Have an account?",
+  "Hesabım > Başvurularım": "My Account > My Applications",
+  "Başvuru Durumu": "Application Status",
+  "Yeni Sorgulama": "New Search",
+  "Başvuru süreci nasıl işler?": "How does the application process work?",
+  "Başvurunuz ve kimlik bilgileriniz ilk 12 saat içinde kontrol edilir.": "Your application and identity details are checked within the first 12 hours.",
+  "Bilgileriniz eksiksizse başvurunuz bankaya iletilir ve kredi değerlendirmesi yapılır.": "If your details are complete, your application is forwarded to the bank for a credit evaluation.",
+  "Başvuru Sonucu": "Application Result",
+  "Değerlendirme tamamlandığında sonucu ve kredi koşullarını bu sayfadan inceleyebilirsiniz.": "Once the review is complete, you can see the result and loan terms on this page.",
+  "Başvuru numaramı nerede bulurum?": "Where do I find my application number?",
+  "Başvurunuzu tamamladığınızda ekranda gösterilen, KG ile başlayan koddur (ör. KG261009E9902B).": "It is the code starting with KG that was shown on screen when you completed your application (e.g. KG261009E9902B).",
+  "Tüm başvurularımı tek yerden görmek istiyorum": "I want to see all my applications in one place",
+  "Üye olarak bundan sonraki başvurularınızı Hesabım > Başvurularım bölümünden takip edebilirsiniz.": "Sign up to track your future applications under My Account > My Applications.",
+  "Başvuru sorgulama şu anda yapılamıyor. Lütfen daha sonra tekrar deneyin.": "Application lookup is not available right now. Please try again later.",
+  "Bu başvuru numarası için çok fazla hatalı deneme yapıldı. Lütfen 15 dakika sonra tekrar deneyin.": "Too many incorrect attempts were made for this application number. Please try again in 15 minutes.",
+  "Bu başvuru numarası ve cep telefonuyla eşleşen bir başvuru bulunamadı. Bilgilerinizi kontrol edip tekrar deneyin.": "No application matches this application number and mobile phone. Please check your details and try again.",
+  "Başvuru numaranızı KG ile başlayacak şekilde eksiksiz girin (ör. KG261009E9902B).": "Enter your full application number, starting with KG (e.g. KG261009E9902B).",
+  "05XX XXX XX XX biçiminde geçerli bir cep telefonu girin.": "Enter a valid mobile phone number in the format 05XX XXX XX XX."
+ },
+ "html": {
+  "Başvurumu Sorgula <i class=\"ri-search-line\"></i>": "Check My Application <i class=\"ri-search-line\"></i>",
+  "Üye misiniz? <a href=\"hesabim.html#basvurularim\">Hesabım &gt; Başvurularım</a>": "Have an account? <a href=\"hesabim.html#basvurularim\">My Account &gt; My Applications</a>",
+  "Yeni Sorgulama <i class=\"ri-refresh-line\"></i>": "New Search <i class=\"ri-refresh-line\"></i>",
+  "<i class=\"ri-question-line\" aria-hidden=\"true\"></i> Başvuru numaramı nerede bulurum?": "<i class=\"ri-question-line\" aria-hidden=\"true\"></i> Where do I find my application number?",
+  "<i class=\"ri-user-add-line\" aria-hidden=\"true\"></i> Tüm başvurularımı tek yerden görmek istiyorum": "<i class=\"ri-user-add-line\" aria-hidden=\"true\"></i> I want to see all my applications in one place",
+  "<i class=\"ri-user-unfollow-line\" aria-hidden=\"true\"></i> Üyelik gerekmez": "<i class=\"ri-user-unfollow-line\" aria-hidden=\"true\"></i> No account needed",
+  "<i class=\"ri-shield-check-line\" aria-hidden=\"true\"></i> Kimlik bilgileriniz gösterilmez": "<i class=\"ri-shield-check-line\" aria-hidden=\"true\"></i> Your identity details are never shown"
+ }
+}

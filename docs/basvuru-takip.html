@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="assets/js/dil.js?v=1"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Başvuru numaranız ve cep telefonunuzla kredi başvurunuzun hangi aşamada olduğunu öğrenin.">
+    <link rel="canonical" href="https://kredimgeldi.com/basvuru-takip.html">
+    <meta property="og:site_name" content="KredimGeldi">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:title" content="Başvuru Takip - KredimGeldi">
+    <meta property="og:description" content="Başvuru numaranız ve cep telefonunuzla kredi başvurunuzun hangi aşamada olduğunu öğrenin.">
+    <meta property="og:image" content="https://kredimgeldi.com/assets/images/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://kredimgeldi.com/basvuru-takip.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Başvuru Takip - KredimGeldi">
+    <meta name="twitter:description" content="Başvuru numaranız ve cep telefonunuzla kredi başvurunuzun hangi aşamada olduğunu öğrenin.">
+    <meta name="twitter:image" content="https://kredimgeldi.com/assets/images/preview.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap">
+
+    <!-- Essential CSS Files -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon_finto.css">
+    <link rel="stylesheet" href="assets/css/scrollCue.css">
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/hesabim.css?v=3">
+    <link rel="stylesheet" href="assets/css/basvuru-takip.css?v=1">
+
+    <!-- Title & Favicon -->
+    <title>Başvuru Takip - KredimGeldi</title>
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area text-center position-fixed top-0 bottom-0 start-0 end-0" id="preloader">
+        <div class="loader position-absolute start-0 end-0">
+            <img src="assets/images/favicon.png" alt="favicon" class="img-fluid" style="width: 70px; height: 70px;">
+            <div class="wavy position-relative fw-light">
+                <span class="d-inline-block"></span>
+                <span class="d-inline-block">K</span>
+                <span class="d-inline-block">R</span>
+                <span class="d-inline-block">E</span>
+                <span class="d-inline-block">D</span>
+                <span class="d-inline-block">I</span>
+                <span class="d-inline-block">M</span>
+                <span class="d-inline-block">G</span>
+                <span class="d-inline-block">E</span>
+                <span class="d-inline-block">L</span>
+                <span class="d-inline-block">D</span>
+                <span class="d-inline-block">I</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <div id="header-placeholder"></div>
+    <!-- End Navbar Area -->
+    <div class="mobile-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
+        id="navbarOffcanvas">
+
+    </div>
+
+
+
+    <main class="kg-account kg-track">
+        <div class="container">
+            <section class="kg-hero kg-track-hero">
+                <div class="kg-track-intro">
+                    <nav class="kg-track-crumb" aria-label="Sayfa yolu">
+                        <a href="index.html">Ana Sayfa</a><i class="ri-arrow-right-s-line" aria-hidden="true"></i><span>Krediler</span><i class="ri-arrow-right-s-line" aria-hidden="true"></i><span>Başvuru Takip</span>
+                    </nav>
+                    <span class="kg-hero-eyebrow">Başvuru Takip</span>
+                    <h1 class="kg-hero-name">Başvurunuz hangi aşamada?</h1>
+                    <p class="kg-track-lead">Başvuru numaranızı ve başvuruda kullandığınız cep telefonu numarasını girin, başvurunuzun durumunu adım adım görün.</p>
+                    <ul class="kg-track-points">
+                        <li><i class="ri-user-unfollow-line" aria-hidden="true"></i> Üyelik gerekmez</li>
+                        <li><i class="ri-shield-check-line" aria-hidden="true"></i> Kimlik bilgileriniz gösterilmez</li>
+                    </ul>
+                </div>
+
+                <form class="kg-card kg-track-form" id="track-form" novalidate>
+                    <h2 class="kg-card-title">Başvurumu Sorgula</h2>
+                    <div class="mb-3">
+                        <label class="form-label" for="track-ref">Başvuru Numarası</label>
+                        <input class="form-control kg-track-ref" id="track-ref" name="reference_no" placeholder="KG261009E9902B" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="24" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="track-phone">Cep Telefonu</label>
+                        <input class="form-control" id="track-phone" name="phone" type="tel" inputmode="numeric" placeholder="05XX XXX XX XX" autocomplete="tel-national" maxlength="14" required>
+                        <small class="kg-track-help">Başvuru formunda yazdığınız numara</small>
+                    </div>
+                    <button type="submit" class="default-btn w-100">
+                        <span class="spinner-border spinner-border-sm d-none" aria-hidden="true"></span>
+                        Başvurumu Sorgula <i class="ri-search-line"></i>
+                    </button>
+                    <p class="kg-track-member">Üye misiniz? <a href="hesabim.html#basvurularim">Hesabım &gt; Başvurularım</a></p>
+                </form>
+            </section>
+
+            <section class="kg-card kg-track-result d-none" id="track-result" aria-live="polite" tabindex="-1">
+                <div class="kg-apps-head">
+                    <div>
+                        <h2 class="kg-card-title">Başvuru Durumu</h2>
+                        <p class="kg-card-sub mb-0" id="track-result-sub"></p>
+                    </div>
+                    <button type="button" class="default-btn two" id="track-again">Yeni Sorgulama <i class="ri-refresh-line"></i></button>
+                </div>
+                <div id="track-result-body"></div>
+            </section>
+
+            <div class="kg-howto">
+                <h3>Başvuru süreci nasıl işler?</h3>
+                <ol>
+                    <li><span><i class="ri-inbox-archive-line"></i></span><div><strong>Başvuru Alındı</strong><small>Başvurunuz ve kimlik bilgileriniz ilk 12 saat içinde kontrol edilir.</small></div></li>
+                    <li><span><i class="ri-bank-line"></i></span><div><strong>Banka İncelemesinde</strong><small>Bilgileriniz eksiksizse başvurunuz bankaya iletilir ve kredi değerlendirmesi yapılır.</small></div></li>
+                    <li><span><i class="ri-file-search-line"></i></span><div><strong>Başvuru Sonucu</strong><small>Değerlendirme tamamlandığında sonucu ve kredi koşullarını bu sayfadan inceleyebilirsiniz.</small></div></li>
+                </ol>
+            </div>
+
+            <div class="kg-track-faq">
+                <div>
+                    <h3><i class="ri-question-line" aria-hidden="true"></i> Başvuru numaramı nerede bulurum?</h3>
+                    <p>Başvurunuzu tamamladığınızda ekranda gösterilen, KG ile başlayan koddur (ör. KG261009E9902B).</p>
+                </div>
+                <div>
+                    <h3><i class="ri-user-add-line" aria-hidden="true"></i> Tüm başvurularımı tek yerden görmek istiyorum</h3>
+                    <p>Üye olarak bundan sonraki başvurularınızı Hesabım &gt; Başvurularım bölümünden takip edebilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" class="footer-area bg-color-0c3a30 pt-120">
+    </div>
+    <div class="go-top">
+        <i class="ri-arrow-up-fill"></i>
+    </div>
+    <script>
+        fetch('components/mobile_navbar.html?v=6')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarOffcanvas').innerHTML = data;
+            });
+
+        fetch('components/footer.html?v=8')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fslightbox.min.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+    <script src="assets/js/auth-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/script.js?v=6"></script>
+    <script src="assets/js/formlar.js?v=1"></script>
+    <script src="assets/js/basvurularim.js?v=5"></script>
+    <script src="assets/js/basvuru-takip.js?v=1"></script>
+</body>
+
+</html>

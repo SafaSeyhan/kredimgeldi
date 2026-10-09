@@ -1,5 +1,6 @@
 // Hesabım > Başvurularım: müşterinin "Başvur" penceresinden yaptığı başvuruları ve aşamalarını gösterir.
 // Başvurular Supabase'deki loan_applications tablosundan okunur (bkz. supabase/loan_applications.sql).
+// Görünüm parçaları window.KGApps üzerinden Başvuru Takip sayfasıyla (basvuru-takip.html) paylaşılır.
 //
 // Aşamalar:
 //   1. Başvuru Alındı: başvurudan sonraki ilk 12 saat. Ad, soyad, T.C. kimlik no, doğum tarihi ve cep
@@ -77,7 +78,10 @@
     function stageOf(app) {
         const created = new Date(app.created_at).getTime();
         const checkAt = created + CHECK_HOURS * 3600 * 1000;
-        const missing = Object.keys(REQUIRED).filter(k => !has(app[k]));
+        // Başvuru Takip sayfasında kimlik bilgileri gelmez; eksik alanlar sunucudan liste olarak gelir.
+        const missing = Array.isArray(app.missing)
+            ? app.missing.filter(k => REQUIRED[k])
+            : Object.keys(REQUIRED).filter(k => !has(app[k]));
         const base = { created, checkAt, missing };
         if (app.status === 'onaylandi' || app.status === 'reddedildi') {
             return Object.assign(base, { step: 3, key: app.status, closed: true });
@@ -140,7 +144,7 @@
         }).join('') + '</ol>';
     }
 
-    function message(app, stage) {
+    function message(app, stage, guest) {
         const bank = esc(bankName(app));
         switch (stage.key) {
             case 'received': {
@@ -159,8 +163,9 @@
                 return '<div class="kg-app-msg danger"><i class="ri-error-warning-line"></i><div>'
                     + '<p>Başvurunuzda ' + stage.missing.map(k => REQUIRED[k]).join(', ') + ' bilgisi eksik olduğu için başvurunuz alınamadı. '
                     + 'Bilgilerinizi tamamlayıp yeniden başvurabilirsiniz.</p>'
-                    + '<div class="kg-app-msg-actions"><button type="button" class="kg-chip-btn" data-goto-tab="kimlik">Bilgilerimi Tamamla</button>'
-                    + '<a class="kg-chip-btn ghost" href="products.html">Yeniden Başvur</a></div></div></div>';
+                    + '<div class="kg-app-msg-actions">'
+                    + (guest ? '' : '<button type="button" class="kg-chip-btn" data-goto-tab="kimlik">Bilgilerimi Tamamla</button>')
+                    + '<a class="kg-chip-btn' + (guest ? '' : ' ghost') + '" href="products.html">Yeniden Başvur</a></div></div></div>';
             case 'onaylandi':
                 return '<div class="kg-app-msg success"><i class="ri-checkbox-circle-line"></i><div>'
                     + '<p>Tebrikler! Başvurunuz ' + bank + ' tarafından onaylandı. Kredi koşullarını ve sonraki adımları inceleyebilirsiniz.</p>'
@@ -185,7 +190,7 @@
         return '<dl class="kg-app-figures">' + items.map(i => '<div><dt>' + i[0] + '</dt><dd>' + esc(i[1]) + '</dd></div>').join('') + '</dl>';
     }
 
-    function card(app, compact) {
+    function card(app, compact, guest) {
         const stage = stageOf(app);
         return '<article class="kg-app' + (compact ? ' compact' : '') + '" data-state="' + stage.key + '">'
             + '<header class="kg-app-head">' + logo(app)
@@ -194,8 +199,8 @@
             + pill(stage) + '</header>'
             + (compact ? '' : figures(app))
             + stepper(app, stage)
-            + (compact ? '' : message(app, stage))
-            + (compact ? '' : '<footer class="kg-app-foot"><span><i class="ri-calendar-line"></i> ' + dateTime(app.created_at) + '</span>'
+            + (compact ? '' : message(app, stage, guest))
+            + (compact || guest ? '' : '<footer class="kg-app-foot"><span><i class="ri-calendar-line"></i> ' + dateTime(app.created_at) + '</span>'
                 + '<button type="button" class="kg-link-more" data-app-open="' + esc(app.id) + '">Başvuru Detayları <i class="ri-arrow-right-line"></i></button></footer>')
             + '</article>';
     }
@@ -289,6 +294,8 @@
         modal.show();
     }
 
+    window.KGApps = { esc, has, tl, rate, dateTime, maskPhone, title, stageOf, pill, card, rows, result, history };
+
     // ---------- Liste ----------
 
     function render() {
@@ -354,6 +361,7 @@
         setInterval(() => { if (apps.length) render(); }, 60000);
     }
 
+    if (!$('#apps-list')) return;
     bind();
     load();
 })();
