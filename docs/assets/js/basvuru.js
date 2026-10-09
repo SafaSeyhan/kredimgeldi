@@ -284,8 +284,10 @@
         $('[data-done-ref]', modal).textContent = ref || '';
         $('[data-done-hint]', modal).textContent = user
             ? 'Başvurunuzun durumunu Hesabım > Başvurularım bölümünden adım adım takip edebilirsiniz.'
-            : 'Başvuru numaranızı not edin. Bundan sonraki başvurularınızı adım adım takip etmek için üye olabilirsiniz.';
-        $('[data-done-link]', modal).classList.toggle('d-none', !user);
+            : 'Başvuru numaranızı not edin. Başvurunuzu Krediler > Başvuru Takip sayfasından bu numara ve cep telefonunuzla adım adım takip edebilirsiniz.';
+        const link = $('[data-done-link]', modal);
+        link.href = user ? 'hesabim.html#basvurularim' : 'basvuru-takip.html?no=' + encodeURIComponent(ref || '');
+        link.classList.toggle('d-none', !user && !ref);
         $('[data-done-signup]', modal).classList.toggle('d-none', Boolean(user));
         form.classList.add('d-none');
         $('[data-step="done"]', modal).classList.remove('d-none');

@@ -295,7 +295,9 @@
   "Dosya masrafı dahil toplam geri ödeme": "Total repayment including the processing fee",
   "Hayalindeki araç için bankaların taşıt kredisi tekliflerini aylık taksit ve toplam maliyetle karşılaştır, sana uygun olana tek formla başvur.": "For the car of your dreams, compare banks' vehicle loan offers by monthly installment and total cost, and apply for the right one with a single form.",
   "Tekliflerini Karşılaştır": "Offers Side by Side",
-  "En Uygun Teklif": "Best Offer"
+  "En Uygun Teklif": "Best Offer",
+  "Başvuru Takip": "Application Tracking",
+  "Başvuru numaranızı not edin. Başvurunuzu Krediler > Başvuru Takip sayfasından bu numara ve cep telefonunuzla adım adım takip edebilirsiniz.": "Note down your application number. You can track your application step by step on the Loans > Application Tracking page using this number and your mobile phone."
  },
  "html": {
   "<i class=\"ri-time-line\" aria-hidden=\"true\"></i>Yaklaşık 2 dk okuma": "<i class=\"ri-time-line\" aria-hidden=\"true\"></i>About a 2 min read",
